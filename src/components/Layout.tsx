@@ -106,22 +106,24 @@ export default function Layout() {
                     <span className="text-xs font-medium">Learn</span>
                 </Link>
 
-                <div className="flex items-center gap-3">
-                    <div className="flex flex-col items-center">
-                        <div className="w-16 h-1 bg-gray-200 dark:bg-gray-700 rounded-full mb-1 overflow-hidden">
-                            <div className="h-full bg-gradient-to-r from-indigo-500 to-pink-500" style={{ width: `${(xp % 100)}%` }} />
+                {name && (
+                    <div className="flex items-center gap-3">
+                        <div className="flex flex-col items-center">
+                            <div className="w-16 h-1 bg-gray-200 dark:bg-gray-700 rounded-full mb-1 overflow-hidden">
+                                <div className="h-full bg-gradient-to-r from-indigo-500 to-pink-500" style={{ width: `${(xp % 100)}%` }} />
+                            </div>
+                            <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500">Lv. {level}</span>
                         </div>
-                        <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500">Lv. {level}</span>
-                    </div>
 
-                    <button
-                        onClick={handleLogout}
-                        className="p-1.5 text-gray-300 dark:text-gray-600 hover:text-red-500 dark:hover:text-red-400 transition"
-                        title="Reset Progress"
-                    >
-                        <RotateCcw className="w-4 h-4" />
-                    </button>
-                </div>
+                        <button
+                            onClick={handleLogout}
+                            className="p-1.5 text-gray-300 dark:text-gray-600 hover:text-red-500 dark:hover:text-red-400 transition"
+                            title="Reset Progress"
+                        >
+                            <RotateCcw className="w-4 h-4" />
+                        </button>
+                    </div>
+                )}
 
                 <Link to="/quiz" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/quiz') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <Puzzle className={`w-6 h-6 mb-1 ${isActive('/quiz') ? 'fill-current opacity-20' : ''}`} />

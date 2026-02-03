@@ -65,13 +65,18 @@ export function UserProvider({ children }: { children: ReactNode }) {
 
     const addXp = (amount: number) => {
         const newXp = xp + amount;
-        setXp(newXp);
+        setXp(Math.max(0, newXp)); // Prevent negative XP
 
         // Level Up Logic: 100 XP per level
         const nextLevelThreshold = level * 100;
+        const prevLevelThreshold = (level - 1) * 100;
+
         if (newXp >= nextLevelThreshold) {
             setLevel(prev => prev + 1);
             setShowLevelUp(true);
+        } else if (newXp < prevLevelThreshold && level > 1) {
+            // Level Down Logic
+            setLevel(prev => prev - 1);
         }
     };
 

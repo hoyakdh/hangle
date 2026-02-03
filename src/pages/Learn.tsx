@@ -30,8 +30,9 @@ export default function Learn() {
 
     const handleMarkAsDone = (id: number) => {
         if (completedItems.includes(id)) {
-            // Toggle OFF: Remove from completed list
+            // Toggle OFF: Remove from completed list and deduct XP
             setCompletedItems(prev => prev.filter(item => item !== id));
+            addXp(-10);
         } else {
             // Toggle ON: Add to completed list and grant XP
             setCompletedItems(prev => [...prev, id]);
