@@ -110,8 +110,8 @@ export default function Learn() {
                 <div className={`relative w-full h-full duration-500 preserve-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}`}>
 
                     {/* Front */}
-                    <div className={`absolute w-full h-full backface-hidden bg-white dark:bg-gray-800 rounded-3xl shadow-xl flex flex-col items-center justify-center p-8 border-4 transition-colors ${isCompleted ? 'border-green-400 bg-green-50 dark:bg-green-900/20' : 'border-indigo-50 dark:border-gray-700 hover:border-indigo-100 dark:hover:border-gray-600'}`}>
-                        <h2 className="text-5xl font-black text-gray-800 dark:text-white mb-6 text-center leading-tight">
+                    <div className={`absolute w-full h-full backface-hidden bg-white dark:bg-gray-800 rounded-3xl shadow-xl flex flex-col items-center justify-center p-6 md:p-8 border-4 transition-colors ${isCompleted ? 'border-green-400 bg-green-50 dark:bg-green-900/20' : 'border-indigo-50 dark:border-gray-700 hover:border-indigo-100 dark:hover:border-gray-600'}`}>
+                        <h2 className="text-3xl md:text-5xl font-black text-gray-800 dark:text-white mb-6 text-center leading-tight break-keep">
                             {currentItem.korean}
                         </h2>
                         <p className="text-xl text-gray-500 dark:text-gray-400 font-medium mb-6">
