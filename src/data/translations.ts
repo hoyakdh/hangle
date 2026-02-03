@@ -38,6 +38,8 @@ export const translations = {
             speedSlow: "Slow Speed"
         },
         quiz: {
+            quizModeTitle: "Quiz Mode",
+            quizModeSubtitle: "Test your knowledge!",
             quit: "Quit",
             question: "Question",
             prompt: "What does this mean?",
@@ -90,6 +92,8 @@ export const translations = {
             speedSlow: "Velocidad Lenta"
         },
         quiz: {
+            quizModeTitle: "Modo Quiz",
+            quizModeSubtitle: "¡Pon a prueba tus conocimientos!",
             quit: "Salir",
             question: "Pregunta",
             prompt: "¿Qué significa esto?",
@@ -142,6 +146,8 @@ export const translations = {
             speedSlow: "ゆっくり"
         },
         quiz: {
+            quizModeTitle: "クイズモード",
+            quizModeSubtitle: "知識をテストしよう！",
             quit: "終了",
             question: "質問",
             prompt: "これはどういう意味ですか？",
