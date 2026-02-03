@@ -22,7 +22,7 @@ export default function Home() {
                 <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-8">{t.home.welcome}</h1>
                 <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">{t.home.askName}</p>
 
-                <div className="flex gap-4 w-full max-w-md">
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
                     <input
                         ref={inputRef}
                         type="text"

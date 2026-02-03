@@ -156,18 +156,18 @@ export default function Learn() {
             </div>
 
             {/* Controls */}
-            <div className="w-full flex items-center gap-4">
+            <div className="w-full flex items-center gap-2 sm:gap-4">
                 <button
                     onClick={prevCard}
                     disabled={currentIndex === 0}
-                    className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
+                    className="p-3 sm:p-4 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
                 >
                     <ChevronLeft className="w-6 h-6" />
                 </button>
 
                 <button
                     onClick={() => setIsFlipped(!isFlipped)}
-                    className="p-4 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-200 dark:hover:bg-indigo-900 transition"
+                    className="p-3 sm:p-4 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-200 dark:hover:bg-indigo-900 transition"
                 >
                     <RotateCw className="w-6 h-6" />
                 </button>
@@ -192,7 +192,7 @@ export default function Learn() {
                 <button
                     onClick={nextCard}
                     disabled={currentIndex === items.length - 1}
-                    className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
+                    className="p-3 sm:p-4 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
                 >
                     <ChevronRight className="w-6 h-6" />
                 </button>
