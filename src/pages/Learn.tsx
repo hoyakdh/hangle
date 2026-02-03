@@ -52,7 +52,7 @@ export default function Learn() {
 
     const toggleSpeed = (e: React.MouseEvent) => {
         e.stopPropagation();
-        setPlaybackRate(prev => prev === 0.9 ? 0.6 : 0.9);
+        setPlaybackRate(prev => prev === 0.9 ? 0.4 : 0.9);
     };
 
     // Text-to-Speech
@@ -130,7 +130,7 @@ export default function Learn() {
                                 onClick={toggleSpeed}
                                 className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                             >
-                                {playbackRate === 0.9 ? '1x' : '0.6x'}
+                                {playbackRate === 0.9 ? '1x' : '0.4x'}
                             </button>
                         </div>
 
