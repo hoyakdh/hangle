@@ -104,7 +104,7 @@ export default function Learn() {
                             {currentItem.korean}
                         </h2>
                         <p className="text-xl text-gray-500 dark:text-gray-400 font-medium mb-6">
-                            {currentItem.romanized}
+                            {targetLanguage === 'ja' ? currentItem.japanese_pronunciation : currentItem.romanized}
                         </p>
                         <button
                             onClick={(e) => { e.stopPropagation(); playAudio(currentItem.korean); }}
