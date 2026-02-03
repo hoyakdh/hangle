@@ -29,9 +29,14 @@ export default function Learn() {
     }, [completedItems]);
 
     const handleMarkAsDone = (id: number) => {
-        if (!completedItems.includes(id)) {
+        if (completedItems.includes(id)) {
+            // Toggle OFF: Remove from completed list
+            setCompletedItems(prev => prev.filter(item => item !== id));
+        } else {
+            // Toggle ON: Add to completed list and grant XP
             setCompletedItems(prev => [...prev, id]);
             addXp(10); // Award 10 XP
+
             // Move to next card automatically after a short delay if not the last one
             if (currentIndex < items.length - 1) {
                 setTimeout(() => {
@@ -175,8 +180,7 @@ export default function Learn() {
                 {/* I Know This Button */}
                 <button
                     onClick={() => handleMarkAsDone(currentItem.id)}
-                    disabled={isCompleted}
-                    className={`flex-1 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] ${isCompleted ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 cursor-default shadow-none' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200 dark:shadow-none'}`}
+                    className={`flex-1 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] ${isCompleted ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 cursor-pointer shadow-none' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200 dark:shadow-none'}`}
                 >
                     {isCompleted ? (
                         <>

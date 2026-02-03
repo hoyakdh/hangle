@@ -88,6 +88,9 @@ export function UserProvider({ children }: { children: ReactNode }) {
         setNameState(null);
         setXp(0);
         setLevel(1);
+
+        // Force reload to reset all local states in components
+        window.location.href = '/';
     };
 
     const toggleTheme = () => {
