@@ -87,8 +87,12 @@ export default function Layout() {
             </main>
 
             {/* Footer */}
-            <footer className="bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 py-6 text-center text-gray-400 dark:text-gray-500 text-sm transition-colors duration-300">
-                <p>© {new Date().getFullYear()} Hangle. Enjoy learning Korean!</p>
+            <footer className="bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 py-8 text-center text-gray-400 dark:text-gray-500 text-sm transition-colors duration-300">
+                <p className="mb-4">© {new Date().getFullYear()} Hangle. Enjoy learning Korean!</p>
+                <div className="flex justify-center gap-6">
+                    <Link to="/privacy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</Link>
+                    <Link to="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Service</Link>
+                </div>
             </footer>
         </div>
     );

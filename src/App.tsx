@@ -6,6 +6,8 @@ import Categories from './pages/Categories';
 import Learn from './pages/Learn';
 import Quiz from './pages/Quiz';
 import QuizCategories from './pages/QuizCategories';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import Terms from './pages/Terms';
 import './App.css';
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
             <Route path="learn/:categoryId" element={<Learn />} />
             <Route path="quiz" element={<QuizCategories />} />
             <Route path="quiz/:categoryId" element={<Quiz />} />
+            <Route path="privacy" element={<PrivacyPolicy />} />
+            <Route path="terms" element={<Terms />} />
           </Route>
         </Routes>
       </BrowserRouter>
