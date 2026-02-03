@@ -1,20 +1,31 @@
 import { Link } from 'react-router-dom';
+import { useUser } from '../context/UserContext';
+import { translations } from '../data/translations';
 
 export default function Categories() {
-    const categories = [
-        { id: 'airport', name: 'Airport (공항)', description: 'Check-in, Passport, Gate', color: 'bg-blue-500' },
-        { id: 'taxi', name: 'Taxi (택시)', description: 'Destination, Fare, Directions', color: 'bg-yellow-500' },
-        { id: 'bus', name: 'Bus (버스)', description: 'Bus stop, Route, Fees', color: 'bg-green-500' },
-        { id: 'subway', name: 'Subway (지하철)', description: 'Station, Transfer, Exit', color: 'bg-orange-500' },
-        { id: 'restaurant', name: 'Restaurant (식당)', description: 'Ordering, Menu, Payment', color: 'bg-red-500' },
-        { id: 'hotel', name: 'Hotel (호텔)', description: 'Check-in, Service, Room', color: 'bg-indigo-500' },
-        { id: 'tourist', name: 'Tourist Info (관광안내소)', description: 'Map, Guide, Tickets', color: 'bg-purple-500' },
-        { id: 'daily', name: 'Daily Life (일상)', description: 'Greetings, Basic Questions', color: 'bg-pink-500' },
+    const { targetLanguage } = useUser();
+    const t = translations[targetLanguage].categories;
+
+    const baseCategories = [
+        { id: 'airport', color: 'bg-blue-500' },
+        { id: 'taxi', color: 'bg-yellow-500' },
+        { id: 'bus', color: 'bg-green-500' },
+        { id: 'subway', color: 'bg-orange-500' },
+        { id: 'restaurant', color: 'bg-red-500' },
+        { id: 'hotel', color: 'bg-indigo-500' },
+        { id: 'tourist', color: 'bg-purple-500' },
+        { id: 'daily', color: 'bg-pink-500' },
     ];
+
+    // Merge base config with translations
+    const categories = baseCategories.map(cat => ({
+        ...cat,
+        ...t.items[cat.id as keyof typeof t.items]
+    }));
 
     return (
         <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Choose a Category</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{t.title}</h2>
             <div className="grid md:grid-cols-2 gap-6">
                 {categories.map((cat) => (
                     <Link

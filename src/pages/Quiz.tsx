@@ -1,11 +1,16 @@
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { vocabData } from '../data/vocab';
+import { useUser } from '../context/UserContext';
+import { translations } from '../data/translations';
 
 import { ArrowLeft, CheckCircle, XCircle, Trophy, RefreshCcw } from 'lucide-react';
 
 export default function Quiz() {
     const { categoryId } = useParams<{ categoryId: string }>();
+    const { targetLanguage } = useUser();
+    const t = translations[targetLanguage].quiz;
+
     // Filter items by category
     const items = useMemo(() => vocabData.filter(item => item.category === categoryId), [categoryId]);
 
@@ -44,8 +49,8 @@ export default function Quiz() {
     if (items.length < 4) {
         return (
             <div className="text-center py-12">
-                <h2 className="text-2xl font-bold dark:text-white">Not enough data for quiz</h2>
-                <Link to="/categories" className="text-indigo-600 dark:text-indigo-400 hover:underline mt-4 inline-block">Go back</Link>
+                <h2 className="text-2xl font-bold dark:text-white">{t.notEnough}</h2>
+                <Link to="/categories" className="text-indigo-600 dark:text-indigo-400 hover:underline mt-4 inline-block">{t.goBack}</Link>
             </div>
         );
     }
@@ -75,17 +80,17 @@ export default function Quiz() {
         return (
             <div className="flex flex-col items-center justify-center space-y-8 animate-fade-in py-8">
                 <Trophy className="w-24 h-24 text-yellow-400 drop-shadow-lg" />
-                <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">Quiz Complete!</h2>
+                <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">{t.complete}</h2>
                 <div className="text-2xl font-medium text-gray-600 dark:text-gray-300">
-                    Your Score: <span className="text-indigo-600 dark:text-indigo-400 font-bold">{score}</span> / {items.length}
+                    {t.score} <span className="text-indigo-600 dark:text-indigo-400 font-bold">{score}</span> / {items.length}
                 </div>
 
                 <div className="flex gap-4 mt-8">
                     <Link to={`/learn/${categoryId}`} className="px-6 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition">
-                        Review Phrases
+                        {t.review}
                     </Link>
                     <button onClick={() => window.location.reload()} className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition flex items-center gap-2">
-                        <RefreshCcw className="w-4 h-4" /> Try Again
+                        <RefreshCcw className="w-4 h-4" /> {t.retry}
                     </button>
                 </div>
             </div>
@@ -97,16 +102,16 @@ export default function Quiz() {
             {/* Header */}
             <div className="flex items-center justify-between mb-8">
                 <Link to="/quiz" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 flex items-center gap-1">
-                    <ArrowLeft className="w-5 h-5" /> Quit
+                    <ArrowLeft className="w-5 h-5" /> {t.quit}
                 </Link>
                 <div className="text-sm font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/40 px-4 py-1 rounded-full">
-                    Question {currentIndex + 1} / {items.length}
+                    {t.question} {currentIndex + 1} / {items.length}
                 </div>
             </div>
 
             {/* Question Card */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center border-2 border-indigo-50 dark:border-gray-700">
-                <p className="text-sm text-gray-400 font-medium uppercase tracking-wider mb-4">What does this mean?</p>
+                <p className="text-sm text-gray-400 font-medium uppercase tracking-wider mb-4">{t.prompt}</p>
                 <h2 className="text-4xl font-black text-gray-800 dark:text-white mb-2">{currentQuestion.korean}</h2>
             </div>
 
@@ -137,7 +142,11 @@ export default function Quiz() {
                             disabled={isAnswered}
                             className={btnClass}
                         >
-                            <span>{option.english}</span>
+                            <span>
+                                {targetLanguage === 'en' && option.english}
+                                {targetLanguage === 'es' && option.spanish}
+                                {targetLanguage === 'ja' && option.japanese}
+                            </span>
                             {isAnswered && isCorrect && <CheckCircle className="w-6 h-6 text-green-500" />}
                             {isAnswered && isSelected && !isCorrect && <XCircle className="w-6 h-6 text-red-500" />}
                         </button>
@@ -151,7 +160,7 @@ export default function Quiz() {
                     onClick={handleNext}
                     className="w-full py-4 mt-6 bg-indigo-600 text-white rounded-xl font-bold text-lg shadow-lg hover:bg-indigo-700 hover:scale-[1.02] transition-all animate-bounce-subtle"
                 >
-                    {currentIndex < items.length - 1 ? 'Next Question' : 'See Results'}
+                    {currentIndex < items.length - 1 ? t.next : t.results}
                 </button>
             )}
         </div>

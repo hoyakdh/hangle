@@ -3,7 +3,7 @@ import { BookOpen, Moon, Sun } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 
 export default function Layout() {
-    const { name, level, xp, logout, theme, toggleTheme } = useUser();
+    const { name, level, xp, logout, theme, toggleTheme, targetLanguage, setTargetLanguage } = useUser();
 
     const handleLogout = () => {
         if (window.confirm('Are you sure you want to reset your progress? This cannot be undone.')) {
@@ -46,6 +46,19 @@ export default function Layout() {
 
                     {/* Right: Nav & Settings */}
                     <nav className="flex items-center gap-4">
+                        <div className="relative group">
+                            <select
+                                value={targetLanguage}
+                                onChange={(e) => setTargetLanguage(e.target.value as 'en' | 'es' | 'ja')}
+                                className="appearance-none bg-transparent font-medium text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 py-1 pl-2 pr-6 cursor-pointer focus:outline-none"
+                            >
+                                <option value="en" className="bg-white dark:bg-gray-800">🇺🇸 EN</option>
+                                <option value="es" className="bg-white dark:bg-gray-800">🇪🇸 ES</option>
+                                <option value="ja" className="bg-white dark:bg-gray-800">🇯🇵 JA</option>
+                            </select>
+                            {/* Custom Arrow Icon can be added here if needed, or rely on browser default but styled */}
+                        </div>
+
                         <Link to="/categories" className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
                             Learn
                         </Link>

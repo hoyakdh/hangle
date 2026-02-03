@@ -4,10 +4,13 @@ import { vocabData } from '../data/vocab';
 import { ChevronLeft, ChevronRight, Volume2, RotateCw, ArrowLeft, Check } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import LevelUpModal from '../components/LevelUpModal';
+import { translations } from '../data/translations';
 
 export default function Learn() {
     const { categoryId } = useParams<{ categoryId: string }>();
-    const { addXp, showLevelUp, level, closeLevelUp } = useUser();
+    const { addXp, showLevelUp, level, closeLevelUp, targetLanguage } = useUser();
+
+    const t = translations[targetLanguage].learn;
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
@@ -71,8 +74,8 @@ export default function Learn() {
     if (items.length === 0) {
         return (
             <div className="text-center py-12">
-                <h2 className="text-2xl font-bold dark:text-white">Category not found</h2>
-                <Link to="/categories" className="text-indigo-600 dark:text-indigo-400 hover:underline mt-4 inline-block">Go back</Link>
+                <h2 className="text-2xl font-bold dark:text-white">{t.notFound}</h2>
+                <Link to="/categories" className="text-indigo-600 dark:text-indigo-400 hover:underline mt-4 inline-block">{t.goBack}</Link>
             </div>
         );
     }
@@ -84,7 +87,7 @@ export default function Learn() {
             {/* Header */}
             <div className="w-full flex items-center justify-between">
                 <Link to="/categories" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 flex items-center gap-1">
-                    <ArrowLeft className="w-5 h-5" /> Back
+                    <ArrowLeft className="w-5 h-5" /> {t.back}
                 </Link>
                 <div className="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
                     {currentIndex + 1} / {items.length}
@@ -109,12 +112,16 @@ export default function Learn() {
                         >
                             <Volume2 className="w-6 h-6" />
                         </button>
-                        <p className="mt-8 text-gray-400 dark:text-gray-500 text-sm font-medium">Tap to flip</p>
+                        <p className="mt-8 text-gray-400 dark:text-gray-500 text-sm font-medium">{t.flip}</p>
                     </div>
 
                     {/* Back */}
                     <div className="absolute w-full h-full backface-hidden bg-indigo-600 dark:bg-indigo-800 rounded-3xl shadow-xl rotate-y-180 text-white flex flex-col items-center justify-center p-8">
-                        <h3 className="text-3xl font-bold mb-8 text-center">{currentItem.english}</h3>
+                        <h3 className="text-3xl font-bold mb-8 text-center">
+                            {targetLanguage === 'en' && currentItem.english}
+                            {targetLanguage === 'es' && currentItem.spanish}
+                            {targetLanguage === 'ja' && currentItem.japanese}
+                        </h3>
 
                         <button
                             onClick={(e) => { e.stopPropagation(); playAudio(currentItem.korean); }}
@@ -151,11 +158,11 @@ export default function Learn() {
                 >
                     {isCompleted ? (
                         <>
-                            <Check className="w-6 h-6" /> Learned
+                            <Check className="w-6 h-6" /> {t.learned}
                         </>
                     ) : (
                         <>
-                            I know this! <span className="text-xs bg-white/20 px-2 py-0.5 rounded ml-1">+10 XP</span>
+                            {t.known} <span className="text-xs bg-white/20 px-2 py-0.5 rounded ml-1">{t.xp}</span>
                         </>
                     )}
                 </button>
@@ -176,7 +183,7 @@ export default function Learn() {
                         to={`/quiz/${categoryId}`}
                         className="block w-full py-4 bg-gradient-to-r from-pink-500 to-rose-500 text-white font-bold text-center rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition"
                     >
-                        Ready? Take the Quiz!
+                        {t.quizPrompt}
                     </Link>
                 </div>
             )}

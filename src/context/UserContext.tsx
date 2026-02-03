@@ -11,6 +11,8 @@ interface UserContextType {
     logout: () => void;
     theme: 'light' | 'dark';
     toggleTheme: () => void;
+    targetLanguage: 'en' | 'es' | 'ja';
+    setTargetLanguage: (lang: 'en' | 'es' | 'ja') => void;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -26,6 +28,12 @@ export function UserProvider({ children }: { children: ReactNode }) {
         const savedTheme = localStorage.getItem('hangle_theme');
         if (savedTheme) return savedTheme as 'light' | 'dark';
         return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    });
+
+    // Language State
+    const [targetLanguage, setTargetLanguageState] = useState<'en' | 'es' | 'ja'>(() => {
+        const savedLang = localStorage.getItem('hangle_target_lang');
+        return (savedLang as 'en' | 'es' | 'ja') || 'en';
     });
 
     useEffect(() => {
@@ -46,6 +54,10 @@ export function UserProvider({ children }: { children: ReactNode }) {
             document.documentElement.classList.remove('dark');
         }
     }, [theme]);
+
+    useEffect(() => {
+        localStorage.setItem('hangle_target_lang', targetLanguage);
+    }, [targetLanguage]);
 
     const setName = (newName: string) => {
         setNameState(newName);
@@ -82,8 +94,12 @@ export function UserProvider({ children }: { children: ReactNode }) {
         setTheme(prev => prev === 'light' ? 'dark' : 'light');
     };
 
+    const setTargetLanguage = (lang: 'en' | 'es' | 'ja') => {
+        setTargetLanguageState(lang);
+    };
+
     return (
-        <UserContext.Provider value={{ name, setName, xp, level, addXp, showLevelUp, closeLevelUp, logout, theme, toggleTheme }}>
+        <UserContext.Provider value={{ name, setName, xp, level, addXp, showLevelUp, closeLevelUp, logout, theme, toggleTheme, targetLanguage, setTargetLanguage }}>
             {children}
         </UserContext.Provider>
     );
