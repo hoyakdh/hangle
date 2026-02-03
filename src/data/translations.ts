@@ -33,7 +33,9 @@ export const translations = {
             xp: "+10 XP",
             quizPrompt: "Ready? Take the Quiz!",
             notFound: "Category not found",
-            goBack: "Go back"
+            goBack: "Go back",
+            speedNormal: "Normal Speed",
+            speedSlow: "Slow Speed"
         },
         quiz: {
             quit: "Quit",
@@ -83,7 +85,9 @@ export const translations = {
             xp: "+10 XP",
             quizPrompt: "¿Listo? ¡Haz la prueba!",
             notFound: "Categoría no encontrada",
-            goBack: "Volver"
+            goBack: "Volver",
+            speedNormal: "Velocidad Normal",
+            speedSlow: "Velocidad Lenta"
         },
         quiz: {
             quit: "Salir",
@@ -133,7 +137,9 @@ export const translations = {
             xp: "+10 XP",
             quizPrompt: "準備完了？クイズに挑戦！",
             notFound: "カテゴリーが見つかりません",
-            goBack: "戻る"
+            goBack: "戻る",
+            speedNormal: "標準速度",
+            speedSlow: "ゆっくり"
         },
         quiz: {
             quit: "終了",

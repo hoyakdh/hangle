@@ -48,12 +48,23 @@ export default function Learn() {
         setIsFlipped(false);
     }, [categoryId]);
 
+    const [playbackRate, setPlaybackRate] = useState(0.9);
+
+    const toggleSpeed = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setPlaybackRate(prev => prev === 0.9 ? 0.6 : 0.9);
+    };
+
     // Text-to-Speech
     const playAudio = (text: string) => {
         if (!('speechSynthesis' in window)) return;
+
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+
         const utterance = new SpeechSynthesisUtterance(text);
         utterance.lang = 'ko-KR';
-        utterance.rate = 0.9;
+        utterance.rate = playbackRate;
         window.speechSynthesis.speak(utterance);
     };
 
@@ -106,12 +117,23 @@ export default function Learn() {
                         <p className="text-xl text-gray-500 dark:text-gray-400 font-medium mb-6">
                             {targetLanguage === 'ja' ? currentItem.japanese_pronunciation : currentItem.romanized}
                         </p>
-                        <button
-                            onClick={(e) => { e.stopPropagation(); playAudio(currentItem.korean); }}
-                            className="p-3 bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors"
-                        >
-                            <Volume2 className="w-6 h-6" />
-                        </button>
+
+                        <div className="flex items-center gap-3">
+                            <button
+                                onClick={(e) => { e.stopPropagation(); playAudio(currentItem.korean); }}
+                                className="p-3 bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors"
+                            >
+                                <Volume2 className="w-6 h-6" />
+                            </button>
+
+                            <button
+                                onClick={toggleSpeed}
+                                className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                            >
+                                {playbackRate === 0.9 ? '1x' : '0.6x'}
+                            </button>
+                        </div>
+
                         <p className="mt-8 text-gray-400 dark:text-gray-500 text-sm font-medium">{t.flip}</p>
                     </div>
 
