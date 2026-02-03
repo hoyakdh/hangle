@@ -1,5 +1,5 @@
 import { Link, Outlet } from 'react-router-dom';
-import { BookOpen, Moon, Sun } from 'lucide-react';
+import { BookOpen, Moon, Sun, Globe, ChevronDown } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 
 export default function Layout() {
@@ -46,17 +46,18 @@ export default function Layout() {
 
                     {/* Right: Nav & Settings */}
                     <nav className="flex items-center gap-4">
-                        <div className="relative group">
+                        <div className="relative flex items-center bg-gray-100 dark:bg-gray-700 rounded-full px-3 py-1.5 transition-colors group hover:bg-gray-200 dark:hover:bg-gray-600">
+                            <Globe className="w-4 h-4 text-gray-500 dark:text-gray-400 mr-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition" />
                             <select
                                 value={targetLanguage}
                                 onChange={(e) => setTargetLanguage(e.target.value as 'en' | 'es' | 'ja')}
-                                className="appearance-none bg-transparent font-medium text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 py-1 pl-2 pr-6 cursor-pointer focus:outline-none"
+                                className="appearance-none bg-transparent font-medium text-sm text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none pr-6 z-10"
                             >
-                                <option value="en" className="bg-white dark:bg-gray-800">🇺🇸 EN</option>
-                                <option value="es" className="bg-white dark:bg-gray-800">🇪🇸 ES</option>
-                                <option value="ja" className="bg-white dark:bg-gray-800">🇯🇵 JA</option>
+                                <option value="en">English</option>
+                                <option value="es">Español</option>
+                                <option value="ja">日本語</option>
                             </select>
-                            {/* Custom Arrow Icon can be added here if needed, or rely on browser default but styled */}
+                            <ChevronDown className="w-3 h-3 text-gray-500 dark:text-gray-400 absolute right-3 pointer-events-none group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition" />
                         </div>
 
                         <Link to="/categories" className="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
