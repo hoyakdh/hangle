@@ -71,8 +71,8 @@ export default function Learn() {
     if (items.length === 0) {
         return (
             <div className="text-center py-12">
-                <h2 className="text-2xl font-bold">Category not found</h2>
-                <Link to="/categories" className="text-indigo-600 hover:underline mt-4 inline-block">Go back</Link>
+                <h2 className="text-2xl font-bold dark:text-white">Category not found</h2>
+                <Link to="/categories" className="text-indigo-600 dark:text-indigo-400 hover:underline mt-4 inline-block">Go back</Link>
             </div>
         );
     }
@@ -83,10 +83,10 @@ export default function Learn() {
 
             {/* Header */}
             <div className="w-full flex items-center justify-between">
-                <Link to="/categories" className="text-gray-500 hover:text-gray-900 flex items-center gap-1">
+                <Link to="/categories" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 flex items-center gap-1">
                     <ArrowLeft className="w-5 h-5" /> Back
                 </Link>
-                <div className="text-sm font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">
+                <div className="text-sm font-medium text-gray-500 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full">
                     {currentIndex + 1} / {items.length}
                 </div>
             </div>
@@ -96,24 +96,24 @@ export default function Learn() {
                 <div className={`relative w-full h-full duration-500 preserve-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}`}>
 
                     {/* Front */}
-                    <div className={`absolute w-full h-full backface-hidden bg-white rounded-3xl shadow-xl flex flex-col items-center justify-center p-8 border-4 transition-colors ${isCompleted ? 'border-green-400 bg-green-50' : 'border-indigo-50 hover:border-indigo-100'}`}>
-                        <h2 className="text-5xl font-black text-gray-800 mb-6 text-center leading-tight">
+                    <div className={`absolute w-full h-full backface-hidden bg-white dark:bg-gray-800 rounded-3xl shadow-xl flex flex-col items-center justify-center p-8 border-4 transition-colors ${isCompleted ? 'border-green-400 bg-green-50 dark:bg-green-900/20' : 'border-indigo-50 dark:border-gray-700 hover:border-indigo-100 dark:hover:border-gray-600'}`}>
+                        <h2 className="text-5xl font-black text-gray-800 dark:text-white mb-6 text-center leading-tight">
                             {currentItem.korean}
                         </h2>
-                        <p className="text-xl text-gray-500 font-medium mb-6">
+                        <p className="text-xl text-gray-500 dark:text-gray-400 font-medium mb-6">
                             {currentItem.romanized}
                         </p>
                         <button
                             onClick={(e) => { e.stopPropagation(); playAudio(currentItem.korean); }}
-                            className="p-3 bg-indigo-50 text-indigo-600 rounded-full hover:bg-indigo-100 transition-colors"
+                            className="p-3 bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors"
                         >
                             <Volume2 className="w-6 h-6" />
                         </button>
-                        <p className="mt-8 text-gray-400 text-sm font-medium">Tap to flip</p>
+                        <p className="mt-8 text-gray-400 dark:text-gray-500 text-sm font-medium">Tap to flip</p>
                     </div>
 
                     {/* Back */}
-                    <div className="absolute w-full h-full backface-hidden bg-indigo-600 rounded-3xl shadow-xl rotate-y-180 text-white flex flex-col items-center justify-center p-8">
+                    <div className="absolute w-full h-full backface-hidden bg-indigo-600 dark:bg-indigo-800 rounded-3xl shadow-xl rotate-y-180 text-white flex flex-col items-center justify-center p-8">
                         <h3 className="text-3xl font-bold mb-8 text-center">{currentItem.english}</h3>
 
                         <button
@@ -131,14 +131,14 @@ export default function Learn() {
                 <button
                     onClick={prevCard}
                     disabled={currentIndex === 0}
-                    className="p-4 rounded-full bg-white shadow-md text-gray-600 hover:text-indigo-600 disabled:opacity-30 disabled:cursor-not-allowed transition"
+                    className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
                 >
                     <ChevronLeft className="w-6 h-6" />
                 </button>
 
                 <button
                     onClick={() => setIsFlipped(!isFlipped)}
-                    className="p-4 rounded-full bg-indigo-100 text-indigo-600 hover:bg-indigo-200 transition"
+                    className="p-4 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-200 dark:hover:bg-indigo-900 transition"
                 >
                     <RotateCw className="w-6 h-6" />
                 </button>
@@ -147,7 +147,7 @@ export default function Learn() {
                 <button
                     onClick={() => handleMarkAsDone(currentItem.id)}
                     disabled={isCompleted}
-                    className={`flex-1 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] ${isCompleted ? 'bg-green-100 text-green-700 cursor-default shadow-none' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200'}`}
+                    className={`flex-1 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] ${isCompleted ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 cursor-default shadow-none' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200 dark:shadow-none'}`}
                 >
                     {isCompleted ? (
                         <>
@@ -163,7 +163,7 @@ export default function Learn() {
                 <button
                     onClick={nextCard}
                     disabled={currentIndex === items.length - 1}
-                    className="p-4 rounded-full bg-white shadow-md text-gray-600 hover:text-indigo-600 disabled:opacity-30 disabled:cursor-not-allowed transition"
+                    className="p-4 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
                 >
                     <ChevronRight className="w-6 h-6" />
                 </button>

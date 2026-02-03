@@ -44,8 +44,8 @@ export default function Quiz() {
     if (items.length < 4) {
         return (
             <div className="text-center py-12">
-                <h2 className="text-2xl font-bold">Not enough data for quiz</h2>
-                <Link to="/categories" className="text-indigo-600 hover:underline mt-4 inline-block">Go back</Link>
+                <h2 className="text-2xl font-bold dark:text-white">Not enough data for quiz</h2>
+                <Link to="/categories" className="text-indigo-600 dark:text-indigo-400 hover:underline mt-4 inline-block">Go back</Link>
             </div>
         );
     }
@@ -75,13 +75,13 @@ export default function Quiz() {
         return (
             <div className="flex flex-col items-center justify-center space-y-8 animate-fade-in py-8">
                 <Trophy className="w-24 h-24 text-yellow-400 drop-shadow-lg" />
-                <h2 className="text-4xl font-extrabold text-gray-900">Quiz Complete!</h2>
-                <div className="text-2xl font-medium text-gray-600">
-                    Your Score: <span className="text-indigo-600 font-bold">{score}</span> / {items.length}
+                <h2 className="text-4xl font-extrabold text-gray-900 dark:text-white">Quiz Complete!</h2>
+                <div className="text-2xl font-medium text-gray-600 dark:text-gray-300">
+                    Your Score: <span className="text-indigo-600 dark:text-indigo-400 font-bold">{score}</span> / {items.length}
                 </div>
 
                 <div className="flex gap-4 mt-8">
-                    <Link to={`/learn/${categoryId}`} className="px-6 py-3 bg-white border border-gray-300 rounded-xl font-semibold hover:bg-gray-50 transition">
+                    <Link to={`/learn/${categoryId}`} className="px-6 py-3 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white rounded-xl font-semibold hover:bg-gray-50 dark:hover:bg-gray-700 transition">
                         Review Phrases
                     </Link>
                     <button onClick={() => window.location.reload()} className="px-6 py-3 bg-indigo-600 text-white rounded-xl font-semibold hover:bg-indigo-700 transition flex items-center gap-2">
@@ -96,18 +96,18 @@ export default function Quiz() {
         <div className="max-w-lg mx-auto space-y-6">
             {/* Header */}
             <div className="flex items-center justify-between mb-8">
-                <Link to="/quiz" className="text-gray-500 hover:text-gray-900 flex items-center gap-1">
+                <Link to="/quiz" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 flex items-center gap-1">
                     <ArrowLeft className="w-5 h-5" /> Quit
                 </Link>
-                <div className="text-sm font-bold text-indigo-600 bg-indigo-50 px-4 py-1 rounded-full">
+                <div className="text-sm font-bold text-indigo-600 dark:text-indigo-400 bg-indigo-50 dark:bg-indigo-900/40 px-4 py-1 rounded-full">
                     Question {currentIndex + 1} / {items.length}
                 </div>
             </div>
 
             {/* Question Card */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 text-center border-2 border-indigo-50">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center border-2 border-indigo-50 dark:border-gray-700">
                 <p className="text-sm text-gray-400 font-medium uppercase tracking-wider mb-4">What does this mean?</p>
-                <h2 className="text-4xl font-black text-gray-800 mb-2">{currentQuestion.korean}</h2>
+                <h2 className="text-4xl font-black text-gray-800 dark:text-white mb-2">{currentQuestion.korean}</h2>
             </div>
 
             {/* Options */}
@@ -120,14 +120,14 @@ export default function Quiz() {
 
                     if (isAnswered) {
                         if (isCorrect) {
-                            btnClass += "bg-green-50 border-green-500 text-green-700";
+                            btnClass += "bg-green-50 dark:bg-green-900/30 border-green-500 text-green-700 dark:text-green-400";
                         } else if (isSelected && !isCorrect) {
-                            btnClass += "bg-red-50 border-red-500 text-red-700";
+                            btnClass += "bg-red-50 dark:bg-red-900/30 border-red-500 text-red-700 dark:text-red-400";
                         } else {
-                            btnClass += "bg-gray-50 border-gray-100 text-gray-400 opacity-50";
+                            btnClass += "bg-gray-50 dark:bg-gray-800 border-gray-100 dark:border-gray-700 text-gray-400 dark:text-gray-500 opacity-50";
                         }
                     } else {
-                        btnClass += "bg-white border-gray-200 hover:border-indigo-400 hover:bg-indigo-50 text-gray-700 shadow-sm hover:shadow-md";
+                        btnClass += "bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 hover:border-indigo-400 dark:hover:border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-900/20 text-gray-700 dark:text-gray-200 shadow-sm hover:shadow-md";
                     }
 
                     return (

@@ -14,20 +14,20 @@ export default function Categories() {
 
     return (
         <div className="space-y-8">
-            <h2 className="text-3xl font-bold text-gray-900">Choose a Category</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Choose a Category</h2>
             <div className="grid md:grid-cols-2 gap-6">
                 {categories.map((cat) => (
                     <Link
                         key={cat.id}
                         to={`/learn/${cat.id}`}
-                        className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 bg-white"
+                        className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"
                     >
                         <div className={`h-2 ${cat.color}`} />
                         <div className="p-8">
-                            <h3 className="text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                 {cat.name}
                             </h3>
-                            <p className="text-gray-500 mt-2">{cat.description}</p>
+                            <p className="text-gray-500 dark:text-gray-400 mt-2">{cat.description}</p>
                         </div>
                     </Link>
                 ))}
