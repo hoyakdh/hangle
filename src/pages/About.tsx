@@ -47,15 +47,6 @@ export default function About() {
                         <p className="text-sm text-gray-600 dark:text-gray-400">{t.features.quiz.desc}</p>
                     </div>
                 </div>
-
-                <div className="text-center pt-8">
-                    <Link
-                        to="/categories"
-                        className="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white transition-all duration-200 bg-indigo-600 border border-transparent rounded-full hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                    >
-                        {t.cta}
-                    </Link>
-                </div>
             </div>
         </div>
     );
