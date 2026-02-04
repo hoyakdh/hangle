@@ -69,19 +69,19 @@ export default function Layout() {
                             <ChevronDown className="w-3 h-3 text-gray-500 dark:text-gray-400 absolute right-2 md:right-3 pointer-events-none group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition" />
                         </div>
 
-                        <Link to="/categories" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
+                        <Link to="/categories" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
                             Learn
                         </Link>
-                        <Link to="/conversation" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
+                        <Link to="/conversation" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
                             Talk
                         </Link>
-                        <Link to="/bookmarks" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
-                            {t.home.bookmarks}
+                        <Link to="/bookmarks" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
+                            Bookmarks
                         </Link>
-                        <Link to="/quiz" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
+                        <Link to="/quiz" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
                             Quiz
                         </Link>
-                        <Link to="/guide" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
+                        <Link to="/guide" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
                             Guide
                         </Link>
                         <button
@@ -128,7 +128,7 @@ export default function Layout() {
 
                 <Link to="/bookmarks" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/bookmarks') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <Star className={`w-6 h-6 mb-1 ${isActive('/bookmarks') ? 'fill-current' : ''}`} />
-                    <span className="text-xs font-medium">{t.home.bookmarks}</span>
+                    <span className="text-xs font-medium">Bookmarks</span>
                 </Link>
 
                 {name && (
