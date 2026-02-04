@@ -6,7 +6,7 @@ export interface VocabItem {
     spanish: string;
     japanese: string;
     japanese_pronunciation: string;
-    category: 'airport' | 'taxi' | 'bus' | 'subway' | 'restaurant' | 'hotel' | 'tourist' | 'daily';
+    category: 'airport' | 'taxi' | 'bus' | 'subway' | 'restaurant' | 'hotel' | 'tourist' | 'daily' | 'emergency' | 'hospital';
 }
 
 export const vocabData: VocabItem[] = [
@@ -185,4 +185,28 @@ export const vocabData: VocabItem[] = [
     { id: 818, category: 'daily', korean: '눈이 와요.', romanized: 'Nuni wayo.', english: 'It is snowing.', spanish: 'Está nevando.', japanese: '雪が降っています。', japanese_pronunciation: 'ヌニ ワヨ' },
     { id: 819, category: 'daily', korean: '다시 말해 주세요.', romanized: 'Dasi malhae juseyo.', english: 'Please say it again.', spanish: 'Dígalo de nuevo, por favor.', japanese: 'もう一度言ってください。', japanese_pronunciation: 'タシ マレ ジュセヨ' },
     { id: 820, category: 'daily', korean: '안녕히 가세요.', romanized: 'Annyeonghi gaseyo.', english: 'Goodbye (to person leaving).', spanish: 'Adiós.', japanese: 'さようなら。', japanese_pronunciation: 'アンニョンヒ ガセヨ' },
+
+    // --- Emergency (긴급상황) ---
+    { id: 901, category: 'emergency', korean: '도와주세요!', romanized: 'Dowajuseyo!', english: 'Help me!', spanish: '¡Ayúdeme!', japanese: '助けてください！', japanese_pronunciation: 'トワジュセヨ！' },
+    { id: 902, category: 'emergency', korean: '경찰을 불러주세요.', romanized: 'Gyeongchareul bulleojuseyo.', english: 'Please call the police.', spanish: 'Por favor llame a la policía.', japanese: '警察を呼んでください。', japanese_pronunciation: 'キョンチャル バロジュセヨ' },
+    { id: 903, category: 'emergency', korean: '구급차를 불러주세요.', romanized: 'Gugeupchareul bulleojuseyo.', english: 'Please call an ambulance.', spanish: 'Por favor llame a una ambulancia.', japanese: '救急車を呼んでください。', japanese_pronunciation: 'クグプチャル バロジュセヨ' },
+    { id: 904, category: 'emergency', korean: '불이 났어요!', romanized: 'Buri nasseoyo!', english: 'There is a fire!', spanish: '¡Hay un incendio!', japanese: '火事です！', japanese_pronunciation: 'ブリ ナッソヨ！' },
+    { id: 905, category: 'emergency', korean: '병원이 어디예요?', romanized: 'Byeong-woni eodiyeyo?', english: 'Where is the hospital?', spanish: '¿Dónde está el hospital?', japanese: '病院はどこですか？', japanese_pronunciation: 'ビョンウォニ オディエヨ？' },
+    { id: 906, category: 'emergency', korean: '여권을 잃어버렸어요.', romanized: 'Yeogwoneul ireobeoryeosseoyo.', english: 'I lost my passport.', spanish: 'Perdí mi pasaporte.', japanese: 'パスポートをなくしました。', japanese_pronunciation: 'ヨグォヌル イロボリョッソヨ' },
+    { id: 907, category: 'emergency', korean: '지갑을 잃어버렸어요.', romanized: 'Jigabeul ireobeoryeosseoyo.', english: 'I lost my wallet.', spanish: 'Perdí mi billetera.', japanese: '財布をなくしました。', japanese_pronunciation: 'チガブル イロボリョッソヨ' },
+    { id: 908, category: 'emergency', korean: '길을 잃었어요.', romanized: 'Gireul ireosseoyo.', english: 'I am lost.', spanish: 'Estoy perdido.', japanese: '道に迷いました。', japanese_pronunciation: 'キルル イロッソヨ' },
+    { id: 909, category: 'emergency', korean: '비상구가 어디예요?', romanized: 'Bisangguga eodiyeyo?', english: 'Where is the emergency exit?', spanish: '¿Dónde está la salida de emergencia?', japanese: '非常口はどこですか？', japanese_pronunciation: 'ビサングガ オディエヨ？' },
+    { id: 910, category: 'emergency', korean: '대사관이 어디예요?', romanized: 'Daesagwani eodiyeyo?', english: 'Where is the embassy?', spanish: '¿Dónde está la embajada?', japanese: '大使館はどこですか？', japanese_pronunciation: 'デサグァニ オディエヨ？' },
+
+    // --- Hospital (병원) ---
+    { id: 1001, category: 'hospital', korean: '아파요.', romanized: 'Apayo.', english: 'I am sick / It hurts.', spanish: 'Estoy enfermo / Me duele.', japanese: '具合が悪いです／痛いです。', japanese_pronunciation: 'アパヨ' },
+    { id: 1002, category: 'hospital', korean: '머리가 아파요.', romanized: 'Meoriga apayo.', english: 'I have a headache.', spanish: 'Me duele la cabeza.', japanese: '頭が痛いです。', japanese_pronunciation: 'モリガ アパヨ' },
+    { id: 1003, category: 'hospital', korean: '배가 아파요.', romanized: 'Baega apayo.', english: 'I have a stomachache.', spanish: 'Me duele el estómago.', japanese: 'お腹が痛いです。', japanese_pronunciation: 'ペガ アパヨ' },
+    { id: 1004, category: 'hospital', korean: '열이 나요.', romanized: 'Yeori nayo.', english: 'I have a fever.', spanish: 'Tengo fiebre.', japanese: '熱があります。', japanese_pronunciation: 'ヨリ ナヨ' },
+    { id: 1005, category: 'hospital', korean: '감기에 걸렸어요.', romanized: 'Gamgie geollyeosseoyo.', english: 'I have a cold.', spanish: 'Tengo un resfriado.', japanese: '風邪をひきました。', japanese_pronunciation: 'カムギエ ゴルリョッソヨ' },
+    { id: 1006, category: 'hospital', korean: '약국이 어디예요?', romanized: 'Yakgugi eodiyeyo?', english: 'Where is the pharmacy?', spanish: '¿Dónde está la farmacia?', japanese: '薬局はどこですか？', japanese_pronunciation: 'ヤッグギ オディエヨ？' },
+    { id: 1007, category: 'hospital', korean: '소화제 주세요.', romanized: 'Sohwaje juseyo.', english: 'Digestive medicine please.', spanish: 'Digestivo, por favor.', japanese: '消化剤をください。', japanese_pronunciation: 'ソファジェ ジュセヨ' },
+    { id: 1008, category: 'hospital', korean: '진통제 주세요.', romanized: 'Jintongje juseyo.', english: 'Painkiller please.', spanish: 'Analgésico, por favor.', japanese: '鎮痛剤をください。', japanese_pronunciation: 'チントンジェ ジュセヨ' },
+    { id: 1009, category: 'hospital', korean: '의사 선생님을 만나고 싶어요.', romanized: 'Uisa seonsaengnimeul mannago sipeoyo.', english: 'I want to see a doctor.', spanish: 'Quiero ver a un médico.', japanese: '医者に診てもらいたいです。', japanese_pronunciation: 'ウィサ ソンセンニムル マンナゴ シポヨ' },
+    { id: 1010, category: 'hospital', korean: '언제부터 아팠어요?', romanized: 'Eonjebuteo apasseoyo?', english: 'When did it start hurting?', spanish: '¿Desde cuándo le duele?', japanese: 'いつから痛いですか？', japanese_pronunciation: 'オンジェブト アパッソヨ？' }
 ];

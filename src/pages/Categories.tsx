@@ -15,6 +15,8 @@ export default function Categories() {
         { id: 'hotel', color: 'bg-indigo-500' },
         { id: 'tourist', color: 'bg-purple-500' },
         { id: 'daily', color: 'bg-pink-500' },
+        { id: 'emergency', color: 'bg-red-600' },
+        { id: 'hospital', color: 'bg-emerald-500' },
     ];
 
     // Merge base config with translations

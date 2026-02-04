@@ -22,7 +22,9 @@ export const translations = {
                 restaurant: { name: "Restaurant (식당)", description: "Ordering, Menu, Payment" },
                 hotel: { name: "Hotel (호텔)", description: "Check-in, Service, Room" },
                 tourist: { name: "Tourist Info (관광안내소)", description: "Map, Guide, Tickets" },
-                daily: { name: "Daily Life (일상)", description: "Greetings, Basic Questions" }
+                daily: { name: "Daily Life (일상)", description: "Greetings, Basic Questions" },
+                emergency: { name: "Emergency (긴급상황)", description: "Police, Fire, Ambulance" },
+                hospital: { name: "Hospital (병원)", description: "Doctor, Pharmacy, Symptoms" }
             }
         },
         learn: {
@@ -152,7 +154,9 @@ export const translations = {
                 restaurant: { name: "Restaurante (식당)", description: "Pedir, Menú, Pago" },
                 hotel: { name: "Hotel (호텔)", description: "Check-in, Servicio, Habitación" },
                 tourist: { name: "Info Turística (관광안내소)", description: "Mapa, Guía, Entradas" },
-                daily: { name: "Vida Diaria (일상)", description: "Saludos, Preguntas Básicas" }
+                daily: { name: "Vida Diaria (일상)", description: "Saludos, Preguntas Básicas" },
+                emergency: { name: "Emergencia (긴급상황)", description: "Policía, Bomberos, Ambulancia" },
+                hospital: { name: "Hospital (병원)", description: "Médico, Farmacia, Síntomas" }
             }
         },
         learn: {
@@ -282,7 +286,9 @@ export const translations = {
                 restaurant: { name: "レストラン (식당)", description: "注文、メニュー、支払い" },
                 hotel: { name: "ホテル (호텔)", description: "チェックイン、サービス、部屋" },
                 tourist: { name: "観光案内 (관광안내소)", description: "地図、ガイド、チケット" },
-                daily: { name: "日常生活 (일상)", description: "挨拶、基本的な質問" }
+                daily: { name: "日常生活 (일상)", description: "挨拶、基本的な質問" },
+                emergency: { name: "緊急事態 (긴급상황)", description: "警察、火事、救急車" },
+                hospital: { name: "病院 (병원)", description: "医者、薬局、症状" }
             }
         },
         learn: {
