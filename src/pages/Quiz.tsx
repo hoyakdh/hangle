@@ -4,7 +4,7 @@ import { vocabData } from '../data/vocab';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 
-import { ArrowLeft, CheckCircle, XCircle, Trophy, RefreshCcw } from 'lucide-react';
+import { ArrowLeft, CheckCircle, XCircle, Trophy, RefreshCcw, Volume2 } from 'lucide-react';
 
 export default function Quiz() {
     const { categoryId } = useParams<{ categoryId: string }>();
@@ -19,6 +19,25 @@ export default function Quiz() {
     const [showResult, setShowResult] = useState(false);
     const [selectedOption, setSelectedOption] = useState<number | null>(null);
     const [isAnswered, setIsAnswered] = useState(false);
+    const [playbackRate, setPlaybackRate] = useState(0.9);
+
+    // Text-to-Speech
+    const playAudio = (text: string) => {
+        if (!('speechSynthesis' in window)) return;
+
+        // Cancel any ongoing speech
+        window.speechSynthesis.cancel();
+
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ko-KR';
+        utterance.rate = playbackRate;
+        window.speechSynthesis.speak(utterance);
+    };
+
+    const toggleSpeed = (e: React.MouseEvent) => {
+        e.stopPropagation();
+        setPlaybackRate(prev => prev === 0.9 ? 0.4 : 0.9);
+    };
 
     // Generate question and options
     const currentQuestion = items[currentIndex];
@@ -112,7 +131,25 @@ export default function Quiz() {
             {/* Question Card */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 text-center border-2 border-indigo-50 dark:border-gray-700">
                 <p className="text-sm text-gray-400 font-medium uppercase tracking-wider mb-4">{t.prompt}</p>
-                <h2 className="text-4xl font-black text-gray-800 dark:text-white mb-2">{currentQuestion.korean}</h2>
+                <h2 className="text-4xl font-black text-gray-800 dark:text-white mb-6">{currentQuestion.korean}</h2>
+
+                <div className="flex items-center justify-center gap-3">
+                    <button
+                        onClick={() => playAudio(currentQuestion.korean)}
+                        className="p-3 bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors"
+                        title="Listen"
+                    >
+                        <Volume2 className="w-6 h-6" />
+                    </button>
+
+                    <button
+                        onClick={toggleSpeed}
+                        className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                        title="Toggle Speed"
+                    >
+                        {playbackRate === 0.9 ? '1x' : '0.4x'}
+                    </button>
+                </div>
             </div>
 
             {/* Options */}
