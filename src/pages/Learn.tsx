@@ -1,14 +1,14 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { vocabData } from '../data/vocab';
-import { ChevronLeft, ChevronRight, Volume2, RotateCw, ArrowLeft, Check } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Volume2, RotateCw, ArrowLeft, Check, Star } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import LevelUpModal from '../components/LevelUpModal';
 import { translations } from '../data/translations';
 
 export default function Learn() {
     const { categoryId } = useParams<{ categoryId: string }>();
-    const { addXp, showLevelUp, level, closeLevelUp, targetLanguage } = useUser();
+    const { addXp, showLevelUp, level, closeLevelUp, targetLanguage, bookmarks, toggleBookmark } = useUser();
 
     const t = translations[targetLanguage].learn;
 
@@ -137,6 +137,15 @@ export default function Learn() {
                                 className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                             >
                                 {playbackRate === 0.9 ? '1x' : '0.4x'}
+                            </button>
+                        </div>
+
+                        <div className="absolute top-4 right-4">
+                            <button
+                                onClick={(e) => { e.stopPropagation(); toggleBookmark(currentItem.id); }}
+                                className={`p-2 rounded-full transition-colors ${bookmarks.includes(currentItem.id) ? 'text-yellow-400 bg-yellow-400/10' : 'text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10'}`}
+                            >
+                                <Star className={`w-6 h-6 ${bookmarks.includes(currentItem.id) ? 'fill-current' : ''}`} />
                             </button>
                         </div>
 

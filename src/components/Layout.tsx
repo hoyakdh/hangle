@@ -1,9 +1,11 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw } from 'lucide-react';
+import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw, Star, Search } from 'lucide-react';
 import { useUser } from '../context/UserContext';
+import { translations } from '../data/translations';
 
 export default function Layout() {
     const { name, level, xp, logout, theme, toggleTheme, targetLanguage, setTargetLanguage } = useUser();
+    const t = translations[targetLanguage];
     const location = useLocation();
 
     const handleLogout = () => {
@@ -50,6 +52,9 @@ export default function Layout() {
 
                     {/* Right: Nav & Settings */}
                     <nav className="flex items-center gap-3 md:gap-4 justify-self-end col-start-3">
+                        <Link to="/search" className="p-2 text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition" title={t.home.search}>
+                            <Search className="w-5 h-5" />
+                        </Link>
                         <div className="relative flex items-center bg-gray-100 dark:bg-gray-700 rounded-full px-2 py-1.5 md:px-3 transition-colors group hover:bg-gray-200 dark:hover:bg-gray-600">
                             <Globe className="w-4 h-4 text-gray-500 dark:text-gray-400 md:mr-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition" />
                             <select
@@ -66,6 +71,9 @@ export default function Layout() {
 
                         <Link to="/categories" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
                             Learn
+                        </Link>
+                        <Link to="/bookmarks" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
+                            {t.home.bookmarks}
                         </Link>
                         <Link to="/quiz" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
                             Quiz
@@ -110,6 +118,11 @@ export default function Layout() {
                     <span className="text-xs font-medium">Learn</span>
                 </Link>
 
+                <Link to="/bookmarks" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/bookmarks') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
+                    <Star className={`w-6 h-6 mb-1 ${isActive('/bookmarks') ? 'fill-current' : ''}`} />
+                    <span className="text-xs font-medium">{t.home.bookmarks}</span>
+                </Link>
+
                 {name && (
                     <div className="flex items-center gap-3">
                         <div className="flex flex-col items-center">
@@ -130,6 +143,7 @@ export default function Layout() {
                 )}
 
                 <Link to="/quiz" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/quiz') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
+                    <Globe className={`w-6 h-6 mb-1 ${isActive('/quiz') ? 'fill-current opacity-20' : ''}`} />
                     <span className="text-xs font-medium">Quiz</span>
                 </Link>
 

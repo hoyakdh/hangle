@@ -3,6 +3,8 @@ export const translations = {
         home: {
             welcome: "Welcome to Hangle!",
             askName: "What should we call you?",
+            welcomeDescription: "Hangle is a free, simple app to help you learn essential Korean phrases for your trip.",
+            dataWarning: "Note: Your progress is saved locally on this device. Clearing browser data will reset your progress.",
             namePlaceholder: "Enter your name",
             start: "Start",
             greeting: "Hello, {name}! Ready to learn?",
@@ -10,7 +12,23 @@ export const translations = {
             subtitle: "For Your Trip",
             description: "Learn essential phrases for travel and daily life. Simple cards, native pronunciation, and fun quizzes.",
             startLearning: "Start Learning",
-            takeQuiz: "Take a Quiz"
+            takeQuiz: "Take a Quiz",
+            bookmarks: "Bookmarks",
+            search: "Search",
+            dailyPhrase: {
+                title: "Daily Phrase",
+                learnMore: "Learn More"
+            }
+        },
+        search: {
+            placeholder: "Search vocabulary or grammar...",
+            noResults: "No results found for",
+            tabs: {
+                all: "All",
+                vocab: "Vocabulary",
+                grammar: "Grammar"
+            },
+            results: "Results"
         },
         guide: {
             title: "Hangle Guide",
@@ -167,6 +185,8 @@ export const translations = {
         home: {
             welcome: "¡Bienvenido a Hangle!",
             askName: "¿Cómo te llamamos?",
+            welcomeDescription: "Hangle es una aplicación gratuita y sencilla para aprender frases esenciales en coreano para tu viaje.",
+            dataWarning: "Nota: Tu progreso se guarda localmente en este dispositivo. Borrar los datos del navegador reiniciará tu progreso.",
             namePlaceholder: "Ingresa tu nombre",
             start: "Empezar",
             greeting: "¡Hola, {name}! ¿Listo para aprender?",
@@ -174,7 +194,23 @@ export const translations = {
             subtitle: "Para Tu Viaje",
             description: "Aprende frases esenciales para viajes y la vida diaria. Tarjetas simples, pronunciación nativa y cuestionarios divertidos.",
             startLearning: "Empezar a Aprender",
-            takeQuiz: "Hacer un Quiz"
+            takeQuiz: "Hacer un Quiz",
+            bookmarks: "Favoritos",
+            search: "Buscar",
+            dailyPhrase: {
+                title: "Frase del Día",
+                learnMore: "Aprender Más"
+            }
+        },
+        search: {
+            placeholder: "Buscar vocabulario o gramática...",
+            noResults: "No se encontraron resultados para",
+            tabs: {
+                all: "Todo",
+                vocab: "Vocabulario",
+                grammar: "Gramática"
+            },
+            results: "Resultados"
         },
         guide: {
             title: "Guía Hangle",
@@ -216,7 +252,7 @@ export const translations = {
                 bus: { name: "Autobús (버스)", description: "Parada, Ruta, Tarifas" },
                 subway: { name: "Metro (지하철)", description: "Estación, Transbordo, Salida" },
                 restaurant: { name: "Restaurante (식당)", description: "Pedir, Menú, Pago" },
-                hotel: { name: "Hotel (호텔)", description: "Check-in, Servicio, Habitación" },
+                hotel: { name: "Hotel (ホテル)", description: "Check-in, Servicio, Habitación" },
                 tourist: { name: "Info Turística (관광안내소)", description: "Mapa, Guía, Entradas" },
                 daily: { name: "Vida Diaria (일상)", description: "Saludos, Preguntas Básicas" },
                 emergency: { name: "Emergencia (긴급상황)", description: "Policía, Bomberos, Ambulancia" },
@@ -331,6 +367,8 @@ export const translations = {
         home: {
             welcome: "Hangleへようこそ！",
             askName: "お名前を教えてください",
+            welcomeDescription: "Hangleは、旅行に必要な韓国語フレーズを学ぶための無料のシンプルアプリです。",
+            dataWarning: "注意: 学習記録はこの端末に保存されます。ブラウザのデータを消去するとリセットされます。",
             namePlaceholder: "名前を入力",
             start: "開始",
             greeting: "こんにちは、{name}さん！学習の準備はいいですか？",
@@ -338,7 +376,23 @@ export const translations = {
             subtitle: "旅行のために",
             description: "旅行や日常生活に必要なフレーズを学びましょう。シンプルなカード、ネイティブの発音、楽しいクイズ。",
             startLearning: "学習を開始",
-            takeQuiz: "クイズに挑戦"
+            takeQuiz: "クイズに挑戦",
+            bookmarks: "ブックマーク",
+            search: "検索",
+            dailyPhrase: {
+                title: "今日の表現",
+                learnMore: "もっと見る"
+            }
+        },
+        search: {
+            placeholder: "単語や文法を検索...",
+            noResults: "見つかりませんでした:",
+            tabs: {
+                all: "すべて",
+                vocab: "単語",
+                grammar: "文法"
+            },
+            results: "検索結果"
         },
         guide: {
             title: "ハングルガイド",

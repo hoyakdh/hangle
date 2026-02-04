@@ -1,14 +1,36 @@
-import { useRef } from 'react';
+import { useRef, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Globe } from 'lucide-react';
+import { ArrowRight, Volume2, Calendar } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
+import { vocabData } from '../data/vocab';
 
 export default function Home() {
     const { name, setName, targetLanguage } = useUser();
     const inputRef = useRef<HTMLInputElement>(null);
 
     const t = translations[targetLanguage];
+
+    // Calculate Daily Phrase
+    const dailyPhrase = useMemo(() => {
+        const today = new Date();
+        const start = new Date(today.getFullYear(), 0, 0);
+        const diff = (today.getTime() - start.getTime()) + ((start.getTimezoneOffset() - today.getTimezoneOffset()) * 60 * 1000);
+        const oneDay = 1000 * 60 * 60 * 24;
+        const dayOfYear = Math.floor(diff / oneDay);
+
+        // Use dayOfYear to select a phrase cyclically
+        return vocabData[dayOfYear % vocabData.length];
+    }, []);
+
+    const playAudio = (text: string) => {
+        if (!('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ko-KR';
+        utterance.rate = 0.9;
+        window.speechSynthesis.speak(utterance);
+    };
 
     const handleSaveName = () => {
         if (inputRef.current && inputRef.current.value.trim()) {
@@ -19,10 +41,13 @@ export default function Home() {
     if (!name) {
         return (
             <div className="flex flex-col items-center justify-center py-20 animate-fade-in">
-                <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-8">{t.home.welcome}</h1>
-                <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">{t.home.askName}</p>
+                <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">{t.home.welcome}</h1>
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg text-center px-4">
+                    {t.home.welcomeDescription}
+                </p>
+                <p className="text-xl text-gray-800 dark:text-gray-200 font-bold mb-6">{t.home.askName}</p>
 
-                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md">
+                <div className="flex flex-col sm:flex-row gap-4 w-full max-w-md mb-8 px-4">
                     <input
                         ref={inputRef}
                         type="text"
@@ -37,6 +62,10 @@ export default function Home() {
                         {t.home.start}
                     </button>
                 </div>
+
+                <p className="text-sm text-gray-400 dark:text-gray-500 max-w-md text-center px-4 leading-relaxed">
+                    {t.home.dataWarning}
+                </p>
             </div>
         );
     }
@@ -62,12 +91,43 @@ export default function Home() {
                     >
                         {t.home.startLearning} <ArrowRight className="w-5 h-5" />
                     </Link>
-                    <Link
-                        to="/quiz"
-                        className="inline-flex items-center gap-2 px-8 py-4 bg-white dark:bg-gray-800 text-indigo-600 dark:text-indigo-400 border-2 border-indigo-100 dark:border-gray-700 rounded-full font-semibold text-lg shadow-md hover:border-indigo-600 dark:hover:border-indigo-400 hover:shadow-lg hover:scale-105 transition-all transform duration-200"
-                    >
-                        {t.home.takeQuiz} <Globe className="w-5 h-5" />
-                    </Link>
+
+                </div>
+
+                {/* Daily Phrase Widget */}
+                <div className="mt-8 bg-white dark:bg-gray-800 rounded-3xl p-6 shadow-xl border border-indigo-50 dark:border-gray-700 transform hover:scale-[1.02] transition-transform duration-300 text-left">
+                    <div className="flex items-center gap-2 mb-4 text-gray-500 dark:text-gray-400 font-medium text-sm uppercase tracking-wider justify-center">
+                        <Calendar className="w-4 h-4" />
+                        {t.home.dailyPhrase.title}
+                    </div>
+
+                    <div className="text-3xl font-bold text-gray-900 dark:text-white mb-2 text-center">
+                        {dailyPhrase.korean}
+                    </div>
+                    <div className="text-lg text-gray-500 dark:text-gray-400 mb-4 text-center">
+                        {dailyPhrase.romanized}
+                    </div>
+
+                    <div className="text-xl font-medium text-indigo-600 dark:text-indigo-400 mb-6 text-center">
+                        {targetLanguage === 'en' && dailyPhrase.english}
+                        {targetLanguage === 'es' && dailyPhrase.spanish}
+                        {targetLanguage === 'ja' && dailyPhrase.japanese}
+                    </div>
+
+                    <div className="flex gap-3 justify-center">
+                        <button
+                            onClick={() => playAudio(dailyPhrase.korean)}
+                            className="p-3 bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors"
+                        >
+                            <Volume2 className="w-5 h-5" />
+                        </button>
+                        <Link
+                            to={`/learn/${dailyPhrase.category}`}
+                            className="px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-full font-bold hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors text-sm flex items-center"
+                        >
+                            {t.home.dailyPhrase.learnMore}
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

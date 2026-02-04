@@ -1,0 +1,81 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useUser } from '../context/UserContext';
+import { vocabData } from '../data/vocab';
+import { translations } from '../data/translations';
+import { ArrowLeft, Star, Volume2 } from 'lucide-react';
+
+export default function Bookmarks() {
+    const { bookmarks, toggleBookmark, targetLanguage } = useUser();
+    const t = translations[targetLanguage];
+
+    // Filter bookmarks
+    const bookmarkedItems = vocabData.filter(item => bookmarks.includes(item.id));
+
+    // Audio Playback
+    const playAudio = (text: string) => {
+        if (!('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ko-KR';
+        utterance.rate = 0.9;
+        window.speechSynthesis.speak(utterance);
+    };
+
+    return (
+        <div className="max-w-3xl mx-auto py-8 px-4 animate-fade-in">
+            <div className="flex items-center justify-between mb-8">
+                <Link to="/" className="inline-flex items-center text-gray-500 hover:text-indigo-600 transition-colors">
+                    <ArrowLeft className="w-5 h-5 mr-2" /> {t.privacy.backToHome}
+                </Link>
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                    <Star className="w-6 h-6 text-yellow-500 fill-current" />
+                    {t.home.bookmarks}
+                </h1>
+            </div>
+
+            {bookmarkedItems.length === 0 ? (
+                <div className="text-center py-20 bg-gray-50 dark:bg-gray-800 rounded-3xl">
+                    <Star className="w-16 h-16 text-gray-300 mx-auto mb-4" />
+                    <p className="text-gray-500 dark:text-gray-400 text-lg">No bookmarks yet.</p>
+                    <Link to="/categories" className="mt-4 inline-block px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
+                        {t.home.startLearning}
+                    </Link>
+                </div>
+            ) : (
+                <div className="grid gap-4 md:grid-cols-2">
+                    {bookmarkedItems.map((item) => (
+                        <div key={item.id} className="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col relative group hover:shadow-md transition">
+                            <div className="flex justify-between items-start mb-4">
+                                <div className="space-y-1">
+                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">{item.korean}</h3>
+                                    <p className="text-sm text-gray-500 dark:text-gray-400">{item.romanized}</p>
+                                </div>
+                                <button
+                                    onClick={() => toggleBookmark(item.id)}
+                                    className="text-yellow-400 hover:text-yellow-500 transition-colors p-1"
+                                >
+                                    <Star className="w-6 h-6 fill-current" />
+                                </button>
+                            </div>
+
+                            <div className="mt-auto">
+                                <p className="text-lg font-medium text-indigo-600 dark:text-indigo-400 mb-4">
+                                    {targetLanguage === 'en' && item.english}
+                                    {targetLanguage === 'es' && item.spanish}
+                                    {targetLanguage === 'ja' && item.japanese}
+                                </p>
+                                <button
+                                    onClick={() => playAudio(item.korean)}
+                                    className="flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 transition-colors"
+                                >
+                                    <Volume2 className="w-4 h-4" /> Listen
+                                </button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+}

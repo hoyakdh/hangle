@@ -13,6 +13,8 @@ interface UserContextType {
     toggleTheme: () => void;
     targetLanguage: 'en' | 'es' | 'ja';
     setTargetLanguage: (lang: 'en' | 'es' | 'ja') => void;
+    bookmarks: number[];
+    toggleBookmark: (id: number) => void;
 }
 
 const UserContext = createContext<UserContextType | undefined>(undefined);
@@ -36,6 +38,12 @@ export function UserProvider({ children }: { children: ReactNode }) {
         return (savedLang as 'en' | 'es' | 'ja') || 'en';
     });
 
+    // Bookmarks State
+    const [bookmarks, setBookmarks] = useState<number[]>(() => {
+        const saved = localStorage.getItem('hangle_bookmarks');
+        return saved ? JSON.parse(saved) : [];
+    });
+
     useEffect(() => {
         if (name) localStorage.setItem('hangle_username', name);
     }, [name]);
@@ -44,6 +52,10 @@ export function UserProvider({ children }: { children: ReactNode }) {
         localStorage.setItem('hangle_xp', xp.toString());
         localStorage.setItem('hangle_level', level.toString());
     }, [xp, level]);
+
+    useEffect(() => {
+        localStorage.setItem('hangle_bookmarks', JSON.stringify(bookmarks));
+    }, [bookmarks]);
 
     // Apply Theme
     useEffect(() => {
@@ -80,6 +92,16 @@ export function UserProvider({ children }: { children: ReactNode }) {
         }
     };
 
+    const toggleBookmark = (id: number) => {
+        setBookmarks(prev => {
+            if (prev.includes(id)) {
+                return prev.filter(item => item !== id);
+            } else {
+                return [...prev, id];
+            }
+        });
+    };
+
     const closeLevelUp = () => {
         setShowLevelUp(false);
     };
@@ -89,10 +111,12 @@ export function UserProvider({ children }: { children: ReactNode }) {
         localStorage.removeItem('hangle_xp');
         localStorage.removeItem('hangle_level');
         localStorage.removeItem('hangle_completed');
+        localStorage.removeItem('hangle_bookmarks');
 
         setNameState(null);
         setXp(0);
         setLevel(1);
+        setBookmarks([]);
 
         // Force reload to reset all local states in components
         window.location.href = '/';
@@ -107,7 +131,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
     };
 
     return (
-        <UserContext.Provider value={{ name, setName, xp, level, addXp, showLevelUp, closeLevelUp, logout, theme, toggleTheme, targetLanguage, setTargetLanguage }}>
+        <UserContext.Provider value={{ name, setName, xp, level, addXp, showLevelUp, closeLevelUp, logout, theme, toggleTheme, targetLanguage, setTargetLanguage, bookmarks, toggleBookmark }}>
             {children}
         </UserContext.Provider>
     );

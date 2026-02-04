@@ -13,6 +13,8 @@ import Guide from './pages/Guide';
 import Pronunciation from './pages/guide/Pronunciation';
 import Grammar from './pages/guide/Grammar';
 import Mistakes from './pages/guide/Mistakes';
+import Bookmarks from './pages/Bookmarks';
+import Search from './pages/Search';
 import './App.css';
 
 function App() {
@@ -23,6 +25,8 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="categories" element={<Categories />} />
+            <Route path="bookmarks" element={<Bookmarks />} />
+            <Route path="search" element={<Search />} />
             <Route path="learn/:categoryId" element={<Learn />} />
             <Route path="quiz" element={<QuizCategories />} />
             <Route path="quiz/:categoryId" element={<Quiz />} />
