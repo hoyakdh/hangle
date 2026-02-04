@@ -18,6 +18,13 @@ export const translations = {
             dailyPhrase: {
                 title: "Daily Phrase",
                 learnMore: "Learn More"
+            },
+            speaking: {
+                start: "Speak",
+                listening: "Listening...",
+                success: "Perfect!",
+                tryAgain: "Try Again",
+                permission: "Please allow microphone access to practice speaking."
             }
         },
         search: {
@@ -200,6 +207,13 @@ export const translations = {
             dailyPhrase: {
                 title: "Frase del Día",
                 learnMore: "Aprender Más"
+            },
+            speaking: {
+                start: "Hablar",
+                listening: "Escuchando...",
+                success: "¡Perfecto!",
+                tryAgain: "Inténtalo de nuevo",
+                permission: "Por favor permite el acceso al micrófono para practicar."
             }
         },
         search: {
@@ -382,6 +396,13 @@ export const translations = {
             dailyPhrase: {
                 title: "今日の表現",
                 learnMore: "もっと見る"
+            },
+            speaking: {
+                start: "話す",
+                listening: "聞いています...",
+                success: "完璧です！",
+                tryAgain: "もう一度",
+                permission: "発音練習のためにマイクの使用を許可してください。"
             }
         },
         search: {

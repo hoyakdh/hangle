@@ -1,7 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { vocabData } from '../data/vocab';
-import { ChevronLeft, ChevronRight, Volume2, RotateCw, ArrowLeft, Check, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, Volume2, RotateCw, ArrowLeft, Check, Star, Mic, MicOff } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import LevelUpModal from '../components/LevelUpModal';
 import { translations } from '../data/translations';
@@ -10,13 +10,105 @@ export default function Learn() {
     const { categoryId } = useParams<{ categoryId: string }>();
     const { addXp, showLevelUp, level, closeLevelUp, targetLanguage, bookmarks, toggleBookmark } = useUser();
 
+    // @ts-ignore
     const t = translations[targetLanguage].learn;
+    // @ts-ignore
+    const tCommon = translations[targetLanguage]?.speaking || {
+        start: "Speak",
+        listening: "Listening...",
+        success: "Perfect!",
+        tryAgain: "Try Again",
+        permission: "Please allow microphone access."
+    };
+
+    const [debugInfo, setDebugInfo] = useState<string>(""); // Temporary debug state
 
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isFlipped, setIsFlipped] = useState(false);
 
     const items = vocabData.filter(item => item.category === categoryId);
     const currentItem = items[currentIndex];
+
+    // Speaking Practice State
+    const [speakingStatus, setSpeakingStatus] = useState<'idle' | 'listening' | 'success' | 'fail'>('idle');
+    const recognitionRef = useRef<any>(null);
+
+    // Reset speaking status when card changes
+    useEffect(() => {
+        setSpeakingStatus('idle');
+        if (recognitionRef.current) {
+            recognitionRef.current.abort();
+        }
+    }, [currentIndex, categoryId]);
+
+    const startListening = (e: React.MouseEvent) => {
+        e.stopPropagation();
+
+        if (!('webkitSpeechRecognition' in window) && !('SpeechRecognition' in window)) {
+            alert("Speech recognition is not supported in this browser.");
+            return;
+        }
+
+        if (speakingStatus === 'listening') {
+            recognitionRef.current?.stop();
+            setSpeakingStatus('idle');
+            return;
+        }
+
+        const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
+        const recognition = new SpeechRecognition();
+        recognitionRef.current = recognition;
+
+        recognition.lang = 'ko-KR';
+        recognition.interimResults = false;
+        recognition.maxAlternatives = 1;
+
+        recognition.onstart = () => {
+            setSpeakingStatus('listening');
+            setDebugInfo("Status: Listening...");
+        };
+
+        recognition.onresult = (event: any) => {
+            const transcript = event.results[0][0].transcript;
+            const cleanTranscript = transcript.replace(/\s+/g, '').replace(/[.,!?]/g, '');
+            const cleanTarget = currentItem.korean.replace(/\s+/g, '').replace(/[.,!?]/g, '');
+
+            setDebugInfo(`Heard: "${transcript}"`);
+
+            if (cleanTranscript === cleanTarget) {
+                setSpeakingStatus('success');
+                addXp(5);
+            } else {
+                setSpeakingStatus('fail');
+                setTimeout(() => setSpeakingStatus(prev => prev === 'fail' ? 'idle' : prev), 2000);
+            }
+        };
+
+        recognition.onerror = (event: any) => {
+            console.error('Speech recognition error', event.error);
+            setDebugInfo(`Error: ${event.error}`);
+            if (event.error === 'not-allowed' || event.error === 'permission-denied') {
+                alert(tCommon?.permission || "Please allow microphone access.");
+            }
+            setSpeakingStatus('idle');
+        };
+
+        recognition.onend = () => {
+            setSpeakingStatus(prev => {
+                if (prev === 'listening') return 'idle';
+                return prev;
+            });
+        };
+
+        try {
+            recognition.start();
+        } catch (e) {
+            console.error(e);
+            setSpeakingStatus('idle');
+            alert("Microphone access failed. Please check permissions.");
+        }
+    };
+
 
     // Local Storage for completed items
     const [completedItems, setCompletedItems] = useState<number[]>(() => {
@@ -132,6 +224,34 @@ export default function Learn() {
                                 <Volume2 className="w-6 h-6" />
                             </button>
 
+                            {/* Speaking Practice Button */}
+                            <button
+                                onClick={startListening}
+                                className={`p-3 rounded-full transition-colors relative ${speakingStatus === 'listening' ? 'bg-red-100 text-red-600 animate-pulse' :
+                                    speakingStatus === 'success' ? 'bg-green-100 text-green-600' :
+                                        speakingStatus === 'fail' ? 'bg-orange-100 text-orange-600' :
+                                            'bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-gray-600'
+                                    }`}
+                            >
+                                {speakingStatus === 'listening' ? <MicOff className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
+
+                                {speakingStatus === 'listening' && (
+                                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                                        {tCommon.listening}
+                                    </span>
+                                )}
+                                {speakingStatus === 'success' && (
+                                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-green-600 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                                        {tCommon.success}
+                                    </span>
+                                )}
+                                {speakingStatus === 'fail' && (
+                                    <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
+                                        {tCommon.tryAgain}
+                                    </span>
+                                )}
+                            </button>
+
                             <button
                                 onClick={toggleSpeed}
                                 className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
@@ -223,6 +343,10 @@ export default function Learn() {
                     </Link>
                 </div>
             )}
+            {/* Debug Info */}
+            <div className="text-xs text-gray-400 text-center mt-4">
+                {debugInfo}
+            </div>
         </div>
     );
 }
