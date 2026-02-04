@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { BookOpen, Moon, Sun, Globe, ChevronDown, Puzzle, RotateCcw } from 'lucide-react';
+import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 
 export default function Layout() {
@@ -70,6 +70,9 @@ export default function Layout() {
                         <Link to="/quiz" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
                             Quiz
                         </Link>
+                        <Link to="/guide" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
+                            Guide
+                        </Link>
                         <button
                             onClick={toggleTheme}
                             className="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition"
@@ -127,8 +130,12 @@ export default function Layout() {
                 )}
 
                 <Link to="/quiz" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/quiz') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
-                    <Puzzle className={`w-6 h-6 mb-1 ${isActive('/quiz') ? 'fill-current opacity-20' : ''}`} />
                     <span className="text-xs font-medium">Quiz</span>
+                </Link>
+
+                <Link to="/guide" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/guide') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
+                    <BookOpen className={`w-6 h-6 mb-1 ${isActive('/guide') ? 'fill-current opacity-20' : ''}`} />
+                    <span className="text-xs font-medium">Guide</span>
                 </Link>
             </div>
         </div>

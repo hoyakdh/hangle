@@ -9,6 +9,10 @@ import QuizCategories from './pages/QuizCategories';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Terms from './pages/Terms';
 import About from './pages/About';
+import Guide from './pages/Guide';
+import Pronunciation from './pages/guide/Pronunciation';
+import Grammar from './pages/guide/Grammar';
+import Mistakes from './pages/guide/Mistakes';
 import './App.css';
 
 function App() {
@@ -22,6 +26,10 @@ function App() {
             <Route path="learn/:categoryId" element={<Learn />} />
             <Route path="quiz" element={<QuizCategories />} />
             <Route path="quiz/:categoryId" element={<Quiz />} />
+            <Route path="guide" element={<Guide />} />
+            <Route path="guide/pronunciation" element={<Pronunciation />} />
+            <Route path="guide/grammar" element={<Grammar />} />
+            <Route path="guide/mistakes" element={<Mistakes />} />
             <Route path="privacy" element={<PrivacyPolicy />} />
             <Route path="terms" element={<Terms />} />
             <Route path="about" element={<About />} />

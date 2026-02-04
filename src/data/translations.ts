@@ -12,6 +12,38 @@ export const translations = {
             startLearning: "Start Learning",
             takeQuiz: "Take a Quiz"
         },
+        guide: {
+            title: "Hangle Guide",
+            subtitle: "Language Basics",
+            pronunciation: {
+                title: "Pronunciation Tips",
+                subtitle: "Master difficult sounds",
+                description: "Learn about final consonants, liaison, and assimilation rules to sound like a native.",
+                written: "Written",
+                pronounced: "Pronounced"
+            },
+            grammar: {
+                title: "Essential Grammar",
+                subtitle: "Top patterns",
+                description: "A comprehensive list of essential Korean grammar patterns for beginners.",
+                searchPlaceholder: "Search grammar...",
+                headers: {
+                    expression: "Expression",
+                    meaning: "Meaning",
+                    example: "Example"
+                },
+                notFound: "No grammar patterns found matching"
+            },
+            mistakes: {
+                title: "Common Mistakes",
+                subtitle: "Avoid these errors",
+                description: "Learn from the most common mistakes foreigners make and how to fix them.",
+                mistake: "Mistake",
+                correction: "Correction",
+                tip: "Tip"
+            },
+            explore: "Explore"
+        },
         categories: {
             title: "Choose a Category",
             items: {
@@ -144,6 +176,38 @@ export const translations = {
             startLearning: "Empezar a Aprender",
             takeQuiz: "Hacer un Quiz"
         },
+        guide: {
+            title: "Guía Hangle",
+            subtitle: "Conceptos Básicos",
+            pronunciation: {
+                title: "Tips de Pronunciación",
+                subtitle: "Domina sonidos difíciles",
+                description: "Aprende sobre consonantes finales, enlaces y reglas de asimilación.",
+                written: "Escrito",
+                pronounced: "Pronunciado"
+            },
+            grammar: {
+                title: "Gramática Esencial",
+                subtitle: "Patrones principales",
+                description: "Una lista completa de patrones gramaticales esenciales para principiantes.",
+                searchPlaceholder: "Buscar gramática...",
+                headers: {
+                    expression: "Expresión",
+                    meaning: "Significado",
+                    example: "Ejemplo"
+                },
+                notFound: "No se encontraron patrones para"
+            },
+            mistakes: {
+                title: "Errores Comunes",
+                subtitle: "Evita estos errores",
+                description: "Aprende de los errores más comunes y cómo corregirlos.",
+                mistake: "Error",
+                correction: "Corrección",
+                tip: "Consejo"
+            },
+            explore: "Explorar"
+        },
         categories: {
             title: "Elige una Categoría",
             items: {
@@ -275,6 +339,38 @@ export const translations = {
             description: "旅行や日常生活に必要なフレーズを学びましょう。シンプルなカード、ネイティブの発音、楽しいクイズ。",
             startLearning: "学習を開始",
             takeQuiz: "クイズに挑戦"
+        },
+        guide: {
+            title: "ハングルガイド",
+            subtitle: "言語の基礎",
+            pronunciation: {
+                title: "発音のコツ",
+                subtitle: "難しい発音を克服",
+                description: "パッチム、連音化、同化のルールを学んでネイティブのように話そう。",
+                written: "表記",
+                pronounced: "発音"
+            },
+            grammar: {
+                title: "必須文法",
+                subtitle: "重要パターン",
+                description: "初心者のための必須韓国語文法パターンリスト。",
+                searchPlaceholder: "文法を検索...",
+                headers: {
+                    expression: "表現",
+                    meaning: "意味",
+                    example: "例文"
+                },
+                notFound: "見つかりません"
+            },
+            mistakes: {
+                title: "よくある間違い",
+                subtitle: "これらのミスを回避",
+                description: "外国人がよく犯す間違いと、その修正方法を学びましょう。",
+                mistake: "間違い",
+                correction: "正解",
+                tip: "ヒント"
+            },
+            explore: "詳細を見る"
         },
         categories: {
             title: "カテゴリーを選択",
