@@ -15,6 +15,7 @@ import Grammar from './pages/guide/Grammar';
 import Mistakes from './pages/guide/Mistakes';
 import Bookmarks from './pages/Bookmarks';
 import Search from './pages/Search';
+import Conversation from './pages/Conversation';
 import './App.css';
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
             <Route path="categories" element={<Categories />} />
             <Route path="bookmarks" element={<Bookmarks />} />
             <Route path="search" element={<Search />} />
+            <Route path="conversation" element={<Conversation />} />
             <Route path="learn/:categoryId" element={<Learn />} />
             <Route path="quiz" element={<QuizCategories />} />
             <Route path="quiz/:categoryId" element={<Quiz />} />

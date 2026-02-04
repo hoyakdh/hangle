@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw, Star, Search } from 'lucide-react';
+import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw, Star, Search, MessageCircle } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 
@@ -72,6 +72,9 @@ export default function Layout() {
                         <Link to="/categories" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
                             Learn
                         </Link>
+                        <Link to="/conversation" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
+                            Talk
+                        </Link>
                         <Link to="/bookmarks" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition">
                             {t.home.bookmarks}
                         </Link>
@@ -116,6 +119,11 @@ export default function Layout() {
                 <Link to="/categories" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/categories') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <BookOpen className={`w-6 h-6 mb-1 ${isActive('/categories') ? 'fill-current opacity-20' : ''}`} />
                     <span className="text-xs font-medium">Learn</span>
+                </Link>
+
+                <Link to="/conversation" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/conversation') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
+                    <MessageCircle className={`w-6 h-6 mb-1 ${isActive('/conversation') ? 'fill-current opacity-20' : ''}`} />
+                    <span className="text-xs font-medium">Talk</span>
                 </Link>
 
                 <Link to="/bookmarks" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/bookmarks') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
