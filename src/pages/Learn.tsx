@@ -4,6 +4,8 @@ import { vocabData } from '../data/vocab';
 import { ChevronLeft, ChevronRight, Volume2, RotateCw, ArrowLeft, Check, Star, Mic, MicOff } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import LevelUpModal from '../components/LevelUpModal';
+import Joyride, { type CallBackProps, type Step } from 'react-joyride';
+
 import { translations } from '../data/translations';
 
 export default function Learn() {
@@ -32,6 +34,24 @@ export default function Learn() {
     // Speaking Practice State
     const [speakingStatus, setSpeakingStatus] = useState<'idle' | 'listening' | 'success' | 'fail'>('idle');
     const recognitionRef = useRef<any>(null);
+
+    // Tour State
+    const [runTour, setRunTour] = useState(false);
+
+    useEffect(() => {
+        const hasSeenTutorial = localStorage.getItem('hasSeenLearnTutorial');
+        if (!hasSeenTutorial) {
+            setRunTour(true);
+        }
+    }, []);
+
+    const handleJoyrideCallback = (data: CallBackProps) => {
+        const { status } = data;
+        if (status === 'finished' || status === 'skipped') {
+            setRunTour(false);
+            localStorage.setItem('hasSeenLearnTutorial', 'true');
+        }
+    };
 
     // Reset speaking status when card changes
     useEffect(() => {
@@ -180,6 +200,34 @@ export default function Learn() {
         }
     };
 
+    const steps: Step[] = [
+        {
+            target: '.tour-listen-btn',
+            content: t.tour?.listen || 'Hear the pronunciation.',
+            disableBeacon: true,
+        },
+        {
+            target: '.tour-speak-btn',
+            content: t.tour?.speak || 'Turn on the mic and speak. We check your pronunciation!',
+        },
+        {
+            target: '.tour-speed-btn',
+            content: t.tour?.speed || 'Adjust playback speed.',
+        },
+        {
+            target: '.tour-flip-card',
+            content: t.tour?.flip || 'Tap the card to see the meaning.',
+        },
+        {
+            target: '.tour-bookmark-btn',
+            content: t.tour?.bookmark || 'Bookmark phrases to review later.',
+        },
+        {
+            target: '.tour-known-btn',
+            content: t.tour?.known || 'Mark as learned to earn XP!',
+        }
+    ];
+
     if (items.length === 0) {
         return (
             <div className="text-center py-12">
@@ -191,6 +239,56 @@ export default function Learn() {
 
     return (
         <div className="flex flex-col items-center space-y-8 max-w-lg mx-auto relative">
+            <Joyride
+                steps={steps}
+                run={runTour}
+                continuous
+                showSkipButton
+                showProgress
+                styles={{
+                    options: {
+                        primaryColor: '#4f46e5',
+                        zIndex: 10000,
+                        arrowColor: 'rgba(255, 255, 255, 0.5)',
+                        backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                        overlayColor: 'rgba(0, 0, 0, 0.4)',
+                        textColor: '#1f2937',
+                        width: 300,
+                    },
+                    tooltip: {
+                        backdropFilter: 'blur(10px)',
+                        borderRadius: '16px',
+                        boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)',
+                        padding: '20px',
+                    },
+                    buttonNext: {
+                        backgroundColor: '#4f46e5',
+                        borderRadius: '8px',
+                        color: '#fff',
+                        outline: 'none',
+                        padding: '6px 14px',
+                        fontSize: '14px',
+                        fontWeight: 600,
+                    },
+                    buttonBack: {
+                        color: '#6b7280',
+                        marginRight: 10,
+                        fontSize: '14px',
+                    },
+                    buttonSkip: {
+                        color: '#6b7280',
+                        fontSize: '14px',
+                    },
+                }}
+                callback={handleJoyrideCallback}
+                locale={{
+                    back: t.back || 'Back',
+                    close: t.close || 'Close',
+                    last: t.last || 'Done',
+                    next: t.next || 'Next',
+                    skip: t.skip || 'Skip',
+                }}
+            />
             {showLevelUp && <LevelUpModal level={level} onClose={closeLevelUp} />}
 
             {/* Header */}
@@ -204,7 +302,7 @@ export default function Learn() {
             </div>
 
             {/* Flashcard Area */}
-            <div className="w-full aspect-[4/3] perspective-1000 group cursor-pointer" onClick={() => setIsFlipped(!isFlipped)}>
+            <div className="tour-flip-card w-full aspect-[4/3] perspective-1000 group cursor-pointer" onClick={() => setIsFlipped(!isFlipped)}>
                 <div className={`relative w-full h-full duration-500 preserve-3d transition-transform ${isFlipped ? 'rotate-y-180' : ''}`}>
 
                     {/* Front */}
@@ -219,21 +317,21 @@ export default function Learn() {
                         <div className="flex items-center gap-3">
                             <button
                                 onClick={(e) => { e.stopPropagation(); playAudio(currentItem.korean); }}
-                                className="p-3 bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors"
+                                className="tour-listen-btn p-2.5 bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 rounded-full hover:bg-indigo-100 dark:hover:bg-gray-600 transition-colors"
                             >
-                                <Volume2 className="w-6 h-6" />
+                                <Volume2 className="w-5 h-5" />
                             </button>
 
                             {/* Speaking Practice Button */}
                             <button
                                 onClick={startListening}
-                                className={`p-3 rounded-full transition-colors relative ${speakingStatus === 'listening' ? 'bg-red-100 text-red-600 animate-pulse' :
+                                className={`tour-speak-btn p-2.5 rounded-full transition-colors relative ${speakingStatus === 'listening' ? 'bg-red-100 text-red-600 animate-pulse' :
                                     speakingStatus === 'success' ? 'bg-green-100 text-green-600' :
                                         speakingStatus === 'fail' ? 'bg-orange-100 text-orange-600' :
                                             'bg-indigo-50 dark:bg-gray-700 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-100 dark:hover:bg-gray-600'
                                     }`}
                             >
-                                {speakingStatus === 'listening' ? <MicOff className="w-6 h-6" /> : <Mic className="w-6 h-6" />}
+                                {speakingStatus === 'listening' ? <MicOff className="w-5 h-5" /> : <Mic className="w-5 h-5" />}
 
                                 {speakingStatus === 'listening' && (
                                     <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded whitespace-nowrap">
@@ -254,7 +352,7 @@ export default function Learn() {
 
                             <button
                                 onClick={toggleSpeed}
-                                className="px-3 py-1.5 bg-gray-100 dark:bg-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
+                                className="tour-speed-btn px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-xs font-bold text-gray-600 dark:text-gray-300 rounded-full hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors"
                             >
                                 {playbackRate === 0.9 ? '1x' : '0.4x'}
                             </button>
@@ -263,7 +361,7 @@ export default function Learn() {
                         <div className="absolute top-4 right-4">
                             <button
                                 onClick={(e) => { e.stopPropagation(); toggleBookmark(currentItem.id); }}
-                                className={`p-2 rounded-full transition-colors ${bookmarks.includes(currentItem.id) ? 'text-yellow-400 bg-yellow-400/10' : 'text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10'}`}
+                                className={`tour-bookmark-btn p-2 rounded-full transition-colors ${bookmarks.includes(currentItem.id) ? 'text-yellow-400 bg-yellow-400/10' : 'text-gray-300 hover:text-yellow-400 hover:bg-yellow-400/10'}`}
                             >
                                 <Star className={`w-6 h-6 ${bookmarks.includes(currentItem.id) ? 'fill-current' : ''}`} />
                             </button>
@@ -295,14 +393,14 @@ export default function Learn() {
                 <button
                     onClick={prevCard}
                     disabled={currentIndex === 0}
-                    className="p-3 sm:p-4 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
+                    className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
                 >
                     <ChevronLeft className="w-6 h-6" />
                 </button>
 
                 <button
                     onClick={() => setIsFlipped(!isFlipped)}
-                    className="p-3 sm:p-4 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-200 dark:hover:bg-indigo-900 transition"
+                    className="p-3 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-200 dark:hover:bg-indigo-900 transition"
                 >
                     <RotateCw className="w-6 h-6" />
                 </button>
@@ -310,11 +408,11 @@ export default function Learn() {
                 {/* I Know This Button */}
                 <button
                     onClick={() => handleMarkAsDone(currentItem.id)}
-                    className={`flex-1 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] ${isCompleted ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 cursor-pointer shadow-none' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200 dark:shadow-none'}`}
+                    className={`tour-known-btn flex-1 py-2 rounded-lg font-bold text-base shadow-md flex items-center justify-center gap-2 transition-all transform hover:scale-[1.02] ${isCompleted ? 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 cursor-pointer shadow-none' : 'bg-indigo-600 text-white hover:bg-indigo-700 shadow-indigo-200 dark:shadow-none'}`}
                 >
                     {isCompleted ? (
                         <>
-                            <Check className="w-6 h-6" /> {t.learned}
+                            <Check className="w-5 h-5" /> {t.learned}
                         </>
                     ) : (
                         <>
@@ -326,7 +424,7 @@ export default function Learn() {
                 <button
                     onClick={nextCard}
                     disabled={currentIndex === items.length - 1}
-                    className="p-3 sm:p-4 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
+                    className="p-3 rounded-full bg-white dark:bg-gray-800 shadow-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 disabled:opacity-30 disabled:cursor-not-allowed transition"
                 >
                     <ChevronRight className="w-6 h-6" />
                 </button>

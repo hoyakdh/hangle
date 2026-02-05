@@ -94,7 +94,19 @@ export const translations = {
             notFound: "Category not found",
             goBack: "Go back",
             speedNormal: "Normal Speed",
-            speedSlow: "Slow Speed"
+            speedSlow: "Slow Speed",
+            close: "Close",
+            last: "Done",
+            next: "Next",
+            skip: "Skip",
+            tour: {
+                listen: "Hear the pronunciation.",
+                speak: "Turn on the mic and speak. We'll check your pronunciation!",
+                speed: "Adjust playback speed.",
+                flip: "Tap the card to see the meaning.",
+                bookmark: "Bookmark phrases to review later.",
+                known: "Mark as learned to earn XP!"
+            }
         },
         quiz: {
             quizModeTitle: "Quiz Mode",
@@ -283,7 +295,19 @@ export const translations = {
             notFound: "Categoría no encontrada",
             goBack: "Volver",
             speedNormal: "Velocidad Normal",
-            speedSlow: "Velocidad Lenta"
+            speedSlow: "Velocidad Lenta",
+            close: "Cerrar",
+            last: "Listo",
+            next: "Siguiente",
+            skip: "Saltar",
+            tour: {
+                listen: "Escucha la pronunciación.",
+                speak: "Enciende el micrófono y habla. ¡Comprobaremos tu pronunciación!",
+                speed: "Ajusta la velocidad de reproducción.",
+                flip: "Toca la tarjeta para ver el significado.",
+                bookmark: "Guarda frases para repasar más tarde.",
+                known: "¡Marca como aprendido para ganar XP!"
+            }
         },
         quiz: {
             quizModeTitle: "Modo Quiz",
@@ -472,7 +496,19 @@ export const translations = {
             notFound: "カテゴリーが見つかりません",
             goBack: "戻る",
             speedNormal: "標準速度",
-            speedSlow: "ゆっくり"
+            speedSlow: "ゆっくり",
+            close: "閉じる",
+            last: "完了",
+            next: "次へ",
+            skip: "スキップ",
+            tour: {
+                listen: "発音を聞いてみましょう。",
+                speak: "マイクをオンにして話してみてください。発音チェックもできます！",
+                speed: "再生速度を調節できます。",
+                flip: "カードをタップして意味を確認。",
+                bookmark: "よく使う表現はブックマーク。",
+                known: "学習完了をチェックしてXPを獲得！"
+            }
         },
         quiz: {
             quizModeTitle: "クイズモード",
