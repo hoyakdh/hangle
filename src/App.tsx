@@ -18,30 +18,35 @@ import Search from './pages/Search';
 import Conversation from './pages/Conversation';
 import './App.css';
 
+import { HelmetProvider } from 'react-helmet-async';
+
 function App() {
   return (
     <UserProvider>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="categories" element={<Categories />} />
-            <Route path="bookmarks" element={<Bookmarks />} />
-            <Route path="search" element={<Search />} />
-            <Route path="conversation" element={<Conversation />} />
-            <Route path="learn/:categoryId" element={<Learn />} />
-            <Route path="quiz" element={<QuizCategories />} />
-            <Route path="quiz/:categoryId" element={<Quiz />} />
-            <Route path="guide" element={<Guide />} />
-            <Route path="guide/pronunciation" element={<Pronunciation />} />
-            <Route path="guide/grammar" element={<Grammar />} />
-            <Route path="guide/mistakes" element={<Mistakes />} />
-            <Route path="privacy" element={<PrivacyPolicy />} />
-            <Route path="terms" element={<Terms />} />
-            <Route path="about" element={<About />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
+      <HelmetProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Home />} />
+              <Route path="categories" element={<Categories />} />
+              <Route path="bookmarks" element={<Bookmarks />} />
+              <Route path="bookmarks" element={<Bookmarks />} />
+              <Route path="search" element={<Search />} />
+              <Route path="conversation" element={<Conversation />} />
+              <Route path="learn/:categoryId" element={<Learn />} />
+              <Route path="quiz" element={<QuizCategories />} />
+              <Route path="quiz/:categoryId" element={<Quiz />} />
+              <Route path="guide" element={<Guide />} />
+              <Route path="guide/pronunciation" element={<Pronunciation />} />
+              <Route path="guide/grammar" element={<Grammar />} />
+              <Route path="guide/mistakes" element={<Mistakes />} />
+              <Route path="privacy" element={<PrivacyPolicy />} />
+              <Route path="terms" element={<Terms />} />
+              <Route path="about" element={<About />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
+      </HelmetProvider>
     </UserProvider>
   );
 }

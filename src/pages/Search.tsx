@@ -6,6 +6,8 @@ import { vocabData } from '../data/vocab';
 import { guideData } from '../data/guideData';
 import { translations } from '../data/translations';
 
+import SEO from '../components/SEO';
+
 export default function Search() {
     const { targetLanguage } = useUser();
     const t = translations[targetLanguage];
@@ -43,6 +45,10 @@ export default function Search() {
 
     return (
         <div className="max-w-3xl mx-auto py-8 text-gray-900 dark:text-gray-100 animate-fade-in">
+            <SEO
+                title="Dictionary Search"
+                description="Search for Korean words, phrases, and grammar rules. Find translations and examples instantly."
+            />
             {/* Header */}
             <div className="mb-8">
                 <Link to="/" className="inline-flex items-center text-gray-500 hover:text-indigo-600 transition-colors mb-4">
@@ -130,13 +136,30 @@ export default function Search() {
                     </section>
                 )}
 
-                {/* No Results */}
-                {query.trim() && totalResults === 0 && (
+                {/* No Results or Initial State */}
+                {query.trim() && totalResults === 0 ? (
                     <div className="text-center py-20 text-gray-400">
                         <SearchIcon className="w-12 h-12 mx-auto mb-4 opacity-20" />
                         <p>{t.search.noResults} "{query}"</p>
+                        <p className="text-sm mt-2 opacity-60">Try searching for simple words like "Hello", "Thank you", or "Food".</p>
+                    </div>
+                ) : !query.trim() && (
+                    <div className="mt-12 text-center text-gray-500 dark:text-gray-400">
+                        <p className="mb-4 text-lg">Type any keyword to search across {vocabData.length} words and phrases.</p>
+                        <div className="flex flex-wrap gap-2 justify-center max-w-md mx-auto">
+                            <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-xs cursor-pointer hover:bg-indigo-100 dark:hover:bg-indigo-900 transition" onClick={() => setQuery("Airport")}>Airport</span>
+                            <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-xs cursor-pointer hover:bg-indigo-100 dark:hover:bg-indigo-900 transition" onClick={() => setQuery("Goreb")}>Goreb</span>
+                            <span className="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-xs cursor-pointer hover:bg-indigo-100 dark:hover:bg-indigo-900 transition" onClick={() => setQuery("Hello")}>Hello</span>
+                        </div>
                     </div>
                 )}
+            </div>
+
+            <div className="mt-20 border-t border-gray-100 dark:border-gray-800 pt-8 text-center text-sm text-gray-400 px-4">
+                <p>
+                    Hangle Dictionary includes daily expressions, travel essentials, and basic grammar patterns.
+                    Use English, Spanish, or Japanese keywords to find the Korean translation.
+                </p>
             </div>
         </div>
     );

@@ -5,6 +5,8 @@ import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 import { vocabData } from '../data/vocab';
 
+import SEO from '../components/SEO';
+
 export default function Home() {
     const { name, setName, targetLanguage } = useUser();
     const inputRef = useRef<HTMLInputElement>(null);
@@ -41,6 +43,10 @@ export default function Home() {
     if (!name) {
         return (
             <div className="flex flex-col items-center justify-center py-20 animate-fade-in">
+                <SEO
+                    title="Welcome to Hangle"
+                    description="Start your Korean learning journey today. Enter your name to begin."
+                />
                 <h1 className="text-4xl font-extrabold text-gray-900 dark:text-white mb-4">{t.home.welcome}</h1>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8 max-w-lg text-center px-4">
                     {t.home.welcomeDescription}
@@ -72,6 +78,10 @@ export default function Home() {
 
     return (
         <div className="flex flex-col items-center justify-center py-12 text-center space-y-12">
+            <SEO
+                title={t.home.title}
+                description={t.home.description}
+            />
             {/* Hero Section */}
             <div className="space-y-6 max-w-2xl animate-fade-in">
                 <div className="inline-block px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 font-bold rounded-full mb-4 animate-bounce-subtle">
@@ -128,6 +138,44 @@ export default function Home() {
                             {t.home.dailyPhrase.learnMore}
                         </Link>
                     </div>
+                </div>
+
+                {/* SEO Content Section */}
+                <div className="mt-16 text-left space-y-8 max-w-3xl mx-auto px-4">
+                    <section>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                            Why Learn Korean with Hangle?
+                        </h2>
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Hangle is the ultimate companion for mastering Korean idioms and daily expressions.
+                            Whether you are preparing for a trip to Korea, studying for the TOPIK exam, or simply interested in K-Culture,
+                            understanding idioms is key to sounding like a native speaker. Our app provides curated vocabulary cards,
+                            native pronunciation audio, and fun quizzes to help you memorize efficiently.
+                        </p>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                            Key Features
+                        </h2>
+                        <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
+                            <li><strong>Daily Phrase:</strong> Learn a new Korean expression every day.</li>
+                            <li><strong>Categorized Learning:</strong> Explore vocabulary by topics like Travel, Food, Emotions, and more.</li>
+                            <li><strong>Interactive Quizzes:</strong> Test your knowledge with fun and challenging quizzes.</li>
+                            <li><strong>Pronunciation Practice:</strong> Listen to native audio and improve your speaking skills.</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                            How to Use This App
+                        </h2>
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                            Start by exploring the <Link to="/categories" className="text-indigo-600 hover:underline">Categories</Link> page to find topics that interest you.
+                            Use the Flashcards to memorize new words, and then challenge yourself in the <Link to="/quiz" className="text-indigo-600 hover:underline">Quiz</Link> section.
+                            Don't forget to check the Daily Phrase every day to keep your streak alive!
+                        </p>
+                    </section>
                 </div>
             </div>
         </div>

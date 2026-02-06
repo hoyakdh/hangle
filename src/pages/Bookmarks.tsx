@@ -4,6 +4,7 @@ import { useUser } from '../context/UserContext';
 import { vocabData } from '../data/vocab';
 import { translations } from '../data/translations';
 import { ArrowLeft, Star, Volume2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Bookmarks() {
     const { bookmarks, toggleBookmark, targetLanguage } = useUser();
@@ -24,6 +25,11 @@ export default function Bookmarks() {
 
     return (
         <div className="max-w-3xl mx-auto py-8 px-4 animate-fade-in">
+            <SEO
+                title={t.home.bookmarks}
+                description="Review your bookmarked Korean vocabulary. Manage your saved words and practice them anytime."
+            />
+
             <div className="flex items-center justify-between mb-8">
                 <Link to="/" className="inline-flex items-center text-gray-500 hover:text-indigo-600 transition-colors">
                     <ArrowLeft className="w-5 h-5 mr-2" /> {t.privacy.backToHome}
@@ -38,7 +44,10 @@ export default function Bookmarks() {
                 <div className="text-center py-20 bg-gray-50 dark:bg-gray-800 rounded-3xl">
                     <Star className="w-16 h-16 text-gray-300 mx-auto mb-4" />
                     <p className="text-gray-500 dark:text-gray-400 text-lg">No bookmarks yet.</p>
-                    <Link to="/categories" className="mt-4 inline-block px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
+                    <p className="text-sm text-gray-400 mt-2 max-w-sm mx-auto">
+                        Found a difficult word? Tap the star icon on any flashcard to save it here for later review.
+                    </p>
+                    <Link to="/categories" className="mt-6 inline-block px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
                         {t.home.startLearning}
                     </Link>
                 </div>
@@ -76,6 +85,13 @@ export default function Bookmarks() {
                     ))}
                 </div>
             )}
+
+            <div className="mt-12 text-center text-sm text-gray-400 dark:text-gray-600 pb-8">
+                <p>
+                    Tip: Regular review is the key to long-term memory.
+                    Try to visit your bookmarks everyday and remove the words you have fully mastered.
+                </p>
+            </div>
         </div>
     );
 }

@@ -7,6 +7,7 @@ import LevelUpModal from '../components/LevelUpModal';
 import Joyride, { type CallBackProps, type Step } from 'react-joyride';
 
 import { translations } from '../data/translations';
+import SEO from '../components/SEO';
 
 export default function Learn() {
     const { categoryId } = useParams<{ categoryId: string }>();
@@ -441,6 +442,24 @@ export default function Learn() {
                     </Link>
                 </div>
             )}
+
+            {/* SEO & Content Section */}
+            <div className="mt-12 text-center max-w-lg mx-auto px-4 pb-8">
+                <SEO
+                    title={`Learn Korean ${categoryId ? categoryId.charAt(0).toUpperCase() + categoryId.slice(1) : ''} Vocabulary`}
+                    description={`Master Korean vocabulary for ${categoryId}. Listen to native pronunciation and practice speaking.`}
+                />
+
+                <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
+                    About this Lesson
+                </h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                    You are learning <strong>{items.length}</strong> new Korean words and phrases related to <strong>{categoryId}</strong>.
+                    Use the flashcards to memorize the meaning and pronunciation.
+                    The "Speaking Practice" feature helps you correct your accent by comparing your voice with native speakers.
+                </p>
+            </div>
+
             {/* Debug Info */}
             <div className="text-xs text-gray-400 text-center mt-4">
                 {debugInfo}
