@@ -104,10 +104,10 @@ export default function Layout() {
                 <Outlet />
             </main>
 
-            {/* Footer (Desktop) */}
-            <footer className="hidden md:block bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 py-8 text-center text-gray-400 dark:text-gray-500 text-sm transition-colors duration-300">
+            {/* Footer */}
+            <footer className="bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 py-8 text-center text-gray-400 dark:text-gray-500 text-sm transition-colors duration-300">
                 <p className="mb-4">© {new Date().getFullYear()} Hangle. Enjoy learning Korean!</p>
-                <div className="flex justify-center gap-6">
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6 px-4">
                     <Link to="/about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</Link>
                     <Link to="/privacy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</Link>
                     <Link to="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Service</Link>
