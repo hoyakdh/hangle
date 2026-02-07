@@ -111,6 +111,7 @@ export default function Layout() {
                     <Link to="/about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</Link>
                     <Link to="/privacy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</Link>
                     <Link to="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Service</Link>
+                    <Link to="/feedback" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Feedback</Link>
                 </div>
             </footer>
 

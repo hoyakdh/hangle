@@ -16,6 +16,7 @@ import Mistakes from './pages/guide/Mistakes';
 import Bookmarks from './pages/Bookmarks';
 import Search from './pages/Search';
 import Conversation from './pages/Conversation';
+import Feedback from './pages/Feedback';
 import './App.css';
 
 import { HelmetProvider } from 'react-helmet-async';
@@ -43,6 +44,7 @@ function App() {
               <Route path="privacy" element={<PrivacyPolicy />} />
               <Route path="terms" element={<Terms />} />
               <Route path="about" element={<About />} />
+              <Route path="feedback" element={<Feedback />} />
             </Route>
           </Routes>
         </BrowserRouter>

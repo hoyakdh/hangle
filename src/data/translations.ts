@@ -198,6 +198,17 @@ export const translations = {
             },
             cta: "Start Learning Today!",
             backToHome: "Back to Home"
+        },
+        feedback: {
+            title: "Your feedback helps us improve",
+            issue: "Issue",
+            issueDesc: "Report bugs or inconvenience",
+            idea: "Idea",
+            ideaDesc: "Suggest features or improvements",
+            contentPlaceholder: "Share your ideas for a better service.",
+            emailLabel: "We'll reply to the email you provide :)",
+            emailPlaceholder: "you@example.com",
+            send: "Send Feedback"
         }
     },
     es: {
@@ -399,6 +410,17 @@ export const translations = {
             },
             cta: "¡Empieza a Aprender Hoy!",
             backToHome: "Volver al Inicio"
+        },
+        feedback: {
+            title: "Tu opinión nos ayuda a mejorar",
+            issue: "Problema",
+            issueDesc: "Reportar errores o inconvenientes",
+            idea: "Idea",
+            ideaDesc: "Sugerir funciones o mejoras",
+            contentPlaceholder: "Comparte tus ideas para un mejor servicio.",
+            emailLabel: "Te responderemos al correo que nos proporciones :)",
+            emailPlaceholder: "tu@ejemplo.com",
+            send: "Enviar Feedback"
         }
     },
     ja: {
@@ -600,6 +622,17 @@ export const translations = {
             },
             cta: "今日から学習を始めましょう！",
             backToHome: "ホームに戻る"
+        },
+        feedback: {
+            title: "皆様のご意見でより良いサービスを提供します",
+            issue: "不具合",
+            issueDesc: "バグ・エラー/不便な点の報告",
+            idea: "アイデア",
+            ideaDesc: "機能提案・改善アイデア",
+            contentPlaceholder: "より良いサービスのためのアイデアを共有してください。",
+            emailLabel: "ご入力いただいたメールアドレスに返信いたします :)",
+            emailPlaceholder: "you@example.com",
+            send: "フィードバックを送信"
         }
     }
 };
