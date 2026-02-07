@@ -4,13 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://hoyakdh.github.io/hangle",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hoyakdh/hangle.git"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "git-push": "./push.sh"
   },
   "dependencies": {
     "canvas-confetti": "^1.9.4",
