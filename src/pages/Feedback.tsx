@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Send, Bug, Lightbulb } from 'lucide-react';
+import { Send, Bug, Lightbulb, ArrowLeft } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 
@@ -23,6 +24,10 @@ export default function Feedback() {
 
     return (
         <div className="max-w-xl mx-auto px-4 py-8 animate-fade-in">
+            <Link to="/" className="inline-flex items-center text-gray-500 hover:text-indigo-600 transition-colors mb-6">
+                <ArrowLeft className="w-4 h-4 mr-2" /> {t.backToHome}
+            </Link>
+
             <h1 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">
                 {t.title}
             </h1>
@@ -34,8 +39,8 @@ export default function Feedback() {
                     <button
                         onClick={() => setType('issue')}
                         className={`p-4 rounded-xl text-left transition-all duration-200 border-2 ${type === 'issue'
-                                ? 'bg-gray-100 dark:bg-gray-700 border-transparent ring-2 ring-indigo-500/20'
-                                : 'bg-gray-50 dark:bg-gray-700/50 border-transparent hover:bg-gray-100 dark:hover:bg-gray-700'
+                            ? 'bg-gray-100 dark:bg-gray-700 border-transparent ring-2 ring-indigo-500/20'
+                            : 'bg-gray-50 dark:bg-gray-700/50 border-transparent hover:bg-gray-100 dark:hover:bg-gray-700'
                             }`}
                     >
                         <div className={`flex items-center gap-2 font-bold mb-1 ${type === 'issue' ? 'text-red-500' : 'text-gray-600 dark:text-gray-300'}`}>
@@ -48,8 +53,8 @@ export default function Feedback() {
                     <button
                         onClick={() => setType('idea')}
                         className={`p-4 rounded-xl text-left transition-all duration-200 border-2 ${type === 'idea'
-                                ? 'bg-gray-100 dark:bg-gray-700 border-transparent ring-2 ring-amber-500/20'
-                                : 'bg-gray-50 dark:bg-gray-700/50 border-transparent hover:bg-gray-100 dark:hover:bg-gray-700'
+                            ? 'bg-gray-100 dark:bg-gray-700 border-transparent ring-2 ring-amber-500/20'
+                            : 'bg-gray-50 dark:bg-gray-700/50 border-transparent hover:bg-gray-100 dark:hover:bg-gray-700'
                             }`}
                     >
                         <div className={`flex items-center gap-2 font-bold mb-1 ${type === 'idea' ? 'text-amber-500' : 'text-gray-600 dark:text-gray-300'}`}>

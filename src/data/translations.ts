@@ -208,7 +208,8 @@ export const translations = {
             contentPlaceholder: "Share your ideas for a better service.",
             emailLabel: "We'll reply to the email you provide :)",
             emailPlaceholder: "you@example.com",
-            send: "Send Feedback"
+            send: "Send Feedback",
+            backToHome: "Back to Home"
         }
     },
     es: {
@@ -420,7 +421,8 @@ export const translations = {
             contentPlaceholder: "Comparte tus ideas para un mejor servicio.",
             emailLabel: "Te responderemos al correo que nos proporciones :)",
             emailPlaceholder: "tu@ejemplo.com",
-            send: "Enviar Feedback"
+            send: "Enviar Feedback",
+            backToHome: "Volver al Inicio"
         }
     },
     ja: {
@@ -632,7 +634,8 @@ export const translations = {
             contentPlaceholder: "より良いサービスのためのアイデアを共有してください。",
             emailLabel: "ご入力いただいたメールアドレスに返信いたします :)",
             emailPlaceholder: "you@example.com",
-            send: "フィードバックを送信"
+            send: "フィードバックを送信",
+            backToHome: "ホームに戻る"
         }
     }
 };
