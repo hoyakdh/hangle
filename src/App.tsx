@@ -31,7 +31,6 @@ function App() {
               <Route index element={<Home />} />
               <Route path="categories" element={<Categories />} />
               <Route path="bookmarks" element={<Bookmarks />} />
-              <Route path="bookmarks" element={<Bookmarks />} />
               <Route path="search" element={<Search />} />
               <Route path="conversation" element={<Conversation />} />
               <Route path="learn/:categoryId" element={<Learn />} />

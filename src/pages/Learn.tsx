@@ -11,12 +11,18 @@ import SEO from '../components/SEO';
 
 export default function Learn() {
     const { categoryId } = useParams<{ categoryId: string }>();
+    // Force remount when category changes to reset all state
+    return <LearnContent key={categoryId} categoryId={categoryId} />;
+}
+
+function LearnContent({ categoryId }: { categoryId?: string }) {
     const { addXp, showLevelUp, level, closeLevelUp, targetLanguage, bookmarks, toggleBookmark } = useUser();
 
-    // @ts-ignore
+    // Translations are dynamic
     const t = translations[targetLanguage].learn;
-    // @ts-ignore
-    const tCommon = translations[targetLanguage]?.speaking || {
+
+    // Translations are dynamic
+    const tCommon = translations[targetLanguage].home?.speaking || {
         start: "Speak",
         listening: "Listening...",
         success: "Perfect!",
@@ -34,17 +40,11 @@ export default function Learn() {
 
     // Speaking Practice State
     const [speakingStatus, setSpeakingStatus] = useState<'idle' | 'listening' | 'success' | 'fail'>('idle');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const recognitionRef = useRef<any>(null);
 
-    // Tour State
-    const [runTour, setRunTour] = useState(false);
-
-    useEffect(() => {
-        const hasSeenTutorial = localStorage.getItem('hasSeenLearnTutorial');
-        if (!hasSeenTutorial) {
-            setRunTour(true);
-        }
-    }, []);
+    // Tour State - lazy initialization
+    const [runTour, setRunTour] = useState(() => !localStorage.getItem('hasSeenLearnTutorial'));
 
     const handleJoyrideCallback = (data: CallBackProps) => {
         const { status } = data;
@@ -54,13 +54,12 @@ export default function Learn() {
         }
     };
 
-    // Reset speaking status when card changes
-    useEffect(() => {
+    const resetSpeaking = () => {
         setSpeakingStatus('idle');
         if (recognitionRef.current) {
             recognitionRef.current.abort();
         }
-    }, [currentIndex, categoryId]);
+    };
 
     const startListening = (e: React.MouseEvent) => {
         e.stopPropagation();
@@ -76,6 +75,7 @@ export default function Learn() {
             return;
         }
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
         const recognition = new SpeechRecognition();
         recognitionRef.current = recognition;
@@ -89,6 +89,7 @@ export default function Learn() {
             setDebugInfo("Status: Listening...");
         };
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         recognition.onresult = (event: any) => {
             const transcript = event.results[0][0].transcript;
             const cleanTranscript = transcript.replace(/\s+/g, '').replace(/[.,!?]/g, '');
@@ -105,6 +106,7 @@ export default function Learn() {
             }
         };
 
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         recognition.onerror = (event: any) => {
             console.error('Speech recognition error', event.error);
             setDebugInfo(`Error: ${event.error}`);
@@ -162,10 +164,7 @@ export default function Learn() {
 
     const isCompleted = completedItems.includes(currentItem?.id);
 
-    useEffect(() => {
-        setCurrentIndex(0);
-        setIsFlipped(false);
-    }, [categoryId]);
+    // Initial reset removed as key={categoryId} handles it
 
     const [playbackRate, setPlaybackRate] = useState(0.9);
 
@@ -191,6 +190,7 @@ export default function Learn() {
         if (currentIndex < items.length - 1) {
             setCurrentIndex(prev => prev + 1);
             setIsFlipped(false);
+            resetSpeaking();
         }
     };
 
@@ -198,6 +198,7 @@ export default function Learn() {
         if (currentIndex > 0) {
             setCurrentIndex(prev => prev - 1);
             setIsFlipped(false);
+            resetSpeaking();
         }
     };
 

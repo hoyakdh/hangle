@@ -8,6 +8,10 @@ import { ArrowLeft, CheckCircle, XCircle, Trophy, RefreshCcw, Volume2 } from 'lu
 
 export default function Quiz() {
     const { categoryId } = useParams<{ categoryId: string }>();
+    return <QuizContent key={categoryId} categoryId={categoryId} />;
+}
+
+function QuizContent({ categoryId }: { categoryId?: string }) {
     const { targetLanguage } = useUser();
     const t = translations[targetLanguage].quiz;
 
@@ -43,8 +47,14 @@ export default function Quiz() {
     const currentQuestion = items[currentIndex];
 
     // Generate 4 options (1 correct, 3 random wrong) using useMemo so they don't reshuffle on every render
-    const options = useMemo(() => {
-        if (!currentQuestion) return [];
+    const [options, setOptions] = useState<typeof items>([]);
+
+    useEffect(() => {
+        if (!currentQuestion) {
+            // eslint-disable-next-line react-hooks/set-state-in-effect
+            setOptions([]);
+            return;
+        }
 
         const correctOption = currentQuestion;
         const otherOptions = items.filter(item => item.id !== currentQuestion.id);
@@ -53,17 +63,11 @@ export default function Quiz() {
         const shuffledOthers = [...otherOptions].sort(() => 0.5 - Math.random()).slice(0, 3);
 
         // Combine and shuffle again
-        return [...shuffledOthers, correctOption].sort(() => 0.5 - Math.random());
+        const newOptions = [...shuffledOthers, correctOption].sort(() => 0.5 - Math.random());
+        setOptions(newOptions);
     }, [currentQuestion, items]);
 
-    useEffect(() => {
-        // Reset state when category changes
-        setCurrentIndex(0);
-        setScore(0);
-        setShowResult(false);
-        setIsAnswered(false);
-        setSelectedOption(null);
-    }, [categoryId]);
+    // Reset effect removed as key={categoryId} handles it
 
     if (items.length < 4) {
         return (

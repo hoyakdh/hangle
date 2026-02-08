@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Search as SearchIcon, ArrowLeft, BookOpen, FileText } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { vocabData } from '../data/vocab';
-import { guideData } from '../data/guideData';
+import { guideData, type GrammarItem } from '../data/guideData';
 import { translations } from '../data/translations';
 
 import SEO from '../components/SEO';
@@ -31,11 +31,11 @@ export default function Search() {
     const grammarResults = useMemo(() => {
         if (!query.trim()) return [];
         const lowerQuery = query.toLowerCase();
-        // @ts-ignore
+
         const currentGuide = guideData[targetLanguage];
         if (!currentGuide || !currentGuide.grammar) return [];
 
-        return currentGuide.grammar.filter((item: any) =>
+        return currentGuide.grammar.filter((item: GrammarItem) =>
             item.expression.toLowerCase().includes(lowerQuery) ||
             item.meaning.toLowerCase().includes(lowerQuery)
         );
@@ -119,7 +119,7 @@ export default function Search() {
                     <section>
                         {activeTab === 'all' && <h2 className="text-lg font-bold mb-4 flex items-center gap-2 mt-2"><FileText className="w-5 h-5 text-rose-500" /> {t.search.tabs.grammar}</h2>}
                         <div className="space-y-3">
-                            {grammarResults.map((item: any) => (
+                            {grammarResults.map((item: GrammarItem) => (
                                 <Link to="/guide/grammar" key={'g-' + item.id} className="block bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-100 dark:border-gray-700 hover:border-rose-300 dark:hover:border-rose-700 hover:shadow-md transition">
                                     <div className="flex justify-between items-start">
                                         <div>
