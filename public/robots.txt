@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://hangle.app/sitemap.xml
+Sitemap: https://hangle.pages.dev/sitemap.xml
