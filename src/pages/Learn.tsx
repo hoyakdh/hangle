@@ -378,6 +378,10 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
                             {targetLanguage === 'en' && currentItem.english}
                             {targetLanguage === 'es' && currentItem.spanish}
                             {targetLanguage === 'ja' && currentItem.japanese}
+                            {targetLanguage === 'fr' && currentItem.french}
+                            {targetLanguage === 'th' && currentItem.thai}
+                            {targetLanguage === 'zh' && currentItem.chinese}
+                            {targetLanguage === 'hi' && currentItem.hindi}
                         </h3>
 
                         <button

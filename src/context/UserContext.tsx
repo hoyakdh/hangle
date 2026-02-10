@@ -11,8 +11,8 @@ interface UserContextType {
     logout: () => void;
     theme: 'light' | 'dark';
     toggleTheme: () => void;
-    targetLanguage: 'en' | 'es' | 'ja';
-    setTargetLanguage: (lang: 'en' | 'es' | 'ja') => void;
+    targetLanguage: 'en' | 'es' | 'ja' | 'fr' | 'th' | 'zh' | 'hi';
+    setTargetLanguage: (lang: 'en' | 'es' | 'ja' | 'fr' | 'th' | 'zh' | 'hi') => void;
     bookmarks: number[];
     toggleBookmark: (id: number) => void;
 }
@@ -33,9 +33,9 @@ export function UserProvider({ children }: { children: ReactNode }) {
     });
 
     // Language State
-    const [targetLanguage, setTargetLanguageState] = useState<'en' | 'es' | 'ja'>(() => {
+    const [targetLanguage, setTargetLanguageState] = useState<'en' | 'es' | 'ja' | 'fr' | 'th' | 'zh' | 'hi'>(() => {
         const savedLang = localStorage.getItem('hangle_target_lang');
-        return (savedLang as 'en' | 'es' | 'ja') || 'en';
+        return (savedLang as 'en' | 'es' | 'ja' | 'fr' | 'th' | 'zh' | 'hi') || 'en';
     });
 
     // Bookmarks State
@@ -126,7 +126,7 @@ export function UserProvider({ children }: { children: ReactNode }) {
         setTheme(prev => prev === 'light' ? 'dark' : 'light');
     };
 
-    const setTargetLanguage = (lang: 'en' | 'es' | 'ja') => {
+    const setTargetLanguage = (lang: 'en' | 'es' | 'ja' | 'fr' | 'th' | 'zh' | 'hi') => {
         setTargetLanguageState(lang);
     };
 

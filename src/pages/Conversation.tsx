@@ -10,7 +10,13 @@ export default function Conversation() {
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [visibleAnswers, setVisibleAnswers] = useState<number[]>([]);
 
-    const langKey = targetLanguage === 'en' ? 'english' : targetLanguage === 'es' ? 'spanish' : 'japanese';
+    const langKey = targetLanguage === 'en' ? 'english' :
+        targetLanguage === 'es' ? 'spanish' :
+            targetLanguage === 'ja' ? 'japanese' :
+                targetLanguage === 'fr' ? 'french' :
+                    targetLanguage === 'th' ? 'thai' :
+                        targetLanguage === 'zh' ? 'chinese' :
+                            'hindi';
 
     const baseCategories = [
         { id: 'airport', color: 'bg-blue-500' },

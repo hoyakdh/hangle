@@ -187,6 +187,10 @@ function QuizContent({ categoryId }: { categoryId?: string }) {
                                 {targetLanguage === 'en' && option.english}
                                 {targetLanguage === 'es' && option.spanish}
                                 {targetLanguage === 'ja' && option.japanese}
+                                {targetLanguage === 'fr' && option.french}
+                                {targetLanguage === 'th' && option.thai}
+                                {targetLanguage === 'zh' && option.chinese}
+                                {targetLanguage === 'hi' && option.hindi}
                             </span>
                             {isAnswered && isCorrect && <CheckCircle className="w-6 h-6 text-green-500" />}
                             {isAnswered && isSelected && !isCorrect && <XCircle className="w-6 h-6 text-red-500" />}

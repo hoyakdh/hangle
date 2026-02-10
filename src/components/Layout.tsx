@@ -1,11 +1,11 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw, Star, Search, MessageCircle } from 'lucide-react';
+import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw, Star, MessageCircle } from 'lucide-react';
 import { useUser } from '../context/UserContext';
-import { translations } from '../data/translations';
+
 
 export default function Layout() {
     const { name, level, xp, logout, theme, toggleTheme, targetLanguage, setTargetLanguage } = useUser();
-    const t = translations[targetLanguage];
+
     const location = useLocation();
 
     const handleLogout = () => {
@@ -52,19 +52,21 @@ export default function Layout() {
 
                     {/* Right: Nav & Settings */}
                     <nav className="flex items-center gap-3 md:gap-4 justify-self-end col-start-3">
-                        <Link to="/search" className="p-2 text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition" title={t.home.search}>
-                            <Search className="w-5 h-5" />
-                        </Link>
+
                         <div className="relative flex items-center bg-gray-100 dark:bg-gray-700 rounded-full px-2 py-1.5 md:px-3 transition-colors group hover:bg-gray-200 dark:hover:bg-gray-600">
                             <Globe className="w-4 h-4 text-gray-500 dark:text-gray-400 md:mr-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition" />
                             <select
                                 value={targetLanguage}
-                                onChange={(e) => setTargetLanguage(e.target.value as 'en' | 'es' | 'ja')}
-                                className="appearance-none bg-transparent font-medium text-sm text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none pr-4 md:pr-6 z-10 max-w-[50px] md:max-w-none text-center"
+                                onChange={(e) => setTargetLanguage(e.target.value as 'en' | 'es' | 'ja' | 'fr' | 'th' | 'zh' | 'hi')}
+                                className="appearance-none bg-transparent font-medium text-sm text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none pr-4 md:pr-6 z-10 max-w-[70px] md:max-w-none text-center"
                             >
-                                <option value="en">EN</option>
-                                <option value="es">ES</option>
-                                <option value="ja">JP</option>
+                                <option value="en">🇺🇸 EN</option>
+                                <option value="es">🇪🇸 ES</option>
+                                <option value="ja">🇯🇵 JP</option>
+                                <option value="fr">🇫🇷 FR</option>
+                                <option value="th">🇹🇭 TH</option>
+                                <option value="zh">🇨🇳 ZH</option>
+                                <option value="hi">🇮🇳 HI</option>
                             </select>
                             <ChevronDown className="w-3 h-3 text-gray-500 dark:text-gray-400 absolute right-2 md:right-3 pointer-events-none group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition" />
                         </div>

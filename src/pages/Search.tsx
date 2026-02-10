@@ -23,7 +23,11 @@ export default function Search() {
             item.romanized.toLowerCase().includes(lowerQuery) ||
             item.english.toLowerCase().includes(lowerQuery) ||
             item.spanish.toLowerCase().includes(lowerQuery) ||
-            item.japanese.toLowerCase().includes(lowerQuery)
+            item.japanese.toLowerCase().includes(lowerQuery) ||
+            item.french?.toLowerCase().includes(lowerQuery) ||
+            item.thai?.toLowerCase().includes(lowerQuery) ||
+            item.chinese?.toLowerCase().includes(lowerQuery) ||
+            item.hindi?.toLowerCase().includes(lowerQuery)
         );
     }, [query]);
 
@@ -106,6 +110,10 @@ export default function Search() {
                                         {targetLanguage === 'en' && item.english}
                                         {targetLanguage === 'es' && item.spanish}
                                         {targetLanguage === 'ja' && item.japanese}
+                                        {targetLanguage === 'fr' && item.french}
+                                        {targetLanguage === 'th' && item.thai}
+                                        {targetLanguage === 'zh' && item.chinese}
+                                        {targetLanguage === 'hi' && item.hindi}
                                     </div>
                                     <div className="text-xs text-gray-400 mt-2 text-right uppercase tracking-wider">{item.category}</div>
                                 </Link>

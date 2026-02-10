@@ -122,6 +122,10 @@ export default function Home() {
                         {targetLanguage === 'en' && dailyPhrase.english}
                         {targetLanguage === 'es' && dailyPhrase.spanish}
                         {targetLanguage === 'ja' && dailyPhrase.japanese}
+                        {targetLanguage === 'fr' && dailyPhrase.french}
+                        {targetLanguage === 'th' && dailyPhrase.thai}
+                        {targetLanguage === 'zh' && dailyPhrase.chinese}
+                        {targetLanguage === 'hi' && dailyPhrase.hindi}
                     </div>
 
                     <div className="flex gap-3 justify-center">

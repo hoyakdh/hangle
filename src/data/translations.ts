@@ -637,5 +637,857 @@ export const translations = {
             send: "フィードバックを送信",
             backToHome: "ホームに戻る"
         }
+    },
+    fr: {
+        home: {
+            welcome: "Bienvenue sur Hangle !",
+            askName: "Comment devons-nous vous appeler ?",
+            welcomeDescription: "Hangle est une application gratuite et simple pour vous aider à apprendre les phrases essentielles en coréen pour votre voyage.",
+            dataWarning: "Remarque : Votre progression est enregistrée localement sur cet appareil. Effacer les données du navigateur réinitialisera votre progression.",
+            namePlaceholder: "Entrez votre nom",
+            start: "Commencer",
+            greeting: "Bonjour, {name} ! Prêt à apprendre ?",
+            title: "Maîtrisez le Coréen de Base",
+            subtitle: "Pour Votre Voyage",
+            description: "Apprenez des phrases essentielles pour le voyage et la vie quotidienne. Cartes simples, prononciation native et quiz amusants.",
+            startLearning: "Commencer l'Apprentissage",
+            takeQuiz: "Faire un Quiz",
+            bookmarks: "Favoris",
+            search: "Rechercher",
+            dailyPhrase: {
+                title: "Phrase du Jour",
+                learnMore: "En Savoir Plus"
+            },
+            speaking: {
+                start: "Parler",
+                listening: "Écoute...",
+                success: "Parfait !",
+                tryAgain: "Réessayer",
+                permission: "Veuillez autoriser l'accès au microphone pour pratiquer l'expression orale."
+            }
+        },
+        search: {
+            placeholder: "Rechercher du vocabulaire ou de la grammaire...",
+            noResults: "Aucun résultat trouvé pour",
+            tabs: {
+                all: "Tout",
+                vocab: "Vocabulaire",
+                grammar: "Grammaire"
+            },
+            results: "Résultats"
+        },
+        guide: {
+            title: "Guide Hangle",
+            subtitle: "Bases de la Langue",
+            pronunciation: {
+                title: "Conseils de Prononciation",
+                subtitle: "Maîtrisez les sons difficiles",
+                description: "Apprenez les consonnes finales, la liaison et les règles d'assimilation pour parler comme un natif.",
+                written: "Écrit",
+                pronounced: "Prononcé"
+            },
+            grammar: {
+                title: "Grammaire Essentielle",
+                subtitle: "Modèles principaux",
+                description: "Une liste complète des modèles de grammaire coréenne essentiels pour les débutants.",
+                searchPlaceholder: "Rechercher la grammaire...",
+                headers: {
+                    expression: "Expression",
+                    meaning: "Signification",
+                    example: "Exemple"
+                },
+                notFound: "Aucun modèle de grammaire trouvé correspondant à"
+            },
+            mistakes: {
+                title: "Erreurs Courantes",
+                subtitle: "Évitez ces erreurs",
+                description: "Apprenez des erreurs les plus courantes commises par les étrangers et comment les corriger.",
+                mistake: "Erreur",
+                correction: "Correction",
+                tip: "Conseil"
+            },
+            explore: "Explorer"
+        },
+        categories: {
+            title: "Choisissez une Catégorie",
+            items: {
+                airport: { name: "Aéroport (공항)", description: "Enregistrement, Passeport, Porte" },
+                taxi: { name: "Taxi (택시)", description: "Destination, Tarif, Directions" },
+                bus: { name: "Bus (버스)", description: "Arrêt de bus, Itinéraire, Frais" },
+                subway: { name: "Métro (지하철)", description: "Station, Transfert, Sortie" },
+                restaurant: { name: "Restaurant (식당)", description: "Commande, Menu, Paiement" },
+                hotel: { name: "Hôtel (호텔)", description: "Enregistrement, Service, Chambre" },
+                tourist: { name: "Info Tourisme (관광안내소)", description: "Carte, Guide, Billets" },
+                daily: { name: "Vie Quotidienne (일상)", description: "Salutations, Questions de Base" },
+                emergency: { name: "Urgence (긴급상황)", description: "Police, Pompiers, Ambulance" },
+                hospital: { name: "Hôpital (병원)", description: "Médecin, Pharmacie, Symptômes" }
+            }
+        },
+        learn: {
+            back: "Retour",
+            flip: "Appuyez pour retourner",
+            known: "Je connais ça !",
+            learned: "Appris",
+            xp: "+10 XP",
+            quizPrompt: "Prêt ? Faites le Quiz !",
+            notFound: "Catégorie introuvable",
+            goBack: "Retourner",
+            speedNormal: "Vitesse Normale",
+            speedSlow: "Vitesse Lente",
+            close: "Fermer",
+            last: "Fini",
+            next: "Suivant",
+            skip: "Sauter",
+            tour: {
+                listen: "Écoutez la prononciation.",
+                speak: "Activez le micro et parlez. Nous vérifierons votre prononciation !",
+                speed: "Ajustez la vitesse de lecture.",
+                flip: "Appuyez sur la carte pour voir la signification.",
+                bookmark: "Marquez les phrases pour les revoir plus tard.",
+                known: "Marquez comme appris pour gagner de l'XP !"
+            }
+        },
+        quiz: {
+            quizModeTitle: "Mode Quiz",
+            quizModeSubtitle: "Testez vos connaissances !",
+            quit: "Quitter",
+            question: "Question",
+            prompt: "Que signifie ceci ?",
+            complete: "Quiz Terminé !",
+            score: "Votre Score :",
+            review: "Revoir les Phrases",
+            retry: "Réessayer",
+            next: "Question Suivante",
+            results: "Voir les Résultats",
+            notEnough: "Pas assez de données pour le quiz",
+            goBack: "Retourner"
+        },
+        privacy: {
+            backToHome: "Retour à l'Accueil",
+            title: "Politique de Confidentialité",
+            lastUpdated: "Dernière mise à jour :",
+            intro: {
+                title: "1. Introduction",
+                content: "Bienvenue sur Hangle. Nous respectons votre vie privée et nous nous engageons à protéger vos données personnelles. Cette politique de confidentialité vous informera de la manière dont nous traitons vos données personnelles lorsque vous visitez notre site web et vous informera de vos droits en matière de confidentialité et de la manière dont la loi vous protège."
+            },
+            dataCollection: {
+                title: "2. Données que Nous Collectons",
+                content: "Nous ne collectons aucune donnée personnelle de nos utilisateurs. Hangle est une application côté client. Toute progression ou préférence (telle que votre nom, niveau, XP et paramètres de thème) est stockée localement sur votre appareil à l'aide du stockage local de votre navigateur. Ces données ne sont transmises à aucun serveur externe."
+            },
+            cookies: {
+                title: "3. Cookies",
+                content: "Nous n'utilisons pas de cookies à des fins de suivi. Nous pouvons utiliser le stockage local pour enregistrer vos préférences afin d'améliorer votre expérience sur notre site (par exemple, mémoriser votre préférence pour le mode sombre)."
+            },
+            thirdParty: {
+                title: "4. Liens Tiers",
+                content: "Ce site web peut inclure des liens vers des sites web, plug-ins et applications tiers. Cliquer sur ces liens ou activer ces connexions peut permettre à des tiers de collecter ou de partager des données vous concernant. Nous ne contrôlons pas ces sites web tiers et ne sommes pas responsables de leurs déclarations de confidentialité."
+            },
+            changes: {
+                title: "5. Modifications de cette Politique",
+                content: "Nous pouvons mettre à jour notre Politique de Confidentialité de temps à autre. Nous vous informerons de tout changement en publiant la nouvelle Politique de Confidentialité sur cette page."
+            },
+            contact: {
+                title: "6. Contactez-nous",
+                content: "Si vous avez des questions concernant cette Politique de Confidentialité, veuillez nous contacter."
+            }
+        },
+        terms: {
+            backToHome: "Retour à l'Accueil",
+            title: "Conditions d'Utilisation",
+            lastUpdated: "Dernière mise à jour :",
+            agreement: {
+                title: "1. Accord aux Conditions",
+                content: "En accédant à notre site web, vous acceptez d'être lié par ces Conditions d'Utilisation et de vous conformer à toutes les lois et réglementations applicables. Si vous n'êtes pas d'accord avec ces conditions, il vous est interdit d'utiliser ou d'accéder à ce site."
+            },
+            license: {
+                title: "2. Licence d'Utilisation",
+                content: "Il est permis de télécharger temporairement une copie du matériel (information ou logiciel) sur le site web de Hangle pour une visualisation transitoire personnelle et non commerciale uniquement. Il s'agit de l'octroi d'une licence, et non d'un transfert de titre."
+            },
+            disclaimer: {
+                title: "3. Clause de Non-responsabilité",
+                content: "Le matériel sur le site web de Hangle est fourni 'tel quel'. Hangle ne donne aucune garantie, expresse ou implicite, et décline et nie par la présente toutes les autres garanties, y compris, sans limitation, les garanties implicites ou conditions de qualité marchande, d'adéquation à un usage particulier, ou de non-violation de la propriété intellectuelle ou autre violation des droits."
+            },
+            limitations: {
+                title: "4. Limitations",
+                content: "En aucun cas Hangle ou ses fournisseurs ne seront responsables de tout dommage (y compris, sans limitation, les dommages pour perte de données ou de profit, ou en raison d'une interruption d'activité) découlant de l'utilisation ou de l'incapacité d'utiliser le matériel sur le site web de Hangle."
+            },
+            accuracy: {
+                title: "5. Exactitude du Matériel",
+                content: "Le matériel apparaissant sur le site web de Hangle pourrait inclure des erreurs techniques, typographiques ou photographiques. Hangle ne garantit pas que l'un des matériaux sur son site web est exact, complet ou à jour. Hangle peut apporter des modifications au matériel contenu sur son site web à tout moment sans préavis."
+            }
+        },
+        about: {
+            title: "À propos de Hangle",
+            subtitle: "Apprenez des phrases coréennes essentielles pour le voyage et la vie quotidienne.",
+            intro: "Hangle a été créé pour rendre l'apprentissage du coréen simple, amusant et accessible à tous. Que vous planifiez votre premier voyage en Corée ou que vous soyez simplement curieux de la langue, Hangle est là pour vous aider.",
+            features: {
+                title: "Fonctionnalités Clés",
+                practical: {
+                    title: "Vocabulaire Pratique",
+                    desc: "Apprenez des phrases essentielles adaptées à des scénarios de voyage réels comme les aéroports, les taxis et les restaurants."
+                },
+                simple: {
+                    title: "Simple et Efficace",
+                    desc: "Pas de leçon de grammaire complexe, juste des expressions utiles que vous pouvez utiliser immédiatement."
+                },
+                quiz: {
+                    title: "Quiz Amusants",
+                    desc: "Testez vos connaissances avec notre mode quiz interactif pour renforcer ce que vous avez appris."
+                }
+            },
+            cta: "Commencez à Apprendre Aujourd'hui !",
+            backToHome: "Retour à l'Accueil"
+        },
+        feedback: {
+            title: "Vos commentaires nous aident à nous améliorer",
+            issue: "Problème",
+            issueDesc: "Signaler des bugs ou des désagréments",
+            idea: "Idée",
+            ideaDesc: "Suggérer des fonctionnalités ou des améliorations",
+            contentPlaceholder: "Partagez vos idées pour un meilleur service.",
+            emailLabel: "Nous répondrons à l'e-mail que vous fournissez :)",
+            emailPlaceholder: "vous@exemple.com",
+            send: "Envoyer le Commentaire",
+            backToHome: "Retour à l'Accueil"
+        }
+    },
+    th: {
+        home: {
+            welcome: "ยินดีต้อนรับสู่ Hangle!",
+            askName: "เราควรเรียกคุณว่าอะไร?",
+            welcomeDescription: "Hangle เป็นแอปฟรีและง่ายที่จะช่วยให้คุณเรียนรู้วลีภาษาเกาหลีที่จำเป็นสำหรับการเดินทางของคุณ",
+            dataWarning: "หมายเหตุ: ความคืบหน้าของคุณจะถูกบันทึกไว้ในอุปกรณ์นี้ หากล้างข้อมูลเบราว์เซอร์ ความคืบหน้าจะหายไป",
+            namePlaceholder: "ใส่ชื่อของคุณ",
+            start: "เริ่มกันเลย",
+            greeting: "สวัสดี, {name}! พร้อมที่จะเรียนรู้หรือยัง?",
+            title: "เรียนรู้ภาษาเกาหลีพื้นฐาน",
+            subtitle: "สำหรับการเดินทางของคุณ",
+            description: "เรียนรู้วลีที่จำเป็นสำหรับการเดินทางและชีวิตประจำวัน บัตรคำศัพท์ง่ายๆ การออกเสียงแบบเจ้าของภาษา และแบบทดสอบสนุกๆ",
+            startLearning: "เริ่มเรียนรู้",
+            takeQuiz: "ทำแบบทดสอบ",
+            bookmarks: "บุ๊กมาร์ก",
+            search: "ค้นหา",
+            dailyPhrase: {
+                title: "วลีประจำวัน",
+                learnMore: "เรียนรู้เพิ่มเติม"
+            },
+            speaking: {
+                start: "พูด",
+                listening: "กำลังฟัง...",
+                success: "ยอดเยี่ยม!",
+                tryAgain: "ลองอีกครั้ง",
+                permission: "โปรดอนุญาตให้เข้าถึงไมโครโฟนเพื่อฝึกการพูด"
+            }
+        },
+        search: {
+            placeholder: "ค้นหาคำศัพท์หรือไวยากรณ์...",
+            noResults: "ไม่พบผลลัพธ์สำหรับ",
+            tabs: {
+                all: "ทั้งหมด",
+                vocab: "คำศัพท์",
+                grammar: "ไวยากรณ์"
+            },
+            results: "ผลลัพธ์"
+        },
+        guide: {
+            title: "คู่มือ Hangle",
+            subtitle: "พื้นฐานภาษา",
+            pronunciation: {
+                title: "เคล็ดลับการออกเสียง",
+                subtitle: "เรียนรู้เสียงที่ยาก",
+                description: "เรียนรู้ตัวสะกด การเชื่อมเสียง และกฎการกลมกลืนเสียงเพื่อพูดให้เหมือนเจ้าของภาษา",
+                written: "เขียน",
+                pronounced: "ออกเสียง"
+            },
+            grammar: {
+                title: "ไวยากรณ์ที่จำเป็น",
+                subtitle: "รูปแบบหลัก",
+                description: "รายการรูปแบบไวยากรณ์ภาษาเกาหลีที่จำเป็นสำหรับผู้เริ่มต้น",
+                searchPlaceholder: "ค้นหาไวยากรณ์...",
+                headers: {
+                    expression: "นิพจน์",
+                    meaning: "ความหมาย",
+                    example: "ตัวอย่าง"
+                },
+                notFound: "ไม่พบรูปแบบไวยากรณ์ที่ตรงกับ"
+            },
+            mistakes: {
+                title: "ข้อผิดพลาดทั่วไป",
+                subtitle: "หลีกเลี่ยงข้อผิดพลาดเหล่านี้",
+                description: "เรียนรู้จากข้อผิดพลาดที่ชาวต่างชาติมักทำและวิธีแก้ไข",
+                mistake: "ผิด",
+                correction: "แก้ไข",
+                tip: "เคล็ดลับ"
+            },
+            explore: "สำรวจ"
+        },
+        categories: {
+            title: "เลือกหมวดหมู่",
+            items: {
+                airport: { name: "สนามบิน (공항)", description: "เช็คอิน, พาสปอร์ต, ประตูทางออก" },
+                taxi: { name: "แท็กซี่ (택시)", description: "จุดหมายปลายทาง, ค่าโดยสาร, ทิศทาง" },
+                bus: { name: "รถบัส (버스)", description: "ป้ายรถเมล์, เส้นทาง, ค่าโดยสาร" },
+                subway: { name: "รถไฟใต้ดิน (지하철)", description: "สถานี, การเปลี่ยนสาย, ทางออก" },
+                restaurant: { name: "ร้านอาหาร (식당)", description: "สั่งอาหาร, เมนู, การจ่ายเงิน" },
+                hotel: { name: "โรงแรม (호텔)", description: "เช็คอิน, บริการ, ห้องพัก" },
+                tourist: { name: "ข้อมูลท่องเที่ยว (관광안내소)", description: "แผนที่, ไกด์, ตั๋ว" },
+                daily: { name: "ชีวิตประจำวัน (일상)", description: "ทักทาย, คำถามพื้นฐาน" },
+                emergency: { name: "ฉุกเฉิน (긴급상황)", description: "ตำรวจ, ดับเพลิง, รถพยาบาล" },
+                hospital: { name: "โรงพยาบาล (병원)", description: "หมอ, ร้านขายยา, อาการ" }
+            }
+        },
+        learn: {
+            back: "กลับ",
+            flip: "แตะเพื่อพลิก",
+            known: "ฉันรู้แล้ว!",
+            learned: "เรียนรู้แล้ว",
+            xp: "+10 XP",
+            quizPrompt: "พร้อมไหม? ทำแบบทดสอบ!",
+            notFound: "ไม่พบหมวดหมู่",
+            goBack: "กลับไป",
+            speedNormal: "ความเร็วปกติ",
+            speedSlow: "ความเร็วช้า",
+            close: "ปิด",
+            last: "เสร็จสิ้น",
+            next: "ถัดไป",
+            skip: "ข้าม",
+            tour: {
+                listen: "ฟังการออกเสียง",
+                speak: "เปิดไมค์แล้วพูด เราจะตรวจสอบการออกเสียงของคุณ!",
+                speed: "ปรับความเร็วในการเล่น",
+                flip: "แตะที่การ์ดเพื่อดูความหมาย",
+                bookmark: "บุ๊กมาร์กวลีเพื่อทบทวนในภายหลัง",
+                known: "ทำเครื่องหมายว่าเรียนรู้แล้วเพื่อรับ XP!"
+            }
+        },
+        quiz: {
+            quizModeTitle: "โหมดแบบทดสอบ",
+            quizModeSubtitle: "ทดสอบความรู้ของคุณ!",
+            quit: "ออก",
+            question: "คำถาม",
+            prompt: "นี่หมายความว่าอย่างไร?",
+            complete: "แบบทดสอบเสร็จสิ้น!",
+            score: "คะแนนของคุณ:",
+            review: "ทบทวนวลี",
+            retry: "ลองอีกครั้ง",
+            next: "คำถามถัดไป",
+            results: "ดูผลลัพธ์",
+            notEnough: "ข้อมูลไม่เพียงพอสำหรับแบบทดสอบ",
+            goBack: "กลับไป"
+        },
+        privacy: {
+            backToHome: "กลับสู่หน้าหลัก",
+            title: "นโยบายความเป็นส่วนตัว",
+            lastUpdated: "อัปเดตล่าสุด:",
+            intro: {
+                title: "1. บทนำ",
+                content: "ยินดีต้อนรับสู่ Hangle เราเคารพความเป็นส่วนตัวของคุณและมุ่งมั่นที่จะปกป้องข้อมูลส่วนบุคคลของคุณ นโยบายความเป็นส่วนตัวนี้จะแจ้งให้คุณทราบถึงวิธีการที่เราดูแลข้อมูลส่วนบุคคลของคุณเมื่อคุณเยี่ยมชมเว็บไซต์ของเรา และแจ้งให้คุณทราบเกี่ยวกับสิทธิความเป็นส่วนตัวของคุณและวิธีการที่กฎหมายคุ้มครองคุณ"
+            },
+            dataCollection: {
+                title: "2. ข้อมูลที่เราเก็บรวบรวม",
+                content: "เราไม่เก็บรวบรวมข้อมูลส่วนบุคคลใดๆ จากผู้ใช้ของเรา Hangle เป็นแอปพลิเคชันฝั่งไคลเอนต์ ความคืบหน้าหรือการตั้งค่าใดๆ (เช่น ชื่อ ระดับ XP และการตั้งค่าธีมของคุณ) จะถูกเก็บไว้ในอุปกรณ์ของคุณโดยใช้ที่เก็บข้อมูลในเครื่องของเบราว์เซอร์ ข้อมูลนี้จะไม่ถูกส่งไปยังเซิร์ฟเวอร์ภายนอกใดๆ"
+            },
+            cookies: {
+                title: "3. คุกกี้",
+                content: "เราไม่ใช้คุกกี้เพื่อวัตถุประสงค์ในการติดตาม เราอาจใช้ที่เก็บข้อมูลในเครื่องเพื่อบันทึกการตั้งค่าของคุณเพื่อปรับปรุงประสบการณ์ของคุณบนเว็บไซต์ของเรา (เช่น การจดจำการตั้งค่าโหมดมืดของคุณ)"
+            },
+            thirdParty: {
+                title: "4. ลิงก์ของบุคคลที่สาม",
+                content: "เว็บไซต์นี้อาจมีลิงก์ไปยังเว็บไซต์ ปลั๊กอิน และแอปพลิเคชันของบุคคลที่สาม การคลิกที่ลิงก์เหล่านั้นหรือเปิดการเชื่อมต่อเหล่านั้นอาจทำให้บุคคลที่สามสามารถรวบรวมหรือแบ่งปันข้อมูลเกี่ยวกับคุณ เราไม่ได้ควบคุมเว็บไซต์ของบุคคลที่สามเหล่านี้และจะไม่รับผิดชอบต่อคำชี้แจงความเป็นส่วนตัวของพวกเขา"
+            },
+            changes: {
+                title: "5. การเปลี่ยนแปลงนโยบายนี้",
+                content: "เราอาจอัปเดตนโยบายความเป็นส่วนตัวของเราเป็นครั้งคราว เราจะแจ้งให้คุณทราบถึงการเปลี่ยนแปลงใดๆ โดยการโพสต์นโยบายความเป็นส่วนตัวใหม่ในหน้านี้"
+            },
+            contact: {
+                title: "6. ติดต่อเรา",
+                content: "หากคุณมีคำถามใดๆ เกี่ยวกับนโยบายความเป็นส่วนตัวนี้ โปรดติดต่อเรา"
+            }
+        },
+        terms: {
+            backToHome: "กลับสู่หน้าหลัก",
+            title: "เงื่อนไขการให้บริการ",
+            lastUpdated: "อัปเดตล่าสุด:",
+            agreement: {
+                title: "1. ข้อตกลงในเงื่อนไข",
+                content: "โดยการเข้าถึงเว็บไซต์ของเรา คุณตกลงที่จะผูกพันตามเงื่อนไขการให้บริการเหล่านี้และปฏิบัติตามกฎหมายและข้อบังคับที่เกี่ยวข้องทั้งหมด หากคุณไม่ยอมรับเงื่อนไขเหล่านี้ คุณจะไม่ได้รับอนุญาตให้ใช้หรือเข้าถึงเว็บไซต์นี้"
+            },
+            license: {
+                title: "2. ใบอนุญาตการใช้งาน",
+                content: "อนุญาตให้ดาวน์โหลดสำเนาของวัสดุ (ข้อมูลหรือซอฟต์แวร์) บนเว็บไซต์ของ Hangle ชั่วคราวสำหรับการดูส่วนบุคคลที่ไม่ใช่เชิงพาณิชย์เท่านั้น นี่คือการอนุญาตให้ใช้สิทธิ์ ไม่ใช่การโอนกรรมสิทธิ์"
+            },
+            disclaimer: {
+                title: "3. ข้อจำกัดความรับผิดชอบ",
+                content: "วัสดุบนเว็บไซต์ของ Hangle จัดทำขึ้น 'ตามที่เป็น' Hangle ไม่รับประกันใดๆ ไม่ว่าจะโดยชัดแจ้งหรือโดยนัย และขอปฏิเสธและปฏิเสธการรับประกันอื่นๆ ทั้งหมด รวมถึงแต่ไม่จำกัดเพียงการรับประกันโดยนัยหรือเงื่อนไขของความสามารถในการขาย ความเหมาะสมสำหรับวัตถุประสงค์เฉพาะ หรือการไม่ละเมิดทรัพย์สินทางปัญญาหรือการละเมิดสิทธิ์อื่นๆ"
+            },
+            limitations: {
+                title: "4. ข้อจำกัด",
+                content: "ไม่ว่าในกรณีใด Hangle หรือซัพพลายเออร์จะไม่รับผิดชอบต่อความเสียหายใดๆ (รวมถึงแต่ไม่จำกัดเพียงความเสียหายจากการสูญเสียข้อมูลหรือกำไร หรือเนื่องจากการหยุดชะงักทางธุรกิจ) ที่เกิดขึ้นจากการใช้หรือไม่สามารถใช้วัสดุบนเว็บไซต์ของ Hangle"
+            },
+            accuracy: {
+                title: "5. ความถูกต้องของวัสดุ",
+                content: "วัสดุที่ปรากฏบนเว็บไซต์ของ Hangle อาจมีข้อผิดพลาดทางเทคนิค การพิมพ์ หรือการถ่ายภาพ Hangle ไม่รับประกันว่าวัสดุใดๆ บนเว็บไซต์นั้นถูกต้อง สมบูรณ์ หรือเป็นปัจจุบัน Hangle อาจทำการเปลี่ยนแปลงวัสดุที่มีอยู่ในเว็บไซต์ได้ตลอดเวลาโดยไม่ต้องแจ้งให้ทราบล่วงหน้า"
+            }
+        },
+        about: {
+            title: "เกี่ยวกับ Hangle",
+            subtitle: "เรียนรู้วลีภาษาเกาหลีที่จำเป็นสำหรับการเดินทางและชีวิตประจำวัน",
+            intro: "Hangle ถูกสร้างขึ้นเพื่อทำให้การเรียนภาษาเกาหลีเป็นเรื่องง่าย สนุก และเข้าถึงได้สำหรับทุกคน ไม่ว่าคุณจะวางแผนการเดินทางครั้งแรกไปเกาหลีหรือเพียงแค่สนใจในภาษา Hangle ก็พร้อมที่จะช่วยเหลือคุณ",
+            features: {
+                title: "คุณสมบัติหลัก",
+                practical: {
+                    title: "คำศัพท์ที่ใช้จริง",
+                    desc: "เรียนรู้วลีที่จำเป็นซึ่งเหมาะสำหรับสถานการณ์การเดินทางจริง เช่น สนามบิน แท็กซี่ และร้านอาหาร"
+                },
+                simple: {
+                    title: "ง่ายและมีประสิทธิภาพ",
+                    desc: "ไม่มีบทเรียนไวยากรณ์ที่ซับซ้อน มีแต่นิพจน์ที่มีประโยชน์ที่คุณสามารถใช้ได้ทันที"
+                },
+                quiz: {
+                    title: "แบบทดสอบสนุกๆ",
+                    desc: "ทดสอบความรู้ของคุณด้วยโหมดแบบทดสอบแบบโต้ตอบของเราเพื่อเสริมสร้างสิ่งที่คุณได้เรียนรู้"
+                }
+            },
+            cta: "เริ่มเรียนรู้ได้เลยวันนี้!",
+            backToHome: "กลับสู่หน้าหลัก"
+        },
+        feedback: {
+            title: "คำติชมของคุณช่วยให้เราปรับปรุงดีขึ้น",
+            issue: "ปัญหา",
+            issueDesc: "รายงานข้อบกพร่องหรือความไม่สะดวก",
+            idea: "ไอเดีย",
+            ideaDesc: "แนะนำคุณสมบัติหรือการปรับปรุง",
+            contentPlaceholder: "แบ่งปันความคิดของคุณเพื่อบริการที่ดียิ่งขึ้น",
+            emailLabel: "เราจะตอบกลับไปยังอีเมลที่คุณให้ไว้ :)",
+            emailPlaceholder: "you@example.com",
+            send: "ส่งคำติชม",
+            backToHome: "กลับสู่หน้าหลัก"
+        }
+    },
+    zh: {
+        home: {
+            welcome: "欢迎来到 Hangle！",
+            askName: "我们该怎么称呼您？",
+            welcomeDescription: "Hangle 是一款免费且简单的应用程序，可帮助您学习旅行所需的各种韩语短语。",
+            dataWarning: "注意：您的进度将保存在此设备本地。清除浏览器数据将重置您的进度。",
+            namePlaceholder: "输入您的名字",
+            start: "开始",
+            greeting: "你好，{name}！准备好学习了吗？",
+            title: "掌握基础韩语",
+            subtitle: "为您的旅行做好准备",
+            description: "学习旅行和日常生活的基本短语。简单的抽认卡，母语发音和有趣的测验。",
+            startLearning: "开始学习",
+            takeQuiz: "参加测验",
+            bookmarks: "书签",
+            search: "搜索",
+            dailyPhrase: {
+                title: "每日短语",
+                learnMore: "了解更多"
+            },
+            speaking: {
+                start: "说话",
+                listening: "正在听...",
+                success: "太棒了！",
+                tryAgain: "再试一次",
+                permission: "请允许使用麦克风以练习口语。"
+            }
+        },
+        search: {
+            placeholder: "搜索词汇或语法...",
+            noResults: "未找到结果",
+            tabs: {
+                all: "全部",
+                vocab: "词汇",
+                grammar: "语法"
+            },
+            results: "结果"
+        },
+        guide: {
+            title: "Hangle 指南",
+            subtitle: "语言基础",
+            pronunciation: {
+                title: "发音技巧",
+                subtitle: "掌握难发音",
+                description: "学习收音、连音和同化规则，像母语者一样说话。",
+                written: "书写",
+                pronounced: "发音"
+            },
+            grammar: {
+                title: "基础语法",
+                subtitle: "主要句型",
+                description: "初学者必备的韩语语法句型列表。",
+                searchPlaceholder: "搜索语法...",
+                headers: {
+                    expression: "表达",
+                    meaning: "含义",
+                    example: "例句"
+                },
+                notFound: "未找到匹配的语法句型"
+            },
+            mistakes: {
+                title: "常见错误",
+                subtitle: "避免这些错误",
+                description: "了解外国人常犯的错误以及如何纠正它们。",
+                mistake: "错误",
+                correction: "改正",
+                tip: "提示"
+            },
+            explore: "探索"
+        },
+        categories: {
+            title: "选择类别",
+            items: {
+                airport: { name: "机场 (공항)", description: "值机, 护照, 登机口" },
+                taxi: { name: "出租车 (택시)", description: "目的地, 车费, 方向" },
+                bus: { name: "公交车 (버스)", description: "公交站, 路线, 费用" },
+                subway: { name: "地铁 (지하철)", description: "车站, 换乘, 出口" },
+                restaurant: { name: "餐厅 (식당)", description: "点餐, 菜单, 付款" },
+                hotel: { name: "酒店 (호텔)", description: "入住, 服务, 房间" },
+                tourist: { name: "旅游信息 (관광안내소)", description: "地图, 指南, 门票" },
+                daily: { name: "日常生活 (일상)", description: "问候, 基本问题" },
+                emergency: { name: "紧急情况 (긴급상황)", description: "警察, 消防, 救护车" },
+                hospital: { name: "医院 (병원)", description: "医生, 药房, 症状" }
+            }
+        },
+        learn: {
+            back: "返回",
+            flip: "点击翻转",
+            known: "我知道这个！",
+            learned: "已学习",
+            xp: "+10 XP",
+            quizPrompt: "准备好了吗？参加测验！",
+            notFound: "未找到类别",
+            goBack: "返回",
+            speedNormal: "正常速度",
+            speedSlow: "慢速",
+            close: "关闭",
+            last: "完成",
+            next: "下一个",
+            skip: "跳过",
+            tour: {
+                listen: "听发音。",
+                speak: "打开麦克风说话。我们会检查您的发音！",
+                speed: "调整播放速度。",
+                flip: "点击卡片查看含义。",
+                bookmark: "收藏短语以便稍后复习。",
+                known: "标记为已学以获得 XP！"
+            }
+        },
+        quiz: {
+            quizModeTitle: "测验模式",
+            quizModeSubtitle: "测试您的知识！",
+            quit: "退出",
+            question: "问题",
+            prompt: "这​​是什么意思？",
+            complete: "测验完成！",
+            score: "您的得分：",
+            review: "复习短语",
+            retry: "重试",
+            next: "下一个问题",
+            results: "查看结果",
+            notEnough: "没有足够的数据进行测验",
+            goBack: "返回"
+        },
+        privacy: {
+            backToHome: "返回首页",
+            title: "隐私政策",
+            lastUpdated: "最后更新：",
+            intro: {
+                title: "1. 简介",
+                content: "欢迎来到 Hangle。我们尊重您的隐私，并致力于保护您的个人数据。本隐私政策将告知您当您访问我们的网站时我们如何处理您的个人数据，并告知您有关您的隐私权以及法律如何保护您。"
+            },
+            dataCollection: {
+                title: "2. 我们收集的数据",
+                content: "我们不收集用户的任何个人数据。Hangle 是一个客户端应用程序。任何进度或偏好（例如您的姓名、等级、XP 和主题设置）都使用浏览器的本地存储存储在您的设备本地。此数据不会传输到任何外部服务器。"
+            },
+            cookies: {
+                title: "3. Cookie",
+                content: "我们不使用 Cookie 进行跟踪。我们可能会使用本地存储来保存您的偏好，以改善您在我们网站上的体验（例如，记住您的深色模式偏好）。"
+            },
+            thirdParty: {
+                title: "4. 第三方链接",
+                content: "本网站可能包含指向第三方网站、插件和应用程序的链接。点击这些链接或启用这些连接可能会允许第三方收集或共享有关您的数据。我们无法控制这些第三方网站，也不对其隐私声明负责。"
+            },
+            changes: {
+                title: "5. 本政策的变更",
+                content: "我们可能会不时更新我们的隐私政策。我们将通过在此页面上发布新的隐私政策来通知您任何更改。"
+            },
+            contact: {
+                title: "6. 联系我们",
+                content: "如果您对本隐私政策有任何疑问，请联系我们。"
+            }
+        },
+        terms: {
+            backToHome: "返回首页",
+            title: "服务条款",
+            lastUpdated: "最后更新：",
+            agreement: {
+                title: "1. 同意条款",
+                content: "通过访问我们的网站，您同意受这些服务条款的约束，并遵守所有适用的法律和法规。如果您不同意这些条款中的任何一项，您将被禁止使用或访问本网站。"
+            },
+            license: {
+                title: "2. 使用许可",
+                content: "允许暂时下载 Hangle 网站上的材料（信息或软件）副本，仅供个人、非商业性的临时查看。这是许可的授予，而不是所有权的转让。"
+            },
+            disclaimer: {
+                title: "3. 免责声明",
+                content: "Hangle 网站上的材料是按“原样”提供的。Hangle 不做任何明示或暗示的保证，并特此声明并否认所有其他保证，包括但不限于适销性、特定用途适用性或不侵犯知识产权或其他侵犯权利的暗示保证或条件。"
+            },
+            limitations: {
+                title: "4. 限制",
+                content: "在任何情况下，Hangle 或其供应商均不对因使用或无法使用 Hangle 网站上的材料而造成的任何损害（包括但不限于数据丢失或利润损失，或由于业务中断造成的损害）负责。"
+            },
+            accuracy: {
+                title: "5. 材料的准确性",
+                content: "Hangle 网站上出现的材料可能包含技术、印刷或摄影错误。Hangle 不保证其网站上的任何材料是准确、完整或最新的。Hangle 可能随时更改其网站上包含的材料，恕不另行通知。"
+            }
+        },
+        about: {
+            title: "关于 Hangle",
+            subtitle: "学习旅行和日常生活的韩语基本短语。",
+            intro: "Hangle 的创建旨在让韩语学习变得简单、有趣且人人均可访问。无论您是计划第一次去韩国旅行，还是只是对这门语言感到好奇，Hangle 都在这里为您提供帮助。",
+            features: {
+                title: "主要功能",
+                practical: {
+                    title: "实用词汇",
+                    desc: "学习适合实际旅行场景（如机场、出租车和餐厅）的基本短语。"
+                },
+                simple: {
+                    title: "简单高效",
+                    desc: "没有复杂的语法课程，只有您可以立即使用的有用表达。"
+                },
+                quiz: {
+                    title: "趣味测验",
+                    desc: "通过我们的互动测验模式测试您的知识，以巩固您所学的知识。"
+                }
+            },
+            cta: "今天开始学习！",
+            backToHome: "返回首页"
+        },
+        feedback: {
+            title: "您的反馈有助于我们需要改进",
+            issue: "问题",
+            issueDesc: "报告错误或不便",
+            idea: "想法",
+            ideaDesc: "建议功能或改进",
+            contentPlaceholder: "分享您的想法以获得更好的服务。",
+            emailLabel: "我们将回复您提供的电子邮件 :)",
+            emailPlaceholder: "you@example.com",
+            send: "发送反馈",
+            backToHome: "返回首页"
+        }
+    },
+    hi: {
+        home: {
+            welcome: "Hangle में आपका स्वागत है!",
+            askName: "हम आपको क्या कहकर बुलाएं?",
+            welcomeDescription: "Hangle आपकी यात्रा के लिए आवश्यक कोरियाई वाक्यांश सीखने में मदद करने के लिए एक निःशुल्क, सरल ऐप है।",
+            dataWarning: "नोट: आपकी प्रगति इस डिवाइस पर स्थानीय रूप से सुरक्षित है। ब्राउज़र डेटा साफ़ करने से आपकी प्रगति रीसेट हो जाएगी।",
+            namePlaceholder: "अपना नाम दर्ज करें",
+            start: "शुरू करें",
+            greeting: "नमस्ते, {name}! सीखने के लिए तैयार हैं?",
+            title: "बुनियादी कोरियाई सीखें",
+            subtitle: "आपकी यात्रा के लिए",
+            description: "यात्रा और दैनिक जीवन के लिए आवश्यक वाक्यांश सीखें। सरल कार्ड, मूल उच्चारण और मजेदार क्विज़।",
+            startLearning: "सीखना शुरू करें",
+            takeQuiz: "क्विज़ लें",
+            bookmarks: "बुकमार्क",
+            search: "खोजें",
+            dailyPhrase: {
+                title: "दैनिक वाक्यांश",
+                learnMore: "और जानें"
+            },
+            speaking: {
+                start: "बोलें",
+                listening: "सुन रहा हूँ...",
+                success: "उत्तम!",
+                tryAgain: "पुनः प्रयास करें",
+                permission: "कृपया बोलने का अभ्यास करने के लिए माइक्रोफ़ोन की अनुमति दें।"
+            }
+        },
+        search: {
+            placeholder: "शब्दावली या व्याकरण खोजें...",
+            noResults: "इसके लिए कोई परिणाम नहीं मिला",
+            tabs: {
+                all: "सभी",
+                vocab: "शब्दावली",
+                grammar: "व्याकरण"
+            },
+            results: "परिणाम"
+        },
+        guide: {
+            title: "Hangle गाइड",
+            subtitle: "भाषा की मूल बातें",
+            pronunciation: {
+                title: "उच्चारण टिप्स",
+                subtitle: "कठिन ध्वनियों में महारत हासिल करें",
+                description: "एक मूल निवासी की तरह बोलने के लिए अंतिम व्यंजन, संपर्क और आत्मसात नियमों के बारे में जानें।",
+                written: "लिखित",
+                pronounced: "उच्चारण"
+            },
+            grammar: {
+                title: "आवश्यक व्याकरण",
+                subtitle: "शीर्ष पैटर्न",
+                description: "शुरुआती लोगों के लिए आवश्यक कोरियाई व्याकरण पैटर्न की एक व्यापक सूची।",
+                searchPlaceholder: "व्याकरण खोजें...",
+                headers: {
+                    expression: "अभिव्यक्ति",
+                    meaning: "अर्थ",
+                    example: "उदाहरण"
+                },
+                notFound: "कोई व्याकरण पैटर्न नहीं मिला"
+            },
+            mistakes: {
+                title: "आम गलतियाँ",
+                subtitle: "इन त्रुटियों से बचें",
+                description: "विदेशियों द्वारा की जाने वाली सबसे आम गलतियों से सीखें और उन्हें कैसे ठीक करें।",
+                mistake: "गलती",
+                correction: "सुधार",
+                tip: "सुझाव"
+            },
+            explore: "अन्वेषण करें"
+        },
+        categories: {
+            title: "एक श्रेणी चुनें",
+            items: {
+                airport: { name: "हवाई अड्डा (공항)", description: "चेक-इन, पासपोर्ट, गेट" },
+                taxi: { name: "टैक्सी (택시)", description: "गंतव्य, किराया, दिशा-निर्देश" },
+                bus: { name: "बस (버스)", description: "बस स्टॉप, मार्ग, शुल्क" },
+                subway: { name: "मेट्रो (지하철)", description: "स्टेशन, स्थानांतरण, निकास" },
+                restaurant: { name: "रेस्तरां (식당)", description: "ऑर्डर, मेनू, भुगतान" },
+                hotel: { name: "होटल (호텔)", description: "चेक-इन, सेवा, कक्ष" },
+                tourist: { name: "पर्यटक जानकारी (관광안내소)", description: "मानचित्र, गाइड, टिकट" },
+                daily: { name: "दैनिक जीवन (일상)", description: "अभिवादन, बुनियादी प्रश्न" },
+                emergency: { name: "आपातकाल (긴급상황)", description: "पुलिस, आग, एम्बुलेंस" },
+                hospital: { name: "अस्पताल (병원)", description: "डॉक्टर, फार्मेसी, लक्षण" }
+            }
+        },
+        learn: {
+            back: "वापस",
+            flip: "पलटने के लिए टैप करें",
+            known: "मैं यह जानता हूँ!",
+            learned: "सीखा",
+            xp: "+10 XP",
+            quizPrompt: "तैयार? क्विज़ लें!",
+            notFound: "श्रेणी नहीं मिली",
+            goBack: "वापस जाओ",
+            speedNormal: "सामान्य गति",
+            speedSlow: "धीमी गति",
+            close: "बंद करें",
+            last: "हो गया",
+            next: "अगला",
+            skip: "छोड़ें",
+            tour: {
+                listen: "उच्चारण सुनें।",
+                speak: "माइक चालू करें और बोलें। हम आपके उच्चारण की जाँच करेंगे!",
+                speed: "प्लेबैक गति समायोजित करें।",
+                flip: "अर्थ देखने के लिए कार्ड पर टैप करें।",
+                bookmark: "बाद में समीक्षा करने के लिए वाक्यांशों को बुकमार्क करें।",
+                known: "XP अर्जित करने के लिए सीखा हुआ चिह्नित करें!"
+            }
+        },
+        quiz: {
+            quizModeTitle: "क्विज़ मोड",
+            quizModeSubtitle: "अपने ज्ञान का परीक्षण करें!",
+            quit: "छोड़ें",
+            question: "प्रश्न",
+            prompt: "इसका क्या मतलब है?",
+            complete: "क्विज़ पूर्ण!",
+            score: "आपका स्कोर:",
+            review: "वाक्यांशों की समीक्षा करें",
+            retry: "पुनः प्रयास करें",
+            next: "अगला प्रश्न",
+            results: "परिणाम देखें",
+            notEnough: "क्विज़ के लिए पर्याप्त डेटा नहीं",
+            goBack: "वापस जाओ"
+        },
+        privacy: {
+            backToHome: "मुखपृष्ठ पर वापस",
+            title: "गोपनीयता नीति",
+            lastUpdated: "अंतिम अद्यतन:",
+            intro: {
+                title: "1. परिचय",
+                content: "Hangle में आपका स्वागत है। हम आपकी गोपनीयता का सम्मान करते हैं और आपके व्यक्तिगत डेटा की सुरक्षा के लिए प्रतिबद्ध हैं। यह गोपनीयता नीति आपको सूचित करेगी कि जब आप हमारी वेबसाइट पर जाते हैं तो हम आपके व्यक्तिगत डेटा की देखभाल कैसे करते हैं और आपको आपके गोपनीयता अधिकारों और कानून आपको कैसे सुरक्षित रखता है, इसके बारे में बताते हैं।"
+            },
+            dataCollection: {
+                title: "2. डेटा जो हम एकत्र करते हैं",
+                content: "हम अपने उपयोगकर्ताओं से कोई भी व्यक्तिगत डेटा एकत्र नहीं करते हैं। Hangle एक क्लाइंट-साइड एप्लिकेशन है। कोई भी प्रगति या प्राथमिकताएं (जैसे आपका नाम, स्तर, XP, और थीम सेटिंग्स) आपके ब्राउज़र के स्थानीय भंडारण का उपयोग करके आपके डिवाइस पर स्थानीय रूप से संग्रहीत की जाती हैं। यह डेटा किसी भी बाहरी सर्वर पर प्रसारित नहीं किया जाता है।"
+            },
+            cookies: {
+                title: "3. कुकीज़",
+                content: "हम ट्रैकिंग उद्देश्यों के लिए कुकीज़ का उपयोग नहीं करते हैं। हम आपकी वरीयताओं को सहेजने के लिए स्थानीय भंडारण का उपयोग कर सकते हैं ताकि हमारी साइट पर आपके अनुभव को बेहतर बनाया जा सके (उदाहरण के लिए, अपनी डार्क मोड वरीयता को याद रखना)।"
+            },
+            thirdParty: {
+                title: "4. तृतीय-पक्ष लिंक",
+                content: "इस वेबसाइट में तृतीय-पक्ष वेबसाइटों, प्लगइन्स और अनुप्रयोगों के लिंक शामिल हो सकते हैं। उन लिंक पर क्लिक करने या उन कनेक्शनों को सक्षम करने से तृतीय पक्षों को आपके बारे में डेटा एकत्र करने या साझा करने की अनुमति मिल सकती है। हम इन तृतीय-पक्ष वेबसाइटों को नियंत्रित नहीं करते हैं और उनके गोपनीयता बयानों के लिए जिम्मेदार नहीं हैं।"
+            },
+            changes: {
+                title: "5. इस नीति में परिवर्तन",
+                content: "हम समय-समय पर अपनी गोपनीयता नीति को अपडेट कर सकते हैं। हम इस पृष्ठ पर नई गोपनीयता नीति पोस्ट करके आपको किसी भी बदलाव के बारे में सूचित करेंगे।"
+            },
+            contact: {
+                title: "6. हमसे संपर्क करें",
+                content: "यदि आपके पास इस गोपनीयता नीति के बारे में कोई प्रश्न हैं, तो कृपया हमसे संपर्क करें।"
+            }
+        },
+        terms: {
+            backToHome: "मुखपृष्ठ पर वापस",
+            title: "सेवा की शर्तें",
+            lastUpdated: "अंतिम अद्यतन:",
+            agreement: {
+                title: "1. शर्तों के लिए समझौता",
+                content: "हमारी वेबसाइट तक पहुँचने से, आप इन सेवा की शर्तों से बंधे होने और सभी लागू कानूनों और नियमों का पालन करने के लिए सहमत होते हैं। यदि आप इन शर्तों में से किसी के साथ सहमत नहीं हैं, तो आपको इस साइट का उपयोग करने या तक पहुँचने से प्रतिबंधित किया जाता है।"
+            },
+            license: {
+                title: "2. उपयोग लाइसेंस",
+                content: "व्यक्तिगत, गैर-वाणिज्यिक अस्थायी देखने के लिए केवल Hangle की वेबसाइट पर सामग्री (जानकारी या सॉफ़्टवेयर) की एक प्रति अस्थायी रूप से डाउनलोड करने की अनुमति दी जाती है। यह एक लाइसेंस का अनुदान है, शीर्षक का हस्तांतरण नहीं।"
+            },
+            disclaimer: {
+                title: "3. अस्वीकरण",
+                content: "Hangle की वेबसाइट पर सामग्री 'जैसा है' के आधार पर प्रदान की जाती है। Hangle कोई वारंटी, व्यक्त या निहित नहीं करता है, और इसके द्वारा अन्य सभी वारंटी को अस्वीकार और नकारता है, जिसमें बिना किसी सीमा के, निहित वारंटी या व्यापारिक योग्यता की शर्तें, किसी विशेष उद्देश्य के लिए फिटनेस, या बौद्धिक संपदा का गैर-उल्लंघन या अधिकारों का अन्य उल्लंघन शामिल है।"
+            },
+            limitations: {
+                title: "4. सीमाएं",
+                content: "किसी भी स्थिति में Hangle या इसके आपूर्तिकर्ता Hangle की वेबसाइट पर सामग्री के उपयोग या उपयोग करने में असमर्थता से उत्पन्न होने वाले किसी भी नुकसान (बिना किसी सीमा के, डेटा या लाभ के नुकसान के लिए नुकसान, या व्यापार रुकावट के कारण) के लिए उत्तरदायी नहीं होंगे।"
+            },
+            accuracy: {
+                title: "5. सामग्री की सटीकता",
+                content: "Hangle की वेबसाइट पर दिखाई देने वाली सामग्री में तकनीकी, टाइपोग्राफिकल या फोटोग्राफिक त्रुटियां शामिल हो सकती हैं। Hangle यह वारंटी नहीं देता है कि इसकी वेबसाइट पर कोई भी सामग्री सटीक, पूर्ण या वर्तमान है। Hangle बिना किसी सूचना के किसी भी समय अपनी वेबसाइट पर निहित सामग्री में परिवर्तन कर सकता है।"
+            }
+        },
+        about: {
+            title: "Hangle के बारे में",
+            subtitle: "यात्रा और दैनिक जीवन के लिए आवश्यक कोरियाई वाक्यांश सीखें।",
+            intro: "Hangle को कोरियाई सीखने को सरल, मजेदार और सभी के लिए सुलभ बनाने के लिए बनाया गया था। चाहे आप कोरिया की अपनी पहली यात्रा की योजना बना रहे हों या सिर्फ भाषा के बारे में उत्सुक हों, Hangle मदद के लिए यहाँ है।",
+            features: {
+                title: "प्रमुख विशेषताऐं",
+                practical: {
+                    title: "व्यावहारिक शब्दावली",
+                    desc: "हवाई अड्डों, टैक्सियों और रेस्तरां जैसे वास्तविक यात्रा परिदृश्यों के लिए सिलवाया गया आवश्यक वाक्यांश सीखें।"
+                },
+                simple: {
+                    title: "सरल और प्रभावी",
+                    desc: "कोई जटिल व्याकरण पाठ नहीं, बस उपयोगी अभिव्यक्ति जिनका आप तुरंत उपयोग कर सकते हैं।",
+                },
+                quiz: {
+                    title: "मजेदार क्विज़",
+                    desc: "आपने जो सीखा है उसे सुदृढ़ करने के लिए हमारे इंटरेक्टिव क्विज़ मोड के साथ अपने ज्ञान का परीक्षण करें।"
+                }
+            },
+            cta: "आज सीखना शुरू करें!",
+            backToHome: "मुखपृष्ठ पर वापस"
+        },
+        feedback: {
+            title: "आपकी प्रतिक्रिया हमें बेहतर बनाने में मदद करती है",
+            issue: "मुद्दा",
+            issueDesc: "कीड़े या असुविधा की रिपोर्ट करें",
+            idea: "विचार",
+            ideaDesc: "सुविधाओं या सुधारों का सुझाव दें",
+            contentPlaceholder: "बीटर सेवा के लिए अपने विचार साझा करें।",
+            emailLabel: "हम आपके द्वारा प्रदान किए गए ईमेल का उत्तर देंगे :)",
+            emailPlaceholder: "you@example.com",
+            send: "प्रतिक्रिया भेजें",
+            backToHome: "मुखपृष्ठ पर वापस"
+        }
     }
 };

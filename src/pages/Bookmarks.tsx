@@ -73,6 +73,10 @@ export default function Bookmarks() {
                                     {targetLanguage === 'en' && item.english}
                                     {targetLanguage === 'es' && item.spanish}
                                     {targetLanguage === 'ja' && item.japanese}
+                                    {targetLanguage === 'fr' && item.french}
+                                    {targetLanguage === 'th' && item.thai}
+                                    {targetLanguage === 'zh' && item.chinese}
+                                    {targetLanguage === 'hi' && item.hindi}
                                 </p>
                                 <button
                                     onClick={() => playAudio(item.korean)}
