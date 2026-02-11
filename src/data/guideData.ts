@@ -31,7 +31,12 @@ export const guideData = {
                 description: "When ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ, ㅎ appear at the end of a syllable, they are all pronounced as [t] (t or d).",
                 examples: [
                     { word: "있다", romanized: "itda", pronunciation: "[it-tta]", meaning: "to have/be" },
-                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "flower" }
+                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "flower" },
+                    { word: "낫", romanized: "nat", pronunciation: "[낟]", meaning: "sickle" },
+                    { word: "낮", romanized: "nat", pronunciation: "[낟]", meaning: "daytime" },
+                    { word: "낯", romanized: "nat", pronunciation: "[낟]", meaning: "face" },
+                    { word: "밑", romanized: "mit", pronunciation: "[믿]", meaning: "bottom" },
+                    { word: "히읗", romanized: "hieut", pronunciation: "[히읃]", meaning: "letter 'ㅎ'" }
                 ]
             },
             {
@@ -41,7 +46,11 @@ export const guideData = {
                 examples: [
                     { word: "먹어요", romanized: "meogeoyo", pronunciation: "[머거요]", meaning: "eat" },
                     { word: "웃어요", romanized: "useoyo", pronunciation: "[우서요]", meaning: "laugh" },
-                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "to Seoul" }
+                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "to Seoul" },
+                    { word: "음악", romanized: "eumak", pronunciation: "[으막]", meaning: "music" },
+                    { word: "무릎이", romanized: "mureupi", pronunciation: "[무르피]", meaning: "knee is..." },
+                    { word: "걸어요", romanized: "georeoyo", pronunciation: "[거러요]", meaning: "walk" },
+                    { word: "할아버지", romanized: "harabeoji", pronunciation: "[하라버지]", meaning: "grandfather" }
                 ]
             },
             {
@@ -50,7 +59,13 @@ export const guideData = {
                 description: "Certain consonant combinations change their sound for easier pronunciation. For example, 'ㅂ' followed by 'ㄴ' becomes 'ㅁ'.",
                 examples: [
                     { word: "합니다", romanized: "hamnida", pronunciation: "[ham-ni-da]", meaning: "do (formal)" },
-                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "national" }
+                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "national" },
+                    { word: "먹는", romanized: "meongneun", pronunciation: "[멍는]", meaning: "eating" },
+                    { word: "국물", romanized: "gungmul", pronunciation: "[궁물]", meaning: "soup" },
+                    { word: "믿는", romanized: "minneun", pronunciation: "[민는]", meaning: "believing" },
+                    { word: "듣는", romanized: "deunneun", pronunciation: "[든는]", meaning: "listening" },
+                    { word: "앞날", romanized: "amnal", pronunciation: "[암날]", meaning: "future" },
+                    { word: "십년", romanized: "simnyeon", pronunciation: "[심년]", meaning: "10 years" }
                 ]
             },
             {
@@ -59,7 +74,21 @@ export const guideData = {
                 description: "When 'ㅎ' meets ㄱ, ㄷ, ㅂ, or ㅈ, they merge into their aspirated forms (ㅋ, ㅌ, ㅍ, ㅊ).",
                 examples: [
                     { word: "축하하다", romanized: "chukahada", pronunciation: "[추카하다]", meaning: "congratulate" },
-                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "good" }
+                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "good" },
+                    { word: "백화점", romanized: "baekhwajeom", pronunciation: "[배콰점]", meaning: "dept. store" },
+                    { word: "어떻게", romanized: "eotteoke", pronunciation: "[어떠케]", meaning: "how" },
+                    { word: "답답하다", romanized: "dapdaphada", pronunciation: "[답따파다]", meaning: "frustrated" },
+                    { word: "그렇지", romanized: "geureochi", pronunciation: "[그러치]", meaning: "that's right" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Bonus Tip: Fortis (된소리되기)",
+                description: "When [ㄱ, ㄷ, ㅂ] meet [ㄱ, ㄷ, ㅂ, ㅅ, ㅈ], they become strong sounds (kk, tt, pp, ss, jj).",
+                examples: [
+                    { word: "학교", romanized: "hakgyo", pronunciation: "[학굑]", meaning: "school" },
+                    { word: "식당", romanized: "sikdang", pronunciation: "[식땅]", meaning: "restaurant" },
+                    { word: "옆집", romanized: "yeopjip", pronunciation: "[엽찝]", meaning: "next door" }
                 ]
             }
         ],
@@ -95,7 +124,7 @@ export const guideData = {
             { id: 29, expression: "(으)면 안 돼요", meaning: "You should not (Prohibition)", example: "여기서 담배를 피우**면 안 돼요**." },
             { id: 30, expression: "(으)ㄹ까요?", meaning: "Shall we...? (Suggestion)", example: "같이 영화 볼**까요**?" }
         ],
-                mistakes: [
+        mistakes: [
             {
                 id: 1,
                 title: "Honorifics vs. Casual (높임말 vs 반말)",
@@ -178,7 +207,12 @@ export const guideData = {
                 description: "Cuando ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ, ㅎ aparecen al final de una sílaba, todas se pronuncian como [t] (t o d).",
                 examples: [
                     { word: "있다", romanized: "itda", pronunciation: "[it-tta]", meaning: "tener/estar" },
-                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "flor" }
+                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "flor" },
+                    { word: "낫", romanized: "nat", pronunciation: "[낟]", meaning: "hoz" },
+                    { word: "낮", romanized: "nat", pronunciation: "[낟]", meaning: "día" },
+                    { word: "낯", romanized: "nat", pronunciation: "[낟]", meaning: "cara" },
+                    { word: "밑", romanized: "mit", pronunciation: "[믿]", meaning: "debajo" },
+                    { word: "히읗", romanized: "hieut", pronunciation: "[히읃]", meaning: "letra 'ㅎ'" }
                 ]
             },
             {
@@ -188,7 +222,11 @@ export const guideData = {
                 examples: [
                     { word: "먹어요", romanized: "meogeoyo", pronunciation: "[머거요]", meaning: "comer" },
                     { word: "웃어요", romanized: "useoyo", pronunciation: "[우서요]", meaning: "reír" },
-                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "a Seúl" }
+                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "a Seúl" },
+                    { word: "음악", romanized: "eumak", pronunciation: "[으막]", meaning: "música" },
+                    { word: "무릎이", romanized: "mureupi", pronunciation: "[무르피]", meaning: "rodilla" },
+                    { word: "걸어요", romanized: "georeoyo", pronunciation: "[거러요]", meaning: "caminar" },
+                    { word: "할아버지", romanized: "harabeoji", pronunciation: "[하라버지]", meaning: "abuelo" }
                 ]
             },
             {
@@ -197,7 +235,13 @@ export const guideData = {
                 description: "Ciertas combinaciones de consonantes cambian su sonido. Por ejemplo, 'ㅂ' seguido de 'ㄴ' se convierte en 'ㅁ'.",
                 examples: [
                     { word: "합니다", romanized: "hamnida", pronunciation: "[ham-ni-da]", meaning: "hacer (formal)" },
-                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "nacional" }
+                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "nacional" },
+                    { word: "먹는", romanized: "meongneun", pronunciation: "[멍는]", meaning: "comiendo" },
+                    { word: "국물", romanized: "gungmul", pronunciation: "[궁물]", meaning: "sopa" },
+                    { word: "믿는", romanized: "minneun", pronunciation: "[민는]", meaning: "creyendo" },
+                    { word: "듣는", romanized: "deunneun", pronunciation: "[든는]", meaning: "escuchando" },
+                    { word: "앞날", romanized: "amnal", pronunciation: "[암날]", meaning: "futuro" },
+                    { word: "십년", romanized: "simnyeon", pronunciation: "[심년]", meaning: "10 años" }
                 ]
             },
             {
@@ -206,7 +250,21 @@ export const guideData = {
                 description: "Cuando 'ㅎ' se encuentra con ㄱ, ㄷ, ㅂ, o ㅈ, se fusionan en sus formas aspiradas (ㅋ, ㅌ, ㅍ, ㅊ).",
                 examples: [
                     { word: "축하하다", romanized: "chukahada", pronunciation: "[추카하다]", meaning: "felicitar" },
-                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "bueno" }
+                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "bueno" },
+                    { word: "백화점", romanized: "baekhwajeom", pronunciation: "[배콰점]", meaning: "grandes almacenes" },
+                    { word: "어떻게", romanized: "eotteoke", pronunciation: "[어떠케]", meaning: "cómo" },
+                    { word: "답답하다", romanized: "dapdaphada", pronunciation: "[답따파다]", meaning: "frustrado" },
+                    { word: "그렇지", romanized: "geureochi", pronunciation: "[그러치]", meaning: "así es" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Bonus Tip: Fortis (된소리되기)",
+                description: "Cuando [ㄱ, ㄷ, ㅂ] se encuentran con [ㄱ, ㄷ, ㅂ, ㅅ, ㅈ], se convierten en sonidos fuertes (kk, tt, pp, ss, jj).",
+                examples: [
+                    { word: "학교", romanized: "hakgyo", pronunciation: "[학굑]", meaning: "escuela" },
+                    { word: "식당", romanized: "sikdang", pronunciation: "[식땅]", meaning: "restaurante" },
+                    { word: "옆집", romanized: "yeopjip", pronunciation: "[엽찝]", meaning: "lado" }
                 ]
             }
         ],
@@ -242,7 +300,7 @@ export const guideData = {
             { id: 29, expression: "(으)면 안 돼요", meaning: "No se debe", example: "여기서 담배를 피우**면 안 돼요**." },
             { id: 30, expression: "(으)ㄹ까요?", meaning: "¿Deberíamos...?", example: "같이 영화 볼**까요**?" }
         ],
-                mistakes: [
+        mistakes: [
             {
                 id: 1,
                 title: "Honoríficos vs. Informal (높임말 vs 반말)",
@@ -325,7 +383,12 @@ export const guideData = {
                 description: "ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ, ㅎが音節の最後に来るときは、すべて [t] (tまたはd) の音になります。",
                 examples: [
                     { word: "있다", romanized: "itda", pronunciation: "[it-tta]", meaning: "ある/いる" },
-                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "花" }
+                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "花" },
+                    { word: "낫", romanized: "nat", pronunciation: "[낟]", meaning: "鎌" },
+                    { word: "낮", romanized: "nat", pronunciation: "[낟]", meaning: "昼" },
+                    { word: "낯", romanized: "nat", pronunciation: "[낟]", meaning: "顔" },
+                    { word: "밑", romanized: "mit", pronunciation: "[믿]", meaning: "下" },
+                    { word: "히읗", romanized: "hieut", pronunciation: "[히읃]", meaning: "文字'ㅎ'" }
                 ]
             },
             {
@@ -335,7 +398,11 @@ export const guideData = {
                 examples: [
                     { word: "먹어요", romanized: "meogeoyo", pronunciation: "[머거요]", meaning: "食べます" },
                     { word: "웃어요", romanized: "useoyo", pronunciation: "[우서요]", meaning: "笑います" },
-                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "ソウルへ" }
+                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "ソウルへ" },
+                    { word: "음악", romanized: "eumak", pronunciation: "[으막]", meaning: "音楽" },
+                    { word: "무릎이", romanized: "mureupi", pronunciation: "[무르피]", meaning: "膝が" },
+                    { word: "걸어요", romanized: "georeoyo", pronunciation: "[거러요]", meaning: "歩きます" },
+                    { word: "할아버지", romanized: "harabeoji", pronunciation: "[하라버지]", meaning: "おじいさん" }
                 ]
             },
             {
@@ -344,7 +411,13 @@ export const guideData = {
                 description: "特定の子音の組み合わせで音が変わります。例えば、'ㅂ' の後ろに 'ㄴ' が来ると 'ㅁ' になります。",
                 examples: [
                     { word: "합니다", romanized: "hamnida", pronunciation: "[ham-ni-da]", meaning: "します" },
-                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "国立" }
+                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "国立" },
+                    { word: "먹는", romanized: "meongneun", pronunciation: "[멍는]", meaning: "食べる" },
+                    { word: "국물", romanized: "gungmul", pronunciation: "[궁물]", meaning: "スープ" },
+                    { word: "믿는", romanized: "minneun", pronunciation: "[민는]", meaning: "信じる" },
+                    { word: "듣는", romanized: "deunneun", pronunciation: "[든는]", meaning: "聞く" },
+                    { word: "앞날", romanized: "amnal", pronunciation: "[암날]", meaning: "将来" },
+                    { word: "십년", romanized: "simnyeon", pronunciation: "[심년]", meaning: "10年" }
                 ]
             },
             {
@@ -353,7 +426,21 @@ export const guideData = {
                 description: "‘ㅎ’ が ㄱ, ㄷ, ㅂ, ㅈ と出会うと、激音 (ㅋ, ㅌ, ㅍ, ㅊ) に変わります。",
                 examples: [
                     { word: "축하하다", romanized: "chukahada", pronunciation: "[추카하다]", meaning: "祝う" },
-                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "良い" }
+                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "良い" },
+                    { word: "백화점", romanized: "baekhwajeom", pronunciation: "[배콰점]", meaning: "デパート" },
+                    { word: "어떻게", romanized: "eotteoke", pronunciation: "[어떠케]", meaning: "どうやって" },
+                    { word: "답답하다", romanized: "dapdaphada", pronunciation: "[답따파다]", meaning: "もどかしい" },
+                    { word: "그렇지", romanized: "geureochi", pronunciation: "[그러치]", meaning: "そうですね" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Bonus Tip: 濃音化 (된소리되기)",
+                description: "[ㄱ, ㄷ, ㅂ] が [ㄱ, ㄷ, ㅂ, ㅅ, ㅈ] と出会うと、濃音 (kk, tt, pp, ss, jj) に変わります。",
+                examples: [
+                    { word: "학교", romanized: "hakgyo", pronunciation: "[학굑]", meaning: "学校" },
+                    { word: "식당", romanized: "sikdang", pronunciation: "[식땅]", meaning: "食堂" },
+                    { word: "옆집", romanized: "yeopjip", pronunciation: "[엽찝]", meaning: "隣の家" }
                 ]
             }
         ],
@@ -389,7 +476,7 @@ export const guideData = {
             { id: 29, expression: "(으)면 안 돼요", meaning: "〜してはいけません", example: "여기서 담배를 피우**면 안 돼요**." },
             { id: 30, expression: "(으)ㄹ까요?", meaning: "〜しましょうか？", example: "같이 영화 볼**까요**?" }
         ],
-                mistakes: [
+        mistakes: [
             {
                 id: 1,
                 title: "敬語 vs タメ口 (높임말 vs 반말)",
@@ -472,7 +559,12 @@ export const guideData = {
                 description: "Lorsque ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ, ㅎ apparaissent à la fin d'une syllabe, elles se prononcent toutes comme [t] (t ou d).",
                 examples: [
                     { word: "있다", romanized: "itda", pronunciation: "[it-tta]", meaning: "avoir/être" },
-                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "fleur" }
+                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "fleur" },
+                    { word: "낫", romanized: "nat", pronunciation: "[낟]", meaning: "faucille" },
+                    { word: "낮", romanized: "nat", pronunciation: "[낟]", meaning: "jour" },
+                    { word: "낯", romanized: "nat", pronunciation: "[낟]", meaning: "visage" },
+                    { word: "밑", romanized: "mit", pronunciation: "[믿]", meaning: "dessous" },
+                    { word: "히읗", romanized: "hieut", pronunciation: "[히읃]", meaning: "lettre 'ㅎ'" }
                 ]
             },
             {
@@ -482,7 +574,11 @@ export const guideData = {
                 examples: [
                     { word: "먹어요", romanized: "meogeoyo", pronunciation: "[머거요]", meaning: "manger" },
                     { word: "웃어요", romanized: "useoyo", pronunciation: "[우서요]", meaning: "rire" },
-                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "à Séoul" }
+                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "à Séoul" },
+                    { word: "음악", romanized: "eumak", pronunciation: "[으막]", meaning: "musique" },
+                    { word: "무릎이", romanized: "mureupi", pronunciation: "[무르피]", meaning: "le genou" },
+                    { word: "걸어요", romanized: "georeoyo", pronunciation: "[거러요]", meaning: "marcher" },
+                    { word: "할아버지", romanized: "harabeoji", pronunciation: "[하라버지]", meaning: "grand-père" }
                 ]
             },
             {
@@ -491,7 +587,13 @@ export const guideData = {
                 description: "Certaines combinaisons de consonnes changent de son pour faciliter la prononciation. Par exemple, 'ㅂ' suivi de 'ㄴ' devient 'ㅁ'.",
                 examples: [
                     { word: "합니다", romanized: "hamnida", pronunciation: "[ham-ni-da]", meaning: "faire (formel)" },
-                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "national" }
+                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "national" },
+                    { word: "먹는", romanized: "meongneun", pronunciation: "[멍는]", meaning: "mangeant" },
+                    { word: "국물", romanized: "gungmul", pronunciation: "[궁물]", meaning: "soupe" },
+                    { word: "믿는", romanized: "minneun", pronunciation: "[민는]", meaning: "croyant" },
+                    { word: "듣는", romanized: "deunneun", pronunciation: "[든는]", meaning: "écoutant" },
+                    { word: "앞날", romanized: "amnal", pronunciation: "[암날]", meaning: "avenir" },
+                    { word: "십년", romanized: "simnyeon", pronunciation: "[심년]", meaning: "10 ans" }
                 ]
             },
             {
@@ -500,7 +602,21 @@ export const guideData = {
                 description: "Lorsque 'ㅎ' rencontre ㄱ, ㄷ, ㅂ ou ㅈ, elles fusionnent en leurs formes aspirées (ㅋ, ㅌ, ㅍ, ㅊ).",
                 examples: [
                     { word: "축하하다", romanized: "chukahada", pronunciation: "[추카하다]", meaning: "féliciter" },
-                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "bon" }
+                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "bon" },
+                    { word: "백화점", romanized: "baekhwajeom", pronunciation: "[배콰점]", meaning: "grand magasin" },
+                    { word: "어떻게", romanized: "eotteoke", pronunciation: "[어떠케]", meaning: "comment" },
+                    { word: "답답하다", romanized: "dapdaphada", pronunciation: "[답따파다]", meaning: "frustré" },
+                    { word: "그렇지", romanized: "geureochi", pronunciation: "[그러치]", meaning: "c'est vrai" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Bonus Tip: Fortis (된소리되기)",
+                description: "Lorsque [ㄱ, ㄷ, ㅂ] rencontrent [ㄱ, ㄷ, ㅂ, ㅅ, ㅈ], elles deviennent des sons forts (kk, tt, pp, ss, jj).",
+                examples: [
+                    { word: "학교", romanized: "hakgyo", pronunciation: "[학굑]", meaning: "école" },
+                    { word: "식당", romanized: "sikdang", pronunciation: "[식땅]", meaning: "restaurant" },
+                    { word: "옆집", romanized: "yeopjip", pronunciation: "[엽찝]", meaning: "porte à côté" }
                 ]
             }
         ],
@@ -536,7 +652,7 @@ export const guideData = {
             { id: 29, expression: "(으)면 안 돼요", meaning: "Vous ne devriez pas", example: "여기서 담배를 피우**면 안 돼요**." },
             { id: 30, expression: "(으)ㄹ까요?", meaning: "On ... ?", example: "같이 영화 볼**까요**?" }
         ],
-                mistakes: [
+        mistakes: [
             {
                 id: 1,
                 title: "Honorifiques vs. Informel (높임말 vs 반말)",
@@ -619,7 +735,12 @@ export const guideData = {
                 description: "เมื่อ ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ, ㅎ ปรากฏที่ท้ายพยางค์ ทั้งหมดจะออกเสียงเป็น [t] (แม่กด).",
                 examples: [
                     { word: "있다", romanized: "itda", pronunciation: "[it-tta]", meaning: "มี/อยู่" },
-                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "ดอกไม้" }
+                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "ดอกไม้" },
+                    { word: "낫", romanized: "nat", pronunciation: "[낟]", meaning: "เคียว" },
+                    { word: "낮", romanized: "nat", pronunciation: "[낟]", meaning: "กลางวัน" },
+                    { word: "낯", romanized: "nat", pronunciation: "[낟]", meaning: "ใบหน้า" },
+                    { word: "밑", romanized: "mit", pronunciation: "[믿]", meaning: "ข้างล่าง" },
+                    { word: "히읗", romanized: "hieut", pronunciation: "[히읃]", meaning: "ตัวอักษร 'ㅎ'" }
                 ]
             },
             {
@@ -629,7 +750,11 @@ export const guideData = {
                 examples: [
                     { word: "먹어요", romanized: "meogeoyo", pronunciation: "[머거요]", meaning: "กิน" },
                     { word: "웃어요", romanized: "useoyo", pronunciation: "[우서요]", meaning: "หัวเราะ" },
-                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "ไปโซล" }
+                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "ไปโซล" },
+                    { word: "음악", romanized: "eumak", pronunciation: "[으막]", meaning: "ดนตรี" },
+                    { word: "무릎이", romanized: "mureupi", pronunciation: "[무르피]", meaning: "หัวเข่า" },
+                    { word: "걸어요", romanized: "georeoyo", pronunciation: "[거러요]", meaning: "เดิน" },
+                    { word: "할아버지", romanized: "harabeoji", pronunciation: "[하라버지]", meaning: "คุณปู่/คุณตา" }
                 ]
             },
             {
@@ -638,7 +763,13 @@ export const guideData = {
                 description: "พยัญชนะบางคู่จะเปลี่ยนเสียงเพื่อให้ลิ้นออกเสียงง่ายขึ้น เช่น 'ㅂ' ตามด้วย 'ㄴ' จะกลายเป็น 'ㅁ'",
                 examples: [
                     { word: "합니다", romanized: "hamnida", pronunciation: "[ham-ni-da]", meaning: "ทำ (ทางการ)" },
-                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "แห่งชาติ" }
+                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "แห่งชาติ" },
+                    { word: "먹는", romanized: "meongneun", pronunciation: "[멍는]", meaning: "กำลังกิน" },
+                    { word: "국물", romanized: "gungmul", pronunciation: "[궁물]", meaning: "น้ำซุป" },
+                    { word: "믿는", romanized: "minneun", pronunciation: "[민는]", meaning: "เชื่อ" },
+                    { word: "듣는", romanized: "deunneun", pronunciation: "[든는]", meaning: "ฟัง" },
+                    { word: "앞날", romanized: "amnal", pronunciation: "[암날]", meaning: "อนาคต" },
+                    { word: "십년", romanized: "simnyeon", pronunciation: "[심년]", meaning: "10 ปี" }
                 ]
             },
             {
@@ -647,7 +778,21 @@ export const guideData = {
                 description: "เมื่อ 'ㅎ' เจอกับ ㄱ, ㄷ, ㅂ, หรือ ㅈ จะรวมกันกลายเป็นเสียงพ่นลม (ㅋ, ㅌ, ㅍ, ㅊ)",
                 examples: [
                     { word: "축하하다", romanized: "chukahada", pronunciation: "[추카하다]", meaning: "แสดงความยินดี" },
-                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "ดี" }
+                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "ดี" },
+                    { word: "백화점", romanized: "baekhwajeom", pronunciation: "[배콰점]", meaning: "ห้างสรรพสินค้า" },
+                    { word: "어떻게", romanized: "eotteoke", pronunciation: "[어떠케]", meaning: "อย่างไร" },
+                    { word: "답답하다", romanized: "dapdaphada", pronunciation: "[답따파다]", meaning: "อึดอัด" },
+                    { word: "그렇지", romanized: "geureochi", pronunciation: "[그러치]", meaning: "ใช่ไหม" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Bonus Tip: Fortis (된소리되기)",
+                description: "เมื่อ [ㄱ, ㄷ, ㅂ] เจอกับ [ㄱ, ㄷ, ㅂ, ㅅ, ㅈ] จะกลายเป็นเสียงหนัก (kk, tt, pp, ss, jj)",
+                examples: [
+                    { word: "학교", romanized: "hakgyo", pronunciation: "[학굑]", meaning: "โรงเรียน" },
+                    { word: "식당", romanized: "sikdang", pronunciation: "[식땅]", meaning: "ร้านอาหาร" },
+                    { word: "옆집", romanized: "yeopjip", pronunciation: "[엽찝]", meaning: "ข้างบ้าน" }
                 ]
             }
         ],
@@ -683,7 +828,7 @@ export const guideData = {
             { id: 29, expression: "(으)면 안 돼요", meaning: "ห้าม / ไม่ควร", example: "여기서 담배를 피우**면 안 돼요**." },
             { id: 30, expression: "(으)ㄹ까요?", meaning: "...กันไหม?", example: "같이 영화 볼**까요**?" }
         ],
-                mistakes: [
+        mistakes: [
             {
                 id: 1,
                 title: "คำสุภาพ vs กันเอง (높임말 vs 반말)",
@@ -766,7 +911,12 @@ export const guideData = {
                 description: "当 ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ, ㅎ 出现在音节末尾时，都发 [t] (t 或 d) 的音。",
                 examples: [
                     { word: "있다", romanized: "itda", pronunciation: "[it-tta]", meaning: "有/在" },
-                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "花" }
+                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "花" },
+                    { word: "낫", romanized: "nat", pronunciation: "[낟]", meaning: "镰刀" },
+                    { word: "낮", romanized: "nat", pronunciation: "[낟]", meaning: "白天" },
+                    { word: "낯", romanized: "nat", pronunciation: "[낟]", meaning: "面孔" },
+                    { word: "밑", romanized: "mit", pronunciation: "[믿]", meaning: "底下" },
+                    { word: "히읗", romanized: "hieut", pronunciation: "[히읃]", meaning: "字母'ㅎ'" }
                 ]
             },
             {
@@ -776,7 +926,11 @@ export const guideData = {
                 examples: [
                     { word: "먹어요", romanized: "meogeoyo", pronunciation: "[머거요]", meaning: "吃" },
                     { word: "웃어요", romanized: "useoyo", pronunciation: "[우서요]", meaning: "笑" },
-                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "去首尔" }
+                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "去首尔" },
+                    { word: "음악", romanized: "eumak", pronunciation: "[으막]", meaning: "音乐" },
+                    { word: "무릎이", romanized: "mureupi", pronunciation: "[무르피]", meaning: "膝盖" },
+                    { word: "걸어요", romanized: "georeoyo", pronunciation: "[거러요]", meaning: "走路" },
+                    { word: "할아버지", romanized: "harabeoji", pronunciation: "[하라버지]", meaning: "爷爷" }
                 ]
             },
             {
@@ -785,7 +939,13 @@ export const guideData = {
                 description: "某些辅音组合变音以便于发音。例如，'ㅂ' 后面跟着 'ㄴ' 时变成 'ㅁ'。",
                 examples: [
                     { word: "합니다", romanized: "hamnida", pronunciation: "[ham-ni-da]", meaning: "做 (正式敬语)" },
-                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "国立" }
+                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "国立" },
+                    { word: "먹는", romanized: "meongneun", pronunciation: "[멍는]", meaning: "吃" },
+                    { word: "국물", romanized: "gungmul", pronunciation: "[궁물]", meaning: "汤" },
+                    { word: "믿는", romanized: "minneun", pronunciation: "[민는]", meaning: "相信" },
+                    { word: "듣는", romanized: "deunneun", pronunciation: "[든는]", meaning: "听" },
+                    { word: "앞날", romanized: "amnal", pronunciation: "[암날]", meaning: "将来" },
+                    { word: "십년", romanized: "simnyeon", pronunciation: "[심년]", meaning: "10年" }
                 ]
             },
             {
@@ -794,7 +954,21 @@ export const guideData = {
                 description: "当 'ㅎ' 遇到 ㄱ, ㄷ, ㅂ, 或 ㅈ 时，它们合并成相应的送气音 (ㅋ, ㅌ, ㅍ, ㅊ)。",
                 examples: [
                     { word: "축하하다", romanized: "chukahada", pronunciation: "[추카하다]", meaning: "祝贺" },
-                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "好" }
+                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "好" },
+                    { word: "백화점", romanized: "baekhwajeom", pronunciation: "[배콰점]", meaning: "百货商店" },
+                    { word: "어떻게", romanized: "eotteoke", pronunciation: "[어떠케]", meaning: "怎么" },
+                    { word: "답답하다", romanized: "dapdaphada", pronunciation: "[답따파다]", meaning: "郁闷" },
+                    { word: "그렇지", romanized: "geureochi", pronunciation: "[그러치]", meaning: "是吧" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Bonus Tip: 紧音化 (된소리되기)",
+                description: "当 [ㄱ, ㄷ, ㅂ] 遇到 [ㄱ, ㄷ, ㅂ, ㅅ, ㅈ] 时，它们变成紧音 (kk, tt, pp, ss, jj)。",
+                examples: [
+                    { word: "학교", romanized: "hakgyo", pronunciation: "[학굑]", meaning: "学校" },
+                    { word: "식당", romanized: "sikdang", pronunciation: "[식땅]", meaning: "食堂" },
+                    { word: "옆집", romanized: "yeopjip", pronunciation: "[엽찝]", meaning: "邻居" }
                 ]
             }
         ],
@@ -830,7 +1004,7 @@ export const guideData = {
             { id: 29, expression: "(으)면 안 돼요", meaning: "不可以...", example: "여기서 담배를 피우**면 안 돼요**." },
             { id: 30, expression: "(으)ㄹ까요?", meaning: "...吗？ (提议/推测)", example: "같이 영화 볼**까요**?" }
         ],
-                mistakes: [
+        mistakes: [
             {
                 id: 1,
                 title: "敬语 vs. 半语 (높임말 vs 반말)",
@@ -914,6 +1088,11 @@ export const guideData = {
                 examples: [
                     { word: "있다", romanized: "itda", pronunciation: "[it-tta]", meaning: "有/在" },
                     { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "花" },
+                    { word: "낫", romanized: "nat", pronunciation: "[낟]", meaning: "鐮刀" },
+                    { word: "낮", romanized: "nat", pronunciation: "[낟]", meaning: "白天" },
+                    { word: "낯", romanized: "nat", pronunciation: "[낟]", meaning: "面孔" },
+                    { word: "밑", romanized: "mit", pronunciation: "[믿]", meaning: "底下" },
+                    { word: "히읗", romanized: "hieut", pronunciation: "[히읃]", meaning: "字母'ㅎ'" },
                 ]
             },
             {
@@ -924,6 +1103,10 @@ export const guideData = {
                     { word: "먹어요", romanized: "meogeoyo", pronunciation: "[머거요]", meaning: "吃" },
                     { word: "웃어요", romanized: "useoyo", pronunciation: "[우서요]", meaning: "笑" },
                     { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "去首爾" },
+                    { word: "음악", romanized: "eumak", pronunciation: "[으막]", meaning: "音樂" },
+                    { word: "무릎이", romanized: "mureupi", pronunciation: "[무르피]", meaning: "膝蓋" },
+                    { word: "걸어요", romanized: "georeoyo", pronunciation: "[거러요]", meaning: "走路" },
+                    { word: "할아버지", romanized: "harabeoji", pronunciation: "[하라버지]", meaning: "爺爺" },
                 ]
             },
             {
@@ -933,6 +1116,12 @@ export const guideData = {
                 examples: [
                     { word: "합니다", romanized: "hamnida", pronunciation: "[ham-ni-da]", meaning: "做 (正式敬語)" },
                     { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "國立" },
+                    { word: "먹는", romanized: "meongneun", pronunciation: "[멍는]", meaning: "吃" },
+                    { word: "국물", romanized: "gungmul", pronunciation: "[궁물]", meaning: "湯" },
+                    { word: "믿는", romanized: "minneun", pronunciation: "[민는]", meaning: "相信" },
+                    { word: "듣는", romanized: "deunneun", pronunciation: "[든는]", meaning: "聽" },
+                    { word: "앞날", romanized: "amnal", pronunciation: "[암날]", meaning: "將來" },
+                    { word: "십년", romanized: "simnyeon", pronunciation: "[심년]", meaning: "10年" },
                 ]
             },
             {
@@ -942,8 +1131,22 @@ export const guideData = {
                 examples: [
                     { word: "축하하다", romanized: "chukahada", pronunciation: "[추카하다]", meaning: "祝賀" },
                     { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "好" },
+                    { word: "백화점", romanized: "baekhwajeom", pronunciation: "[배콰점]", meaning: "百貨商店" },
+                    { word: "어떻게", romanized: "eotteoke", pronunciation: "[어떠케]", meaning: "怎麼" },
+                    { word: "답답하다", romanized: "dapdaphada", pronunciation: "[답따파다]", meaning: "鬱悶" },
+                    { word: "그렇지", romanized: "geureochi", pronunciation: "[그러치]", meaning: "是吧" },
                 ]
             },
+            {
+                id: 5,
+                title: "Bonus Tip: 緊音化 (된소리되기)",
+                description: "當 [ㄱ, ㄷ, ㅂ] 遇到 [ㄱ, ㄷ, ㅂ, ㅅ, ㅈ] 時，它們變成緊音 (kk, tt, pp, ss, jj)。",
+                examples: [
+                    { word: "학교", romanized: "hakgyo", pronunciation: "[학굑]", meaning: "學校" },
+                    { word: "식당", romanized: "sikdang", pronunciation: "[식땅]", meaning: "食堂" },
+                    { word: "옆집", romanized: "yeopjip", pronunciation: "[엽찝]", meaning: "鄰居" }
+                ]
+            }
         ],
         grammar: [
             { id: 1, expression: "이/가", meaning: "[主格助詞]", example: "이름**이** 뭐예요?" },
@@ -977,7 +1180,7 @@ export const guideData = {
             { id: 29, expression: "(으)면 안 돼요", meaning: "不可以...", example: "여기서 담배를 피우**면 안 돼요**." },
             { id: 30, expression: "(으)ㄹ까요?", meaning: "...嗎？ (提議/推測)", example: "같이 영화 볼**까요**?" },
         ],
-                mistakes: [
+        mistakes: [
             {
                 id: 1,
                 title: "敬語 vs. 半語 (높임말 vs 반말)",
@@ -1060,7 +1263,12 @@ export const guideData = {
                 description: "जब ㄷ, ㅌ, ㅅ, ㅆ, ㅈ, ㅊ, ㅎ किसी शब्दांश के अंत में आते हैं, तो उन सभी का उच्चारण [t] (t या d) के रूप में किया जाता है।",
                 examples: [
                     { word: "있다", romanized: "itda", pronunciation: "[it-tta]", meaning: "होना" },
-                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "फूल" }
+                    { word: "꽃", romanized: "kkot", pronunciation: "[kkot]", meaning: "फूल" },
+                    { word: "낫", romanized: "nat", pronunciation: "[낟]", meaning: "दरांती" },
+                    { word: "낮", romanized: "nat", pronunciation: "[낟]", meaning: "दिन" },
+                    { word: "낯", romanized: "nat", pronunciation: "[낟]", meaning: "चेहरा" },
+                    { word: "밑", romanized: "mit", pronunciation: "[믿]", meaning: "नीचे" },
+                    { word: "히읗", romanized: "hieut", pronunciation: "[히읃]", meaning: "अक्षर 'ㅎ'" }
                 ]
             },
             {
@@ -1070,7 +1278,11 @@ export const guideData = {
                 examples: [
                     { word: "먹어요", romanized: "meogeoyo", pronunciation: "[머거요]", meaning: "खाओ" },
                     { word: "웃어요", romanized: "useoyo", pronunciation: "[우서요]", meaning: "हंसो" },
-                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "सियोल को" }
+                    { word: "서울에", romanized: "seoure", pronunciation: "[서우레]", meaning: "सियोल को" },
+                    { word: "음악", romanized: "eumak", pronunciation: "[으막]", meaning: "संगीत" },
+                    { word: "무릎이", romanized: "mureupi", pronunciation: "[무르피]", meaning: "घुटना" },
+                    { word: "걸어요", romanized: "georeoyo", pronunciation: "[거러요]", meaning: "चलना" },
+                    { word: "할아버지", romanized: "harabeoji", pronunciation: "[하라버지]", meaning: "दादा/नाना" }
                 ]
             },
             {
@@ -1079,7 +1291,13 @@ export const guideData = {
                 description: "कुछ व्यंजन संयोजन आसान उच्चारण के लिए अपनी ध्वनि बदलते हैं। उदाहरण के लिए, 'ㅂ' के बाद 'ㄴ' आने पर 'ㅁ' बन जाता है।",
                 examples: [
                     { word: "합니다", romanized: "hamnida", pronunciation: "[ham-ni-da]", meaning: "करना (औपचारिक)" },
-                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "राष्ट्रीय" }
+                    { word: "국립", romanized: "gungnip", pronunciation: "[궁닙]", meaning: "राष्ट्रीय" },
+                    { word: "먹는", romanized: "meongneun", pronunciation: "[멍는]", meaning: "खाना" },
+                    { word: "국물", romanized: "gungmul", pronunciation: "[궁물]", meaning: "सूप" },
+                    { word: "믿는", romanized: "minneun", pronunciation: "[민는]", meaning: "विश्वास" },
+                    { word: "듣는", romanized: "deunneun", pronunciation: "[든는]", meaning: "सुनना" },
+                    { word: "앞날", romanized: "amnal", pronunciation: "[암날]", meaning: "भविष्य" },
+                    { word: "십년", romanized: "simnyeon", pronunciation: "[심년]", meaning: "10 साल" }
                 ]
             },
             {
@@ -1088,7 +1306,21 @@ export const guideData = {
                 description: "जब 'ㅎ', ㄱ, ㄷ, ㅂ, या ㅈ से मिलता है, तो वे अपने महाप्राण रूपों (ㅋ, ㅌ, ㅍ, ㅊ) में विलीन हो जाते हैं।",
                 examples: [
                     { word: "축하하다", romanized: "chukahada", pronunciation: "[추카하다]", meaning: "बधाई देना" },
-                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "अच्छा" }
+                    { word: "좋다", romanized: "jota", pronunciation: "[조타]", meaning: "अच्छा" },
+                    { word: "백화점", romanized: "baekhwajeom", pronunciation: "[배콰점]", meaning: "डिपार्टमेंटल स्टोर" },
+                    { word: "어떻게", romanized: "eotteoke", pronunciation: "[어떠케]", meaning: "कैसे" },
+                    { word: "답답하다", romanized: "dapdaphada", pronunciation: "[답따파다]", meaning: "हताश" },
+                    { word: "그렇지", romanized: "geureochi", pronunciation: "[그러치]", meaning: "सही बात है" }
+                ]
+            },
+            {
+                id: 5,
+                title: "Bonus Tip: Fortis (된소리되기)",
+                description: "जब [ㄱ, ㄷ, ㅂ] [ㄱ, ㄷ, ㅂ, ㅅ, ㅈ] से मिलते हैं, तो वे मजबूत ध्वनियां बन जाते हैं (kk, tt, pp, ss, jj)।",
+                examples: [
+                    { word: "학교", romanized: "hakgyo", pronunciation: "[학굑]", meaning: "स्कूल" },
+                    { word: "식당", romanized: "sikdang", pronunciation: "[식땅]", meaning: "रेस्तरां" },
+                    { word: "옆집", romanized: "yeopjip", pronunciation: "[엽찝]", meaning: "पड़ोस" }
                 ]
             }
         ],
@@ -1124,7 +1356,7 @@ export const guideData = {
             { id: 29, expression: "(으)면 안 돼요", meaning: "आपको नहीं करना चाहिए", example: "여기서 담배를 피우**면 안 돼요**." },
             { id: 30, expression: "(으)ㄹ까요?", meaning: "क्या हम...?", example: "같이 영화 볼**까요**?" }
         ],
-                mistakes: [
+        mistakes: [
             {
                 id: 1,
                 title: "Honorifics vs. अनौपचारिक (높임말 vs 반말)",
