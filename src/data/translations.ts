@@ -65,7 +65,8 @@ export const translations = {
                 description: "Learn from the most common mistakes foreigners make and how to fix them.",
                 mistake: "Mistake",
                 correction: "Correction",
-                tip: "Tip"
+                tip: "Tip",
+                advanced: "Advanced Tip"
             },
             explore: "Explore"
         },
@@ -306,7 +307,8 @@ export const translations = {
                 description: "Aprende de los errores más comunes y cómo corregirlos.",
                 mistake: "Error",
                 correction: "Corrección",
-                tip: "Consejo"
+                tip: "Consejo",
+                advanced: "Consejo Avanzado"
             },
             explore: "Explorar"
         },
@@ -547,7 +549,8 @@ export const translations = {
                 description: "外国人がよく犯す間違いと、その修正方法を学びましょう。",
                 mistake: "間違い",
                 correction: "正解",
-                tip: "ヒント"
+                tip: "ヒント",
+                advanced: "上級編"
             },
             explore: "詳細を見る"
         },
@@ -788,7 +791,8 @@ export const translations = {
                 description: "Apprenez des erreurs les plus courantes commises par les étrangers et comment les corriger.",
                 mistake: "Erreur",
                 correction: "Correction",
-                tip: "Conseil"
+                tip: "Conseil",
+                advanced: "Conseil Avancé"
             },
             explore: "Explorer"
         },
@@ -1029,7 +1033,8 @@ export const translations = {
                 description: "เรียนรู้จากข้อผิดพลาดที่ชาวต่างชาติมักทำและวิธีแก้ไข",
                 mistake: "ผิด",
                 correction: "แก้ไข",
-                tip: "เคล็ดลับ"
+                tip: "เคล็ดลับ",
+                advanced: "เคล็ดลับขั้นสูง"
             },
             explore: "สำรวจ"
         },
@@ -1270,7 +1275,8 @@ export const translations = {
                 description: "了解外国人常犯的错误以及如何纠正它们。",
                 mistake: "错误",
                 correction: "改正",
-                tip: "提示"
+                tip: "提示",
+                advanced: "进阶提示"
             },
             explore: "探索"
         },
@@ -1511,7 +1517,8 @@ export const translations = {
                 description: "了解外國人常犯的錯誤以及如何糾正它們。",
                 mistake: "錯誤",
                 correction: "改正",
-                tip: "提示"
+                tip: "提示",
+                advanced: "進階提示"
             },
             explore: "探索"
         },
@@ -1752,7 +1759,8 @@ export const translations = {
                 description: "विदेशियों द्वारा की जाने वाली सबसे आम गलतियों से सीखें और उन्हें कैसे ठीक करें।",
                 mistake: "गलती",
                 correction: "सुधार",
-                tip: "सुझाव"
+                tip: "सुझाव",
+                advanced: "उन्नत सुझाव"
             },
             explore: "अन्वेषण करें"
         },

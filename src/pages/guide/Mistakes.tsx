@@ -65,10 +65,21 @@ export default function Mistakes() {
                         </div>
 
                         <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-700">
-                            <p className="text-sm text-gray-500 dark:text-gray-400 flex gap-2">
+                            <p className="text-sm text-gray-500 dark:text-gray-400 flex gap-2 mb-4">
                                 <span className="font-bold text-indigo-600 dark:text-indigo-400">💡 {t.tip}:</span>
                                 {item.tip}
                             </p>
+
+                            {item.advanced && (
+                                <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-xl p-4 border border-indigo-100 dark:border-indigo-900/30">
+                                    <h3 className="font-bold text-indigo-900 dark:text-indigo-100 mb-2 flex items-center gap-2 text-sm uppercase tracking-wider">
+                                        🚀 {t.advanced}
+                                    </h3>
+                                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed whitespace-pre-wrap">
+                                        {item.advanced}
+                                    </p>
+                                </div>
+                            )}
                         </div>
                     </div>
                 ))}
