@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 import { conversationData } from '../data/conversation';
-import { MessageCircle, ArrowLeft, Eye, EyeOff, User, Bot } from 'lucide-react';
+import { MessageCircle, ArrowLeft, Eye, EyeOff, User, Bot, Volume2 } from 'lucide-react';
 
 export default function Conversation() {
     const { targetLanguage } = useUser();
@@ -32,10 +32,18 @@ export default function Conversation() {
         { id: 'hospital', color: 'bg-emerald-500' },
     ];
 
+
     const toggleAnswer = (id: number) => {
         setVisibleAnswers(prev =>
             prev.includes(id) ? prev.filter(a => a !== id) : [...prev, id]
         );
+    };
+
+    const speak = (text: string) => {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.lang = 'ko-KR';
+        window.speechSynthesis.speak(utterance);
     };
 
     const categories = baseCategories.map(cat => ({
@@ -85,7 +93,16 @@ export default function Conversation() {
                                     </div>
                                     <div className="flex-1 space-y-2">
                                         <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">{t.conversation.question}</div>
-                                        <div className="text-xl font-bold text-gray-900 dark:text-white">{item.question.korean}</div>
+                                        <div className="flex items-center gap-2">
+                                            <div className="text-xl font-bold text-gray-900 dark:text-white">{item.question.korean}</div>
+                                            <button
+                                                onClick={() => speak(item.question.korean)}
+                                                className="p-1.5 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 rounded-full transition-colors"
+                                                title="Listen"
+                                            >
+                                                <Volume2 className="w-4 h-4" />
+                                            </button>
+                                        </div>
                                         <div className="text-gray-500 dark:text-gray-400 font-medium">{item.question.romanized}</div>
                                         <div className="text-gray-400 dark:text-gray-500 text-sm">
                                             {item.question[langKey]}
@@ -124,7 +141,16 @@ export default function Conversation() {
                                                         <div key={index} className="relative">
                                                             {index > 0 && <div className="absolute -top-3 left-0 right-0 border-t border-dashed border-gray-200 dark:border-gray-700" />}
                                                             <div className="text-xs text-gray-400 mb-1">{t.conversation.option} {index + 1}</div>
-                                                            <div className="text-xl font-bold text-gray-900 dark:text-white">{answer.korean}</div>
+                                                            <div className="flex items-center gap-2">
+                                                                <div className="text-xl font-bold text-gray-900 dark:text-white">{item.answers[index].korean}</div>
+                                                                <button
+                                                                    onClick={() => speak(item.answers[index].korean)}
+                                                                    className="p-1.5 text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 rounded-full transition-colors"
+                                                                    title="Listen"
+                                                                >
+                                                                    <Volume2 className="w-4 h-4" />
+                                                                </button>
+                                                            </div>
                                                             <div className="text-gray-500 dark:text-gray-400 font-medium">{answer.romanized}</div>
                                                             <div className="text-gray-400 dark:text-gray-500 text-sm">
                                                                 {answer[langKey]}
