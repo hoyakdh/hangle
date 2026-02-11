@@ -55,6 +55,49 @@ export default function QuizCategories() {
                     </Link>
                 ))}
             </div>
+
+            {/* SEO Content Section */}
+            <div className="mt-16 border-t border-gray-100 dark:border-gray-800 pt-8 animate-fade-in">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                    {t.quiz.seo?.title || "Why Take Korean Quizzes?"}
+                </h3>
+
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                    <div className="bg-orange-50 dark:bg-orange-900/20 p-6 rounded-2xl">
+                        <h4 className="font-bold text-orange-700 dark:text-orange-400 mb-2">
+                            {t.quiz.seo?.headers?.memory || "Memory"}
+                        </h4>
+                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                            {t.quiz.seo?.benefits?.memory || "Active recall testing strengthens your memory of new vocabulary."}
+                        </p>
+                    </div>
+                    <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-2xl">
+                        <h4 className="font-bold text-blue-700 dark:text-blue-400 mb-2">
+                            {t.quiz.seo?.headers?.confidence || "Confidence"}
+                        </h4>
+                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                            {t.quiz.seo?.benefits?.confidence || "Gain Confidence: Validating your knowledge helps you feel more ready to speak."}
+                        </p>
+                    </div>
+                    <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-2xl">
+                        <h4 className="font-bold text-green-700 dark:text-green-400 mb-2">
+                            {t.quiz.seo?.headers?.fun || "Fun"}
+                        </h4>
+                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                            {t.quiz.seo?.benefits?.fun || "Make Learning Fun: Gamified quizzes make the learning process less tedious and more engaging."}
+                        </p>
+                    </div>
+                </div>
+
+                <div className="bg-gray-50 dark:bg-gray-800 p-6 rounded-2xl">
+                    <h4 className="font-bold text-gray-900 dark:text-white mb-2">
+                        {t.quiz.seo?.headers?.tips || "Quiz Tips"}
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                        {t.quiz.seo?.tips || "Don't worry about making mistakes! Reviewing your errors is one of the best ways to learn."}
+                    </p>
+                </div>
+            </div>
         </div>
     );
 }

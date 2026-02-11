@@ -96,6 +96,23 @@ export default function Bookmarks() {
                     {t.bookmarks?.tip || "Tip: Regular review is the key to long-term memory. Try to visit your bookmarks everyday and remove the words you have fully mastered."}
                 </p>
             </div>
-        </div>
+            {/* SEO / Learning Tips Section - Always visible to add content value */}
+            <div className="mt-16 border-t border-gray-100 dark:border-gray-800 pt-12 animate-fade-in">
+                <div className="max-w-2xl mx-auto text-center">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                        {t.bookmarks.seo?.title || "Your Personal Vocabulary List"}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+                        {t.bookmarks.seo?.desc || "The Bookmarks page is your personalized study guide."}
+                    </p>
+
+                    <div className="bg-yellow-50 dark:bg-yellow-900/10 p-6 rounded-2xl inline-block text-left">
+                        <p className="text-sm text-yellow-800 dark:text-yellow-200 font-medium">
+                            💡 {t.bookmarks.seo?.tips || "Review your bookmarks daily."}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div >
     );
 }

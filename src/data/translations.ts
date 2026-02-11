@@ -149,7 +149,22 @@ export const translations = {
             next: "Next Question",
             results: "See Results",
             notEnough: "Not enough data for quiz",
-            goBack: "Go back"
+            goBack: "Go back",
+            seo: {
+                title: "Why Take Korean Quizzes?",
+                headers: {
+                    memory: "Memory",
+                    confidence: "Confidence",
+                    fun: "Fun",
+                    tips: "Quiz Tips"
+                },
+                benefits: {
+                    memory: "Boost Memory: Active recall testing strengthens your memory of new vocabulary.",
+                    confidence: "Gain Confidence: Validating your knowledge helps you feel more ready to speak.",
+                    fun: "Make Learning Fun: Gamified quizzes make the learning process less tedious and more engaging."
+                },
+                tips: "Don't worry about making mistakes! Reviewing your errors is one of the best ways to learn. Try to take a quiz immediately after learning a new category to reinforce the words."
+            }
         },
         privacy: {
             backToHome: "Back to Home",
@@ -249,13 +264,24 @@ export const translations = {
             option: "Option",
             mainTitle: "Conversation Practice",
             mainDesc: "Learn common Questions & Answers for various situations.",
-            start: "Start Practice"
+            start: "Start Practice",
+            seo: {
+                title: "Master Korean Conversation",
+                desc: "Speaking is the fastest way to learn a language. This section provides common Q&A scenarios you'll encounter during your trip.",
+                subTitle: "Practice Tips",
+                tips: "1. Listen: Play the audio to hear the native pronunciation.\n2. Shadow: Repeat after the audio, trying to mimic the intonation.\n3. Rolplay: Practice with a friend or act out both parts yourself!"
+            }
         },
         bookmarks: {
             noBookmarks: "No bookmarks yet.",
             desc: "Found a difficult word? Tap the star icon on any flashcard to save it here for later review.",
             tip: "Tip: Regular review is the key to long-term memory. Try to visit your bookmarks everyday and remove the words you have fully mastered.",
-            listen: "Listen"
+            listen: "Listen",
+            seo: {
+                title: "Your Personal Vocabulary List",
+                desc: "The Bookmarks page is your personalized study guide. Saving difficult words allows you to focus your energy on what you haven't mastered yet.",
+                tips: "Review your bookmarks daily. Once you feel confident with a word, un-bookmark it to keep your list focused on new challenges."
+            }
         },
         layout: {
             learn: "Learn",
@@ -421,7 +447,22 @@ export const translations = {
             next: "Siguiente Pregunta",
             results: "Ver Resultados",
             notEnough: "No hay suficientes datos para la prueba",
-            goBack: "Volver"
+            goBack: "Volver",
+            seo: {
+                title: "¿Por qué hacer tests de coreano?",
+                headers: {
+                    memory: "Memoria",
+                    confidence: "Confianza",
+                    fun: "Diversión",
+                    tips: "Consejos para el Quiz"
+                },
+                benefits: {
+                    memory: "Mejora la Memoria: Las pruebas de recuperación activa fortalecen tu memoria del nuevo vocabulario.",
+                    confidence: "Gana Confianza: Validar tu conocimiento te ayuda a sentirte más listo para hablar.",
+                    fun: "Hazlo Divertido: El aprendizaje gamificado hace que el proceso sea menos tedioso y más atractivo."
+                },
+                tips: "¡No te preocupes por cometer errores! Revisar tus errores es una de las mejores formas de aprender. Intenta hacer un quiz inmediatamente después de aprender una nueva categoría para reforzar las palabras."
+            }
         },
         privacy: {
             backToHome: "Volver al Inicio",
@@ -521,13 +562,24 @@ export const translations = {
             option: "Opción",
             mainTitle: "Práctica de Conversación",
             mainDesc: "Aprende Preguntas y Respuestas comunes para varias situaciones.",
-            start: "Empezar Práctica"
+            start: "Empezar Práctica",
+            seo: {
+                title: "Domina la Conversación en Coreano",
+                desc: "Hablar es la forma más rápida de aprender un idioma. Esta sección proporciona escenarios de preguntas y respuestas comunes que encontrarás durante tu viaje.",
+                subTitle: "Consejos de Práctica",
+                tips: "1. Escucha: Reproduce el audio para escuchar la pronunciación nativa.\n2. Sigue: Repite después del audio, tratando de imitar la entonación.\n3. Actúa: ¡Practica con un amigo o actúa ambas partes tú mismo!"
+            }
         },
         bookmarks: {
             noBookmarks: "Aún no hay marcadores.",
             desc: "¿Encontraste una palabra difícil? Toca el icono de estrella en cualquier tarjeta para guardarla aquí y repasarla más tarde.",
             tip: "Consejo: La revisión regular es clave para la memoria a largo plazo. Intenta visitar tus marcadores todos los días y elimina las palabras que ya dominas.",
-            listen: "Escuchar"
+            listen: "Escuchar",
+            seo: {
+                title: "Tu Lista de Vocabulario Personal",
+                desc: "La página de Marcadores es tu guía de estudio personalizada. Guardar palabras difíciles te permite enfocar tu energía en lo que aún no has dominado.",
+                tips: "Revisa tus marcadores diariamente. Una vez que te sientas seguro con una palabra, elimínala de marcadores para mantener tu lista enfocada en nuevos desafíos."
+            }
         },
         layout: {
             learn: "Aprender",
@@ -693,7 +745,22 @@ export const translations = {
             next: "次の質問",
             results: "結果を見る",
             notEnough: "クイズデータが不足しています",
-            goBack: "戻る"
+            goBack: "戻る",
+            seo: {
+                title: "なぜ韓国語クイズを受けるのか？",
+                headers: {
+                    memory: "記憶力",
+                    confidence: "自信",
+                    fun: "楽しさ",
+                    tips: "クイズのヒント"
+                },
+                benefits: {
+                    memory: "記憶力を向上: クイズによる能動的な想起は、新しい単語の記憶を強化します。",
+                    confidence: "自信をつける: 知識を確認することで、話す準備が整ったと感じることができます。",
+                    fun: "楽しく学ぶ: ゲーム感覚のクイズで、学習プロセスがより楽しく魅力的になります。"
+                },
+                tips: "間違いを恐れないでください！間違いを見直すことは、学ぶための最良の方法の1つです。新しいカテゴリーを学んだ直後にクイズを受けて、単語を定着させましょう。"
+            }
         },
         privacy: {
             backToHome: "ホームに戻る",
@@ -793,13 +860,24 @@ export const translations = {
             option: "選択肢",
             mainTitle: "会話練習",
             mainDesc: "様々な状況でのよくある質問と回答を学びましょう。",
-            start: "練習開始"
+            start: "練習開始",
+            seo: {
+                title: "韓国語会話をマスターする",
+                desc: "話すことは言語を学ぶ最速の方法です。このセクションでは、旅行中によく遭遇するQ&Aシナリオを提供します。",
+                subTitle: "練習のヒント",
+                tips: "1. 聞く: 音声を再生してネイティブの発音を聞きます。\n2. シャドーイング: 音声の後に続いて、イントネーションを真似て繰り返します。\n3. ロールプレイ: 友達と練習するか、一人で両方のパートを演じてみましょう！"
+            }
         },
         bookmarks: {
             noBookmarks: "ブックマークはまだありません。",
             desc: "難しい単語がありましたか？カードの星アイコンをタップして、後で復習するためにここに保存しましょう。",
             tip: "ヒント：長期記憶の鍵は定期的な復習です。毎日ブックマークを確認し、完全に覚えた単語は削除するようにしましょう。",
-            listen: "聞く"
+            listen: "聞く",
+            seo: {
+                title: "あなただけの単語帳",
+                desc: "ブックマークページは、あなた専用の学習ガイドです。難しい単語を保存することで、まだ習得していないことにエネルギーを集中させることができます。",
+                tips: "毎日ブックマークを見直しましょう。単語に自信がついたら、ブックマークを外して、新しい課題にリストを集中させましょう。"
+            }
         },
         layout: {
             learn: "学習",
@@ -965,7 +1043,22 @@ export const translations = {
             next: "Question Suivante",
             results: "Voir les Résultats",
             notEnough: "Pas assez de données pour le quiz",
-            goBack: "Retourner"
+            goBack: "Retourner",
+            seo: {
+                title: "Pourquoi faire des quiz en coréen ?",
+                headers: {
+                    memory: "Mémoire",
+                    confidence: "Confiance",
+                    fun: "Plaisir",
+                    tips: "Astuces Quiz"
+                },
+                benefits: {
+                    memory: "Boostez votre mémoire : Les tests de rappel actif renforcent votre mémoire du nouveau vocabulaire.",
+                    confidence: "Gagnez en confiance : Valider vos connaissances vous aide à vous sentir plus prêt à parler.",
+                    fun: "Rendez l'apprentissage amusant : Les quiz ludiques rendent le processus d'apprentissage moins fastidieux et plus engageant."
+                },
+                tips: "Ne vous inquiétez pas de faire des erreurs ! Revoir vos erreurs est l'un des meilleurs moyens d'apprendre. Essayez de faire un quiz immédiatement après avoir appris une nouvelle catégorie pour renforcer les mots."
+            }
         },
         privacy: {
             backToHome: "Retour à l'Accueil",
@@ -1065,13 +1158,24 @@ export const translations = {
             option: "Option",
             mainTitle: "Pratique de la Conversation",
             mainDesc: "Apprenez les Questions & Réponses courantes pour diverses situations.",
-            start: "Commencer la Pratique"
+            start: "Commencer la Pratique",
+            seo: {
+                title: "Maîtrisez la Conversation Coréenne",
+                desc: "Parler est le moyen le plus rapide d'apprendre une langue. Cette section propose des scénarios de questions-réponses courants que vous rencontrerez lors de votre voyage.",
+                subTitle: "Conseils de Pratique",
+                tips: "1. Écoutez : Jouez l'audio pour entendre la prononciation native.\n2. Répétez : Répétez après l'audio, en essayant d'imiter l'intonation.\n3. Jeu de rôle : Pratiquez avec un ami ou jouez les deux parties vous-même !"
+            }
         },
         bookmarks: {
             noBookmarks: "Pas encore de favoris.",
             desc: "Vous avez trouvé un mot difficile ? Appuyez sur l'icône étoile de n'importe quelle carte pour l'enregistrer ici et le revoir plus tard.",
             tip: "Conseil : La révision régulière est la clé de la mémoire à long terme. Essayez de consulter vos favoris tous les jours et supprimez les mots que vous maîtrisez.",
-            listen: "Écouter"
+            listen: "Écouter",
+            seo: {
+                title: "Votre Liste de Vocabulaire Personnelle",
+                desc: "La page Favoris est votre guide d'étude personnalisé. Sauvegarder les mots difficiles vous permet de concentrer votre énergie sur ce que vous n'avez pas encore maîtrisé.",
+                tips: "Révisez vos favoris quotidiennement. Une fois que vous vous sentez à l'aise avec un mot, retirez-le des favoris pour garder votre liste concentrée sur de nouveaux défis."
+            }
         },
         layout: {
             learn: "Apprendre",
@@ -1237,7 +1341,22 @@ export const translations = {
             next: "คำถามถัดไป",
             results: "ดูผลลัพธ์",
             notEnough: "ข้อมูลไม่เพียงพอสำหรับแบบทดสอบ",
-            goBack: "กลับไป"
+            goBack: "กลับไป",
+            seo: {
+                title: "ทำไมต้องทำแบบทดสอบภาษาเกาหลี?",
+                headers: {
+                    memory: "ความจำ",
+                    confidence: "ความมั่นใจ",
+                    fun: "ความสนุก",
+                    tips: "เคล็ดลับแบบทดสอบ"
+                },
+                benefits: {
+                    memory: "เพิ่มความจำ: การทดสอบการระลึกถึงช่วยเสริมสร้างความจำคำศัพท์ใหม่ของคุณ",
+                    confidence: "สร้างความมั่นใจ: การตรวจสอบความรู้ของคุณช่วยให้คุณรู้สึกพร้อมที่จะพูดมากขึ้น",
+                    fun: "ทำให้การเรียนรู้เป็นเรื่องสนุก: แบบทดสอบที่เหมือนเกมทำให้กระบวนการเรียนรู้น่าเบื่อน้อยลงและน่าสนใจยิ่งขึ้น"
+                },
+                tips: "ไม่ต้องกังวลกับการทำผิดพลาด! การทบทวนข้อผิดพลาดเป็นหนึ่งในวิธีที่ดีที่สุดในการเรียนรู้ ลองทำแบบทดสอบทันทีหลังจากเรียนรู้หมวดหมู่ใหม่เพื่อเสริมสร้างคำศัพท์"
+            }
         },
         privacy: {
             backToHome: "กลับสู่หน้าหลัก",
@@ -1337,13 +1456,24 @@ export const translations = {
             option: "ตัวเลือก",
             mainTitle: "ฝึกบทสนทนา",
             mainDesc: "เรียนรู้คำถามและคำตอบทั่วไปสำหรับสถานการณ์ต่างๆ",
-            start: "เริ่มฝึกฝน"
+            start: "เริ่มฝึกฝน",
+            seo: {
+                title: "ฝึกฝนบทสนทนาภาษาเกาหลี",
+                desc: "การพูดเป็นวิธีที่เร็วที่สุดในการเรียนรู้ภาษา ส่วนนี้จะมอบสถานการณ์ถาม-ตอบทั่วไปที่คุณจะพบระหว่างการเดินทาง",
+                subTitle: "เคล็ดลับการฝึกฝน",
+                tips: "1. ฟัง: เล่นเสียงเพื่อฟังการออกเสียงของเจ้าของภาษา\n2. พูดตาม: พูดตามเสียง พยายามเลียนแบบน้ำเสียง\n3. บทบาทสมมติ: ฝึกกับเพื่อนหรือแสดงทั้งสองบทบาทด้วยตัวเอง!"
+            }
         },
         bookmarks: {
             noBookmarks: "ยังไม่มีบุ๊กมาร์ก",
             desc: "เจอคำศัพท์ยากไหม? แตะที่ไอคอนดาวบนแฟลชการ์ดเพื่อบันทึกไว้ทบทวนภายหลัง",
             tip: "เคล็ดลับ: การทบทวนอย่างสม่ำเสมอเป็นกุญแจสู่ความจำระยะยาว ลองเข้ามาดูบุ๊กมาร์กทุกวันและลบคำที่คุณจำได้แม่นแล้ว",
-            listen: "ฟัง"
+            listen: "ฟัง",
+            seo: {
+                title: "รายการคำศัพท์ส่วนตัวของคุณ",
+                desc: "หน้าบุ๊กมาร์กคือคู่มือการเรียนส่วนตัวของคุณ การบันทึกคำศัพท์ยากๆ ช่วยให้คุณโฟกัสพลังงานไปที่สิ่งที่คุณยังไม่เชี่ยวชาญ",
+                tips: "ทบทวนบุ๊กมาร์กของคุณทุกวัน เมื่อคุณมั่นใจกับคำศัพท์แล้ว ให้เลิกบุ๊กมาร์กเพื่อให้รายการของคุณโฟกัสไปที่ความท้าทายใหม่ๆ"
+            }
         },
         layout: {
             learn: "เรียนรู้",
@@ -1509,7 +1639,22 @@ export const translations = {
             next: "下一个问题",
             results: "查看结果",
             notEnough: "没有足够的数据进行测验",
-            goBack: "返回"
+            goBack: "返回",
+            seo: {
+                title: "为什么要参加韩语测验？",
+                headers: {
+                    memory: "记忆力",
+                    confidence: "自信",
+                    fun: "乐趣",
+                    tips: "测验技巧"
+                },
+                benefits: {
+                    memory: "增强记忆力：主动回忆测试可增强您对新词汇的记忆。",
+                    confidence: "获得自信：验证您的知识有助于您更自信地开口说话。",
+                    fun: "让学习变得有趣：游戏化的测验使学习过程不再枯燥，更加引人入胜。"
+                },
+                tips: "不要担心犯错！复习错误是最好的学习方法之一。尝试在学习新类别后立即参加测验以巩固单词。"
+            }
         },
         privacy: {
             backToHome: "返回首页",
@@ -1609,13 +1754,24 @@ export const translations = {
             option: "选项",
             mainTitle: "会话练习",
             mainDesc: "学习各种情况下的常见问答。",
-            start: "开始练习"
+            start: "开始练习",
+            seo: {
+                title: "掌握韩语会话",
+                desc: "说是学习语言最快的方式。本部分提供了您在旅行中会遇到的常见问答场景。",
+                subTitle: "练习技巧",
+                tips: "1. 听：播放音频以听取母语发音。\n2. 跟读：跟读音频，尝试模仿语调。\n3. 角色扮演：与朋友练习或自己扮演两个角色！"
+            }
         },
         bookmarks: {
             noBookmarks: "暂无书签。",
             desc: "发现了难懂的单词？点击任何抽认卡上的星形图标将其保存在此处以便稍后复习。",
             tip: "提示：定期复习是长期记忆的关键。尝试每天查看书签并删除已完全掌握的单词。",
-            listen: "收听"
+            listen: "收听",
+            seo: {
+                title: "您的个人词汇表",
+                desc: "书签页面是您的个性化学习指南。保存生词可以让您将精力集中在尚未掌握的内容上。",
+                tips: "每天复习您的书签。一旦您对某个单词感到自信，请取消书签，以保持您的列表专注于新的挑战。"
+            }
         },
         layout: {
             learn: "学习",
@@ -1781,7 +1937,22 @@ export const translations = {
             next: "下一個問題",
             results: "查看結果",
             notEnough: "沒有足夠的數據進行測驗",
-            goBack: "返回"
+            goBack: "返回",
+            seo: {
+                title: "為什麼要參加韓語測驗？",
+                headers: {
+                    memory: "記憶力",
+                    confidence: "自信",
+                    fun: "樂趣",
+                    tips: "測驗技巧"
+                },
+                benefits: {
+                    memory: "增強記憶力：主動回憶測試可增強您對新詞彙的記憶。",
+                    confidence: "獲得自信：驗證您的知識有助於您更自信地開口說話。",
+                    fun: "讓學習變得有趣：遊戲化的測驗使學習過程不再枯燥，更加引人入勝。"
+                },
+                tips: "不要擔心犯錯！複習錯誤是最好的學習方法之一。嘗試在學習新類別後立即參加測驗以鞏固單字。"
+            }
         },
         privacy: {
             backToHome: "返回首頁",
@@ -1881,13 +2052,24 @@ export const translations = {
             option: "選項",
             mainTitle: "會話練習",
             mainDesc: "學習各種情況下的常見問答。",
-            start: "開始練習"
+            start: "開始練習",
+            seo: {
+                title: "掌握韓語會話",
+                desc: "說話是學習語言最快的方式。本部分提供了您在旅行中會遇到的常見問答場景。",
+                subTitle: "練習技巧",
+                tips: "1. 聽：播放音頻以聽取母語發音。\n2. 跟讀：跟讀音頻，嘗試模仿語調。\n3. 角色扮演：與朋友練習或自己扮演這兩個角色！"
+            }
         },
         bookmarks: {
             noBookmarks: "暫無書籤。",
             desc: "發現了難懂的單字？點擊任何抽认卡上的星形圖示將其保存在此處以便稍後複習。",
             tip: "提示：定期複習是長期記憶的關鍵。嘗試每天查看書籤並刪除已完全掌握的單字。",
-            listen: "收聽"
+            listen: "收聽",
+            seo: {
+                title: "您的個人詞彙表",
+                desc: "書籤頁面是您的個性化學習指南。保存生詞可以讓您將精力集中在尚未掌握的內容上。",
+                tips: "每天複習您的書籤。一旦您對某個單字感到自信，請取消書籤，以保持您的列表專注於新的挑戰。"
+            }
         },
         layout: {
             learn: "學習",
@@ -2053,7 +2235,22 @@ export const translations = {
             next: "अगला प्रश्न",
             results: "परिणाम देखें",
             notEnough: "क्विज़ के लिए पर्याप्त डेटा नहीं",
-            goBack: "वापस जाओ"
+            goBack: "वापस जाओ",
+            seo: {
+                title: "कोरियाई क्विज़ क्यों लें?",
+                headers: {
+                    memory: "याददाश्त",
+                    confidence: "आत्मविश्वास",
+                    fun: "मज़ा",
+                    tips: "क्विज़ टिप्स"
+                },
+                benefits: {
+                    memory: "याददाश्त बढ़ाएं: सक्रिय रूप से याद करने का परीक्षण नए शब्दावली की आपकी याददाश्त को मजबूत करता है।",
+                    confidence: "आत्मविश्वास प्राप्त करें: अपने ज्ञान को मान्य करने से आपको बोलने के लिए अधिक तैयार महसूस करने में मदद मिलती है।",
+                    fun: "सीखने को मजेदार बनाएं: गेमिफाइड क्विज़ सीखने की प्रक्रिया को कम कठिन और अधिक आकर्षक बनाते हैं।"
+                },
+                tips: "गलतियां करने के बारे में चिंता न करें! अपनी त्रुटियों की समीक्षा करना सीखने के सर्वोत्तम तरीकों में से एक है। शब्दों को सुदृढ़ करने के लिए एक नई श्रेणी सीखने के तुरंत बाद क्विज़ लेने का प्रयास करें।"
+            }
         },
         privacy: {
             backToHome: "मुखपृष्ठ पर वापस",
@@ -2153,13 +2350,24 @@ export const translations = {
             option: "विकल्प",
             mainTitle: "बातचीत का अभ्यास",
             mainDesc: "विभिन्न स्थितियों के लिए सामान्य प्रश्न और उत्तर सीखें।",
-            start: "अभ्यास शुरू करें"
+            start: "अभ्यास शुरू करें",
+            seo: {
+                title: "कोरियाई बातचीत में महारत हासिल करें",
+                desc: "बोलना भाषा सीखने का सबसे तेज़ तरीका है। यह खंड सामान्य प्रश्न और उत्तर परिदृश्य प्रदान करता है जिनका आप अपनी यात्रा के दौरान सामना करेंगे।",
+                subTitle: "अभ्यास सुझाव",
+                tips: "1. सुनें: मूल उच्चारण सुनने के लिए ऑडियो चलाएं।\n2. छाया: ऑडियो के बाद दोहराएं, इंटोनेशन की नकल करने की कोशिश करें।\n3. रोलप्ले: एक दोस्त के साथ अभ्यास करें या दोनों भागों को स्वयं करें!"
+            }
         },
         bookmarks: {
             noBookmarks: "अभी तक कोई बुकमार्क नहीं।",
             desc: "कोई कठिन शब्द मिला? बाद में समीक्षा के लिए इसे यहाँ सहेजने के लिए किसी भी फ्लैशकार्ड पर स्टार आइकन पर टैप करें।",
             tip: "टिप: नियमित समीक्षा दीर्घकालिक स्मृति की कुंजी है। अपने बुकमार्क को प्रतिदिन देखने का प्रयास करें और उन शब्दों को हटा दें जिन्हें आपने पूरी तरह से महारत हासिल कर ली है।",
-            listen: "सुनें"
+            listen: "सुनें",
+            seo: {
+                title: "आपकी व्यक्तिगत शब्दावली सूची",
+                desc: "बुकमार्क पेज आपकी व्यक्तिगत अध्ययन गाइड है। कठिन शब्दों को सहेजने से आप अपनी ऊर्जा उन चीजों पर केंद्रित कर सकते हैं जिन्हें आपने अभी तक महारत हासिल नहीं की है।",
+                tips: "प्रतिदिन अपने बुकमार्क की समीक्षा करें। एक बार जब आप किसी शब्द के साथ आश्वस्त महसूस करते हैं, तो अपनी सूची को नई चुनौतियों पर केंद्रित रखने के लिए इसे अन-बुकमार्क करें।"
+            }
         },
         layout: {
             learn: "सीखें",

@@ -201,6 +201,34 @@ export default function Conversation() {
                     </button>
                 ))}
             </div>
+
+            {/* SEO Content Section */}
+            {!selectedCategory && (
+                <div className="mt-16 border-t border-gray-100 dark:border-gray-800 pt-8 animate-fade-in">
+                    <div className="max-w-3xl mx-auto text-center space-y-8">
+                        <div>
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                                {t.conversation.seo?.title || "Master Korean Conversation"}
+                            </h3>
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                {t.conversation.seo?.desc || "Speaking is the fastest way to learn a language."}
+                            </p>
+                        </div>
+
+                        <div className="bg-indigo-50 dark:bg-indigo-900/20 rounded-3xl p-8 text-left">
+                            <h4 className="font-bold text-indigo-900 dark:text-indigo-300 mb-4 flex items-center gap-2">
+                                <MessageCircle className="w-5 h-5" />
+                                {t.conversation.seo?.subTitle || "Practice Tips"}
+                            </h4>
+                            <div className="space-y-4 text-gray-700 dark:text-gray-300 text-sm">
+                                <p className="whitespace-pre-line">
+                                    {t.conversation.seo?.tips || "Listen, Shadow, and Roleplay!"}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
