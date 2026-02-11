@@ -1,10 +1,12 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw, Star, MessageCircle } from 'lucide-react';
 import { useUser } from '../context/UserContext';
+import { translations } from '../data/translations';
 
 
 export default function Layout() {
     const { name, level, xp, logout, theme, toggleTheme, targetLanguage, setTargetLanguage } = useUser();
+    const t = translations[targetLanguage];
 
     const location = useLocation();
 
@@ -73,19 +75,19 @@ export default function Layout() {
                         </div>
 
                         <Link to="/categories" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
-                            Learn
+                            {t.layout.learn}
                         </Link>
                         <Link to="/conversation" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
-                            Talk
+                            {t.layout.talk}
                         </Link>
                         <Link to="/bookmarks" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
-                            Bookmarks
+                            {t.layout.bookmarks}
                         </Link>
                         <Link to="/quiz" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
-                            Quiz
+                            {t.layout.quiz}
                         </Link>
                         <Link to="/guide" className="hidden md:block text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition whitespace-nowrap">
-                            Guide
+                            {t.layout.guide}
                         </Link>
                         <button
                             onClick={toggleTheme}
@@ -111,10 +113,10 @@ export default function Layout() {
             <footer className="bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 py-8 text-center text-gray-400 dark:text-gray-500 text-sm transition-colors duration-300">
                 <p className="mb-4">© {new Date().getFullYear()} Hangle. Enjoy learning Korean!</p>
                 <div className="flex flex-wrap justify-center gap-4 md:gap-6 px-4">
-                    <Link to="/about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">About</Link>
-                    <Link to="/privacy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Privacy Policy</Link>
-                    <Link to="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Terms of Service</Link>
-                    <Link to="/feedback" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Feedback</Link>
+                    <Link to="/about" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{t.layout.footer.about}</Link>
+                    <Link to="/privacy" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{t.layout.footer.privacy}</Link>
+                    <Link to="/terms" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{t.layout.footer.terms}</Link>
+                    <Link to="/feedback" className="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">{t.layout.footer.feedback}</Link>
                 </div>
             </footer>
 
@@ -122,17 +124,17 @@ export default function Layout() {
             <div className="md:hidden fixed bottom-0 left-0 w-full bg-white dark:bg-gray-800 border-t border-gray-100 dark:border-gray-700 pb-safe pt-2 px-6 flex justify-between items-center z-50 transition-colors duration-300 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.05)]">
                 <Link to="/categories" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/categories') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <BookOpen className={`w-6 h-6 mb-1 ${isActive('/categories') ? 'fill-current opacity-20' : ''}`} />
-                    <span className="text-xs font-medium">Learn</span>
+                    <span className="text-xs font-medium">{t.layout.learn}</span>
                 </Link>
 
                 <Link to="/conversation" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/conversation') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <MessageCircle className={`w-6 h-6 mb-1 ${isActive('/conversation') ? 'fill-current opacity-20' : ''}`} />
-                    <span className="text-xs font-medium">Talk</span>
+                    <span className="text-xs font-medium">{t.layout.talk}</span>
                 </Link>
 
                 <Link to="/bookmarks" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/bookmarks') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <Star className={`w-6 h-6 mb-1 ${isActive('/bookmarks') ? 'fill-current' : ''}`} />
-                    <span className="text-xs font-medium">Bookmarks</span>
+                    <span className="text-xs font-medium">{t.layout.bookmarks}</span>
                 </Link>
 
                 {name && (
@@ -156,12 +158,12 @@ export default function Layout() {
 
                 <Link to="/quiz" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/quiz') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <Globe className={`w-6 h-6 mb-1 ${isActive('/quiz') ? 'fill-current opacity-20' : ''}`} />
-                    <span className="text-xs font-medium">Quiz</span>
+                    <span className="text-xs font-medium">{t.layout.quiz}</span>
                 </Link>
 
                 <Link to="/guide" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/guide') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <BookOpen className={`w-6 h-6 mb-1 ${isActive('/guide') ? 'fill-current opacity-20' : ''}`} />
-                    <span className="text-xs font-medium">Guide</span>
+                    <span className="text-xs font-medium">{t.layout.guide}</span>
                 </Link>
             </div>
         </div>

@@ -148,36 +148,35 @@ export default function Home() {
                 <div className="mt-16 text-left space-y-8 max-w-3xl mx-auto px-4">
                     <section>
                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                            Why Learn Korean with Hangle?
+                            {t.home.seo.whyTitle}
                         </h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            Hangle is the ultimate companion for mastering Korean idioms and daily expressions.
-                            Whether you are preparing for a trip to Korea, studying for the TOPIK exam, or simply interested in K-Culture,
-                            understanding idioms is key to sounding like a native speaker. Our app provides curated vocabulary cards,
-                            native pronunciation audio, and fun quizzes to help you memorize efficiently.
+                            {t.home.seo.whyDesc}
                         </p>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                            Key Features
+                            {t.home.seo.featuresTitle}
                         </h2>
                         <ul className="list-disc list-inside text-gray-600 dark:text-gray-300 space-y-2">
-                            <li><strong>Daily Phrase:</strong> Learn a new Korean expression every day.</li>
-                            <li><strong>Categorized Learning:</strong> Explore vocabulary by topics like Travel, Food, Emotions, and more.</li>
-                            <li><strong>Interactive Quizzes:</strong> Test your knowledge with fun and challenging quizzes.</li>
-                            <li><strong>Pronunciation Practice:</strong> Listen to native audio and improve your speaking skills.</li>
+                            <li>{t.home.seo.features.daily}</li>
+                            <li>{t.home.seo.features.categories}</li>
+                            <li>{t.home.seo.features.quizzes}</li>
+                            <li>{t.home.seo.features.pronunciation}</li>
                         </ul>
                     </section>
 
                     <section>
                         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                            How to Use This App
+                            {t.home.seo.howToTitle}
                         </h2>
                         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                            Start by exploring the <Link to="/categories" className="text-indigo-600 hover:underline">Categories</Link> page to find topics that interest you.
-                            Use the Flashcards to memorize new words, and then challenge yourself in the <Link to="/quiz" className="text-indigo-600 hover:underline">Quiz</Link> section.
-                            Don't forget to check the Daily Phrase every day to keep your streak alive!
+                            {t.home.seo.howToDescStart}
+                            <Link to="/categories" className="text-indigo-600 hover:underline">{t.home.seo.howToDescCategoryLink}</Link>
+                            {t.home.seo.howToDescMiddle}
+                            <Link to="/quiz" className="text-indigo-600 hover:underline">{t.home.seo.howToDescQuizLink}</Link>
+                            {t.home.seo.howToDescEnd}
                         </p>
                     </section>
                 </div>

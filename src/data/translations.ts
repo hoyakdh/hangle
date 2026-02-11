@@ -25,6 +25,23 @@ export const translations = {
                 success: "Perfect!",
                 tryAgain: "Try Again",
                 permission: "Please allow microphone access to practice speaking."
+            },
+            seo: {
+                whyTitle: "Why Learn Korean with Hangle?",
+                whyDesc: "Hangle is the ultimate companion for mastering Korean idioms and daily expressions. Whether you are preparing for a trip to Korea, studying for the TOPIK exam, or simply interested in K-Culture, understanding idioms is key to sounding like a native speaker. Our app provides curated vocabulary cards, native pronunciation audio, and fun quizzes to help you memorize efficiently.",
+                featuresTitle: "Key Features",
+                features: {
+                    daily: "Daily Phrase: Learn a new Korean expression every day.",
+                    categories: "Categorized Learning: Explore vocabulary by topics like Travel, Food, Emotions, and more.",
+                    quizzes: "Interactive Quizzes: Test your knowledge with fun and challenging quizzes.",
+                    pronunciation: "Pronunciation Practice: Listen to native audio and improve your speaking skills."
+                },
+                howToTitle: "How to Use This App",
+                howToDescStart: "Start by exploring the ",
+                howToDescCategoryLink: "Categories",
+                howToDescMiddle: " page to find topics that interest you. Use the Flashcards to memorize new words, and then challenge yourself in the ",
+                howToDescQuizLink: "Quiz",
+                howToDescEnd: " section. Don't forget to check the Daily Phrase every day to keep your streak alive!"
             }
         },
         search: {
@@ -239,6 +256,19 @@ export const translations = {
             desc: "Found a difficult word? Tap the star icon on any flashcard to save it here for later review.",
             tip: "Tip: Regular review is the key to long-term memory. Try to visit your bookmarks everyday and remove the words you have fully mastered.",
             listen: "Listen"
+        },
+        layout: {
+            learn: "Learn",
+            talk: "Talk",
+            bookmarks: "Bookmarks",
+            quiz: "Quiz",
+            guide: "Guide",
+            footer: {
+                about: "About",
+                privacy: "Privacy Policy",
+                terms: "Terms of Service",
+                feedback: "Feedback"
+            }
         }
     },
     es: {
@@ -267,6 +297,23 @@ export const translations = {
                 success: "¡Perfecto!",
                 tryAgain: "Inténtalo de nuevo",
                 permission: "Por favor permite el acceso al micrófono para practicar."
+            },
+            seo: {
+                whyTitle: "¿Por qué aprender coreano con Hangle?",
+                whyDesc: "Hangle es el compañero definitivo para dominar modismos coreanos y expresiones diarias. Ya sea que te estés preparando para un viaje a Corea, estudiando para el examen TOPIK o simplemente interesado en la cultura K, entender los modismos es clave para sonar como un hablante nativo. Nuestra aplicación proporciona tarjetas de vocabulario seleccionadas, audio de pronunciación nativa y cuestionarios divertidos para ayudarte a memorizar de manera eficiente.",
+                featuresTitle: "Características Clave",
+                features: {
+                    daily: "Frase Diaria: Aprende una nueva expresión coreana cada día.",
+                    categories: "Aprendizaje Categorizado: Explora vocabulario por temas como Viajes, Comida, Emociones y más.",
+                    quizzes: "Cuestionarios Interactivos: Pon a prueba tus conocimientos con cuestionarios divertidos y desafiantes.",
+                    pronunciation: "Práctica de Pronunciación: Escucha audio nativo y mejora tus habilidades de habla."
+                },
+                howToTitle: "Cómo Usar Esta Aplicación",
+                howToDescStart: "Comienza explorando la página de ",
+                howToDescCategoryLink: "Categorías",
+                howToDescMiddle: " para encontrar temas que te interesen. Usa las Flashcards para memorizar nuevas palabras y luego desafíate en la sección de ",
+                howToDescQuizLink: "Cuestionarios",
+                howToDescEnd: ". ¡No olvides revisar la Frase Diaria todos los días para mantener tu racha viva!"
             }
         },
         search: {
@@ -481,6 +528,19 @@ export const translations = {
             desc: "¿Encontraste una palabra difícil? Toca el icono de estrella en cualquier tarjeta para guardarla aquí y repasarla más tarde.",
             tip: "Consejo: La revisión regular es clave para la memoria a largo plazo. Intenta visitar tus marcadores todos los días y elimina las palabras que ya dominas.",
             listen: "Escuchar"
+        },
+        layout: {
+            learn: "Aprender",
+            talk: "Hablar",
+            bookmarks: "Favoritos",
+            quiz: "Quiz",
+            guide: "Guía",
+            footer: {
+                about: "Acerca de",
+                privacy: "Política de Privacidad",
+                terms: "Términos de Servicio",
+                feedback: "Feedback"
+            }
         }
     },
     ja: {
@@ -509,6 +569,23 @@ export const translations = {
                 success: "完璧です！",
                 tryAgain: "もう一度",
                 permission: "発音練習のためにマイクの使用を許可してください。"
+            },
+            seo: {
+                whyTitle: "なぜHangleで韓国語を学ぶのか？",
+                whyDesc: "Hangleは、韓国語の慣用句や日常表現を習得するための究極のパートナーです。韓国旅行の準備、TOPIK試験の勉強、または単にKカルチャーに興味がある場合でも、慣用句を理解することはネイティブのように話すための鍵です。当アプリは、厳選された単語カード、ネイティブの発音音声、楽しいクイズを提供し、効率的に暗記するのを助けます。",
+                featuresTitle: "主な機能",
+                features: {
+                    daily: "今日のフレーズ：毎日新しい韓国語の表現を学びましょう。",
+                    categories: "カテゴリ別学習：旅行、食べ物、感情などのトピック別に語彙を探索します。",
+                    quizzes: "インタラクティブクイズ：楽しくやりがいのあるクイズで知識をテストします。",
+                    pronunciation: "発音練習：ネイティブの音声を聞いてスピーキングスキルを向上させます。"
+                },
+                howToTitle: "このアプリの使い方",
+                howToDescStart: "まずは",
+                howToDescCategoryLink: "カテゴリ",
+                howToDescMiddle: "ページを探索して、興味のあるトピックを見つけましょう。フラッシュカードを使って新しい単語を覚え、その後",
+                howToDescQuizLink: "クイズ",
+                howToDescEnd: "セクションで自分自身に挑戦してください。ストリークを維持するために、毎日「今日のフレーズ」をチェックすることを忘れないでください！"
             }
         },
         search: {
@@ -723,6 +800,19 @@ export const translations = {
             desc: "難しい単語がありましたか？カードの星アイコンをタップして、後で復習するためにここに保存しましょう。",
             tip: "ヒント：長期記憶の鍵は定期的な復習です。毎日ブックマークを確認し、完全に覚えた単語は削除するようにしましょう。",
             listen: "聞く"
+        },
+        layout: {
+            learn: "学習",
+            talk: "会話",
+            bookmarks: "ブックマーク",
+            quiz: "クイズ",
+            guide: "ガイド",
+            footer: {
+                about: "Hangleについて",
+                privacy: "プライバシーポリシー",
+                terms: "利用規約",
+                feedback: "フィードバック"
+            }
         }
     },
     fr: {
@@ -751,6 +841,23 @@ export const translations = {
                 success: "Parfait !",
                 tryAgain: "Réessayer",
                 permission: "Veuillez autoriser l'accès au microphone pour pratiquer l'expression orale."
+            },
+            seo: {
+                whyTitle: "Pourquoi apprendre le coréen avec Hangle ?",
+                whyDesc: "Hangle est le compagnon ultime pour maîtriser les expressions idiomatiques coréennes et les expressions quotidiennes. Que vous prépariez un voyage en Corée, étudiiez pour l'examen TOPIK ou soyez simplement intéressé par la K-Culture, comprendre les expressions idiomatiques est la clé pour parler comme un natif. Notre application propose des cartes de vocabulaire, un son de prononciation natif et des quiz amusants pour vous aider à mémoriser efficacement.",
+                featuresTitle: "Fonctionnalités Clés",
+                features: {
+                    daily: "Phrase du Jour : Apprenez une nouvelle expression coréenne chaque jour.",
+                    categories: "Apprentissage par Catégorie : Explorez le vocabulaire par thèmes comme Voyage, Nourriture, Émotions, et plus.",
+                    quizzes: "Quiz Interactifs : Testez vos connaissances avec des quiz amusants et stimulants.",
+                    pronunciation: "Pratique de la Prononciation : Écoutez l'audio natif et améliorez vos compétences orales."
+                },
+                howToTitle: "Comment utiliser cette application",
+                howToDescStart: "Commencez par explorer la page des ",
+                howToDescCategoryLink: "Catégories",
+                howToDescMiddle: " pour trouver des sujets qui vous intéressent. Utilisez les Flashcards pour mémoriser de nouveaux mots, puis mettez-vous au défi dans la section ",
+                howToDescQuizLink: "Quiz",
+                howToDescEnd: ". N'oubliez pas de vérifier la Phrase du Jour chaque jour pour garder votre série active !"
             }
         },
         search: {
@@ -965,6 +1072,19 @@ export const translations = {
             desc: "Vous avez trouvé un mot difficile ? Appuyez sur l'icône étoile de n'importe quelle carte pour l'enregistrer ici et le revoir plus tard.",
             tip: "Conseil : La révision régulière est la clé de la mémoire à long terme. Essayez de consulter vos favoris tous les jours et supprimez les mots que vous maîtrisez.",
             listen: "Écouter"
+        },
+        layout: {
+            learn: "Apprendre",
+            talk: "Parler",
+            bookmarks: "Favoris",
+            quiz: "Quiz",
+            guide: "Guide",
+            footer: {
+                about: "À propos",
+                privacy: "Politique de Confidentialité",
+                terms: "Conditions d'Utilisation",
+                feedback: "Commentaires"
+            }
         }
     },
     th: {
@@ -993,6 +1113,23 @@ export const translations = {
                 success: "ยอดเยี่ยม!",
                 tryAgain: "ลองอีกครั้ง",
                 permission: "โปรดอนุญาตให้เข้าถึงไมโครโฟนเพื่อฝึกการพูด"
+            },
+            seo: {
+                whyTitle: "ทำไมต้องเรียนภาษาเกาหลีกับ Hangle?",
+                whyDesc: "Hangle เป็นเพื่อนที่ดีที่สุดสำหรับการเรียนรู้สํานวนเกาหลีและสำนวนประจำวัน ไม่ว่าคุณจะเตรียมตัวไปเที่ยวเกาหลี เรียนเพื่อสอบ TOPIK หรือเพียงแค่สนใจใน K-Culture การเข้าใจสํานวนเป็นกุญแจสำคัญในการพูดเหมือนเจ้าของภาษา แอปของเรามีการ์ดคำศัพท์ที่คัดสรรมา เสียงการออกเสียงของเจ้าของภาษา และแบบทดสอบแสนสนุกเพื่อช่วยให้คุณจดจำได้อย่างมีประสิทธิภาพ",
+                featuresTitle: "คุณสมบัติหลัก",
+                features: {
+                    daily: "วลีประจำวัน: เรียนรู้สำนวนเกาหลีใหม่ทุกวัน",
+                    categories: "การเรียนรู้ตามหมวดหมู่: สำรวจคำศัพท์ตามหัวข้อ เช่น การเดินทาง อาหาร อารมณ์ และอื่นๆ",
+                    quizzes: "แบบทดสอบเชิงโต้ตอบ: ทดสอบความรู้ของคุณด้วยแบบทดสอบที่สนุกและท้าทาย",
+                    pronunciation: "ฝึกการออกเสียง: ฟังเสียงเจ้าของภาษาและปรับปรุงทักษะการพูดของคุณ"
+                },
+                howToTitle: "วิธีใช้แอปนี้",
+                howToDescStart: "เริ่มโดยการสำรวจหน้า ",
+                howToDescCategoryLink: "หมวดหมู่",
+                howToDescMiddle: " เพื่อค้นหาหัวข้อที่คุณสนใจ ใช้แฟลชการ์ดเพื่อจดจำคำศัพท์ใหม่ แล้วท้าทายตัวเองในส่วน ",
+                howToDescQuizLink: "แบบทดสอบ",
+                howToDescEnd: " อย่าลืมตรวจสอบวลีประจำวันทุกวันเพื่อรักษาสตรีคของคุณ!"
             }
         },
         search: {
@@ -1207,6 +1344,19 @@ export const translations = {
             desc: "เจอคำศัพท์ยากไหม? แตะที่ไอคอนดาวบนแฟลชการ์ดเพื่อบันทึกไว้ทบทวนภายหลัง",
             tip: "เคล็ดลับ: การทบทวนอย่างสม่ำเสมอเป็นกุญแจสู่ความจำระยะยาว ลองเข้ามาดูบุ๊กมาร์กทุกวันและลบคำที่คุณจำได้แม่นแล้ว",
             listen: "ฟัง"
+        },
+        layout: {
+            learn: "เรียนรู้",
+            talk: "พูดคุย",
+            bookmarks: "บุ๊กมาร์ก",
+            quiz: "แบบทดสอบ",
+            guide: "คู่มือ",
+            footer: {
+                about: "เกี่ยวกับ",
+                privacy: "นโยบายความเป็นส่วนตัว",
+                terms: "เงื่อนไขการให้บริการ",
+                feedback: "ข้อเสนอแนะ"
+            }
         }
     },
     zh: {
@@ -1235,6 +1385,23 @@ export const translations = {
                 success: "太棒了！",
                 tryAgain: "再试一次",
                 permission: "请允许使用麦克风以练习口语。"
+            },
+            seo: {
+                whyTitle: "为什么要用 Hangle 学习韩语？",
+                whyDesc: "Hangle 是掌握韩语习语和日常表达的终极伴侣。无论您是准备去韩国旅行，为 TOPIK 考试学习，还是仅仅对 K-Culture 感兴趣，理解习语是像母语者一样说话的关键。我们的应用程序提供精选的词汇卡，母语发音音频和有趣的测验，帮助您高效记忆。",
+                featuresTitle: "主要功能",
+                features: {
+                    daily: "每日短语：每天学习一个新的韩语表达。",
+                    categories: "分类学习：按主题探索词汇，如旅行，食物，情感等。",
+                    quizzes: "互动测验：通过有趣且具有挑战性的测验测试您的知识。",
+                    pronunciation: "发音练习：听母语音频并提高您的口语技能。"
+                },
+                howToTitle: "如何使用此应用程序",
+                howToDescStart: "首先浏览 ",
+                howToDescCategoryLink: "类别",
+                howToDescMiddle: " 页面以查找您感兴趣的主题。使用抽认卡记忆新单词，然后在 ",
+                howToDescQuizLink: "测验",
+                howToDescEnd: " 部分挑战自己。别忘了每天查看每日短语以保持您的连胜纪录！"
             }
         },
         search: {
@@ -1449,6 +1616,19 @@ export const translations = {
             desc: "发现了难懂的单词？点击任何抽认卡上的星形图标将其保存在此处以便稍后复习。",
             tip: "提示：定期复习是长期记忆的关键。尝试每天查看书签并删除已完全掌握的单词。",
             listen: "收听"
+        },
+        layout: {
+            learn: "学习",
+            talk: "对话",
+            bookmarks: "书签",
+            quiz: "测验",
+            guide: "指南",
+            footer: {
+                about: "关于",
+                privacy: "隐私政策",
+                terms: "服务条款",
+                feedback: "反馈"
+            }
         }
     },
     "zh-TW": {
@@ -1477,6 +1657,23 @@ export const translations = {
                 success: "太棒了！",
                 tryAgain: "再試一次",
                 permission: "請允許使用麥克風以練習口語。"
+            },
+            seo: {
+                whyTitle: "為什麼要用 Hangle 學習韓語？",
+                whyDesc: "Hangle 是掌握韓語習語和日常表達的終極伴侶。無論您是準備去韓國旅行，為 TOPIK 考試學習，還是僅僅對 K-Culture 感興趣，理解習語是像母語者一樣說話的關鍵。我們的應用程序提供精選的詞彙卡，母語發音音頻和有趣的測驗，幫助您高效記憶。",
+                featuresTitle: "主要功能",
+                features: {
+                    daily: "每日短語：每天學習一個新的韓語表達。",
+                    categories: "分類學習：按主題探索詞彙，如旅行，食物，情感等。",
+                    quizzes: "互動測驗：通過有趣且具有挑戰性的測驗測試您的知識。",
+                    pronunciation: "發音練習：聽母語音頻並提高您的口語技能。",
+                },
+                howToTitle: "如何使用此應用程序",
+                howToDescStart: "首先瀏覽 ",
+                howToDescCategoryLink: "類別",
+                howToDescMiddle: " 頁面以查找您感興趣的主題。使用抽認卡記憶新單詞，然後在 ",
+                howToDescQuizLink: "測驗",
+                howToDescEnd: " 部分挑戰自己。別忘了每天查看每日短語以保持您的連勝紀錄！"
             }
         },
         search: {
@@ -1691,6 +1888,19 @@ export const translations = {
             desc: "發現了難懂的單字？點擊任何抽认卡上的星形圖示將其保存在此處以便稍後複習。",
             tip: "提示：定期複習是長期記憶的關鍵。嘗試每天查看書籤並刪除已完全掌握的單字。",
             listen: "收聽"
+        },
+        layout: {
+            learn: "學習",
+            talk: "對話",
+            bookmarks: "書籤",
+            quiz: "測驗",
+            guide: "指南",
+            footer: {
+                about: "關於",
+                privacy: "隱私政策",
+                terms: "服務條款",
+                feedback: "反饋"
+            }
         }
     },
     hi: {
@@ -1719,6 +1929,23 @@ export const translations = {
                 success: "उत्तम!",
                 tryAgain: "पुनः प्रयास करें",
                 permission: "कृपया बोलने का अभ्यास करने के लिए माइक्रोफ़ोन की अनुमति दें।"
+            },
+            seo: {
+                whyTitle: "हंगल के साथ कोरियाई क्यों सीखें?",
+                whyDesc: "कोरियाई मुहावरों और दैनिक अभिव्यक्तियों में महारत हासिल करने के लिए Hangle आपका अंतिम साथी है। चाहे आप कोरिया की यात्रा की तैयारी कर रहे हों, TOPIK परीक्षा के लिए अध्ययन कर रहे हों, या केवल K-Culture में रुचि रखते हों, मुहावरों को समझना एक मूल निवासी की तरह बोलने की कुंजी है। हमारा ऐप आपको कुशलता से याद करने में मदद करने के लिए क्यूरेटेड शब्दावली कार्ड, मूल उच्चारण ऑडियो और मजेदार क्विज़ प्रदान करता है।",
+                featuresTitle: "मुख्य विशेषताएं",
+                features: {
+                    daily: "दैनिक वाक्यांश: हर दिन एक नई कोरियाई अभिव्यक्ति सीखें।",
+                    categories: "वर्गीकृत शिक्षा: यात्रा, भोजन, भावनाएं, और अधिक जैसे विषयों द्वारा शब्दावली का अन्वेषण करें।",
+                    quizzes: "इंटरएक्टिव क्विज़: मजेदार और चुनौतीपूर्ण क्विज़ के साथ अपने ज्ञान का परीक्षण करें।",
+                    pronunciation: "उच्चारण अभ्यास: मूल ऑडियो सुनें और अपने बोलने के कौशल में सुधार करें।"
+                },
+                howToTitle: "इस ऐप का उपयोग कैसे करें",
+                howToDescStart: "आपकी रुचि के विषयों को खोजने के लिए ",
+                howToDescCategoryLink: "श्रेणियां",
+                howToDescMiddle: " पृष्ठ का पता लगाकर प्रारंभ करें। नए शब्दों को याद करने के लिए फ्लैशकार्ड का उपयोग करें, और फिर ",
+                howToDescQuizLink: "क्विज़",
+                howToDescEnd: " अनुभाग में खुद को चुनौती दें। अपनी लय को जीवित रखने के लिए हर दिन दैनिक वाक्यांश की जांच करना न भूलें!"
             }
         },
         search: {
@@ -1933,6 +2160,19 @@ export const translations = {
             desc: "कोई कठिन शब्द मिला? बाद में समीक्षा के लिए इसे यहाँ सहेजने के लिए किसी भी फ्लैशकार्ड पर स्टार आइकन पर टैप करें।",
             tip: "टिप: नियमित समीक्षा दीर्घकालिक स्मृति की कुंजी है। अपने बुकमार्क को प्रतिदिन देखने का प्रयास करें और उन शब्दों को हटा दें जिन्हें आपने पूरी तरह से महारत हासिल कर ली है।",
             listen: "सुनें"
+        },
+        layout: {
+            learn: "सीखें",
+            talk: "बातचीत",
+            bookmarks: "बुकमार्क",
+            quiz: "क्विज़",
+            guide: "गाइड",
+            footer: {
+                about: "के बारे में",
+                privacy: "गोपनीयता नीति",
+                terms: "सेवा की शर्तें",
+                feedback: "प्रतिक्रिया"
+            }
         }
     }
 };
