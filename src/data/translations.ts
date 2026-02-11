@@ -71,6 +71,12 @@ export const translations = {
         },
         categories: {
             title: "Choose a Category",
+            intro: "Select a category to start learning useful phrases.",
+            howToLearn: "How to Learn",
+            focusTitle: "Focus on Phrases",
+            focusDesc: "Read and listen to phrases relevant to your trip.",
+            speakTitle: "Speak Aloud",
+            speakDesc: "Practice speaking to improve your pronunciation.",
             items: {
                 airport: { name: "Airport (공항)", description: "Check-in, Passport, Gate" },
                 taxi: { name: "Taxi (택시)", description: "Destination, Fare, Directions" },
@@ -106,6 +112,10 @@ export const translations = {
                 flip: "Tap the card to see the meaning.",
                 bookmark: "Bookmark phrases to review later.",
                 known: "Mark as learned to earn XP!"
+            },
+            aboutLesson: {
+                title: "About this Lesson",
+                content: "You are learning {count} new Korean words and phrases related to {category}. Use the flashcards to memorize the meaning and pronunciation. The 'Speaking Practice' feature helps you correct your accent by comparing your voice with native speakers."
             }
         },
         quiz: {
@@ -210,6 +220,24 @@ export const translations = {
             emailPlaceholder: "you@example.com",
             send: "Send Feedback",
             backToHome: "Back to Home"
+        },
+        conversation: {
+            back: "Back to Categories",
+            titleSuffix: "Conversation",
+            subtitle: "Practice common Questions & Answers",
+            noData: "No conversation data available for this category yet.",
+            question: "Question",
+            answer: "Answer",
+            option: "Option",
+            mainTitle: "Conversation Practice",
+            mainDesc: "Learn common Questions & Answers for various situations.",
+            start: "Start Practice"
+        },
+        bookmarks: {
+            noBookmarks: "No bookmarks yet.",
+            desc: "Found a difficult word? Tap the star icon on any flashcard to save it here for later review.",
+            tip: "Tip: Regular review is the key to long-term memory. Try to visit your bookmarks everyday and remove the words you have fully mastered.",
+            listen: "Listen"
         }
     },
     es: {
@@ -284,6 +312,12 @@ export const translations = {
         },
         categories: {
             title: "Elige una Categoría",
+            intro: "Selecciona una categoría para comenzar a aprender frases útiles.",
+            howToLearn: "Cómo aprender",
+            focusTitle: "Enfócate en las frases",
+            focusDesc: "Lee y escucha frases relevantes para tu viaje.",
+            speakTitle: "Habla en voz alta",
+            speakDesc: "Practica hablar para mejorar tu pronunciación.",
             items: {
                 airport: { name: "Aeropuerto (공항)", description: "Check-in, Pasaporte, Puerta" },
                 taxi: { name: "Taxi (택시)", description: "Destino, Tarifa, Direcciones" },
@@ -319,6 +353,10 @@ export const translations = {
                 flip: "Toca la tarjeta para ver el significado.",
                 bookmark: "Guarda frases para repasar más tarde.",
                 known: "¡Marca como aprendido para ganar XP!"
+            },
+            aboutLesson: {
+                title: "Sobre esta lección",
+                content: "Estás aprendiendo {count} nuevas palabras y frases en coreano relacionadas con {category}. Usa las tarjetas de memoria para memorizar el significado y la pronunciación. La función 'Práctica de Habla' te ayuda a corregir tu acento comparando tu voz con la de hablantes nativos."
             }
         },
         quiz: {
@@ -423,6 +461,24 @@ export const translations = {
             emailPlaceholder: "tu@ejemplo.com",
             send: "Enviar Feedback",
             backToHome: "Volver al Inicio"
+        },
+        conversation: {
+            back: "Volver a Categorías",
+            titleSuffix: "Conversación",
+            subtitle: "Practica Preguntas y Respuestas comunes",
+            noData: "No hay datos de conversación disponibles para esta categoría aún.",
+            question: "Pregunta",
+            answer: "Respuesta",
+            option: "Opción",
+            mainTitle: "Práctica de Conversación",
+            mainDesc: "Aprende Preguntas y Respuestas comunes para varias situaciones.",
+            start: "Empezar Práctica"
+        },
+        bookmarks: {
+            noBookmarks: "Aún no hay marcadores.",
+            desc: "¿Encontraste una palabra difícil? Toca el icono de estrella en cualquier tarjeta para guardarla aquí y repasarla más tarde.",
+            tip: "Consejo: La revisión regular es clave para la memoria a largo plazo. Intenta visitar tus marcadores todos los días y elimina las palabras que ya dominas.",
+            listen: "Escuchar"
         }
     },
     ja: {
@@ -497,6 +553,12 @@ export const translations = {
         },
         categories: {
             title: "カテゴリーを選択",
+            intro: "カテゴリーを選択して、役立つフレーズの学習を始めましょう。",
+            howToLearn: "学習方法",
+            focusTitle: "フレーズに集中",
+            focusDesc: "旅行に関連するフレーズを読んだり聞いたりしましょう。",
+            speakTitle: "声に出して話す",
+            speakDesc: "発音を改善するために話す練習をしましょう。",
             items: {
                 airport: { name: "空港 (공항)", description: "チェックイン、パスポート、ゲート" },
                 taxi: { name: "タクシー (택시)", description: "目的地、料金、道順" },
@@ -532,6 +594,10 @@ export const translations = {
                 flip: "カードをタップして意味を確認。",
                 bookmark: "よく使う表現はブックマーク。",
                 known: "学習完了をチェックしてXPを獲得！"
+            },
+            aboutLesson: {
+                title: "このレッスンについて",
+                content: "{category}に関連する{count}個の新しい韓国語の単語とフレーズを学んでいます。フラッシュカードを使って意味と発音を覚えましょう。「スピーキング練習」機能は、ネイティブスピーカーとあなたの声を比較してアクセントを矯正するのに役立ちます。"
             }
         },
         quiz: {
@@ -636,6 +702,24 @@ export const translations = {
             emailPlaceholder: "you@example.com",
             send: "フィードバックを送信",
             backToHome: "ホームに戻る"
+        },
+        conversation: {
+            back: "カテゴリーに戻る",
+            titleSuffix: "会話",
+            subtitle: "よくある質問と回答を練習",
+            noData: "このカテゴリーの会話データはまだありません。",
+            question: "質問",
+            answer: "回答",
+            option: "選択肢",
+            mainTitle: "会話練習",
+            mainDesc: "様々な状況でのよくある質問と回答を学びましょう。",
+            start: "練習開始"
+        },
+        bookmarks: {
+            noBookmarks: "ブックマークはまだありません。",
+            desc: "難しい単語がありましたか？カードの星アイコンをタップして、後で復習するためにここに保存しましょう。",
+            tip: "ヒント：長期記憶の鍵は定期的な復習です。毎日ブックマークを確認し、完全に覚えた単語は削除するようにしましょう。",
+            listen: "聞く"
         }
     },
     fr: {
@@ -710,6 +794,12 @@ export const translations = {
         },
         categories: {
             title: "Choisissez une Catégorie",
+            intro: "Sélectionnez une catégorie pour commencer à apprendre des phrases utiles.",
+            howToLearn: "Comment apprendre",
+            focusTitle: "Concentrez-vous sur les phrases",
+            focusDesc: "Lisez et écoutez des phrases pertinentes pour votre voyage.",
+            speakTitle: "Parlez à haute voix",
+            speakDesc: "Entraînez-vous à parler pour améliorer votre prononciation.",
             items: {
                 airport: { name: "Aéroport (공항)", description: "Enregistrement, Passeport, Porte" },
                 taxi: { name: "Taxi (택시)", description: "Destination, Tarif, Directions" },
@@ -745,6 +835,10 @@ export const translations = {
                 flip: "Appuyez sur la carte pour voir la signification.",
                 bookmark: "Marquez les phrases pour les revoir plus tard.",
                 known: "Marquez comme appris pour gagner de l'XP !"
+            },
+            aboutLesson: {
+                title: "À propos de cette leçon",
+                content: "Vous apprenez {count} nouveaux mots et expressions coréens liés à {category}. Utilisez les cartes mémoire pour mémoriser la signification et la prononciation. La fonction 'Pratique de l'Oral' vous aide à corriger votre accent en comparant votre voix à celle de locuteurs natifs."
             }
         },
         quiz: {
@@ -849,6 +943,24 @@ export const translations = {
             emailPlaceholder: "vous@exemple.com",
             send: "Envoyer le Commentaire",
             backToHome: "Retour à l'Accueil"
+        },
+        conversation: {
+            back: "Retour aux Catégories",
+            titleSuffix: "Conversation",
+            subtitle: "Pratiquez les Questions & Réponses courantes",
+            noData: "Aucune donnée de conversation disponible pour cette catégorie pour le moment.",
+            question: "Question",
+            answer: "Réponse",
+            option: "Option",
+            mainTitle: "Pratique de la Conversation",
+            mainDesc: "Apprenez les Questions & Réponses courantes pour diverses situations.",
+            start: "Commencer la Pratique"
+        },
+        bookmarks: {
+            noBookmarks: "Pas encore de favoris.",
+            desc: "Vous avez trouvé un mot difficile ? Appuyez sur l'icône étoile de n'importe quelle carte pour l'enregistrer ici et le revoir plus tard.",
+            tip: "Conseil : La révision régulière est la clé de la mémoire à long terme. Essayez de consulter vos favoris tous les jours et supprimez les mots que vous maîtrisez.",
+            listen: "Écouter"
         }
     },
     th: {
@@ -923,6 +1035,12 @@ export const translations = {
         },
         categories: {
             title: "เลือกหมวดหมู่",
+            intro: "เลือกหมวดหมู่เพื่อเริ่มเรียนรู้วลีที่มีประโยชน์",
+            howToLearn: "วิธีการเรียนรู้",
+            focusTitle: "เน้นที่วลี",
+            focusDesc: "อ่านและฟังวลีที่เกี่ยวข้องกับการเดินทางของคุณ",
+            speakTitle: "พูดออกมาดัง ๆ",
+            speakDesc: "ฝึกพูดเพื่อปรับปรุงการออกเสียงของคุณ",
             items: {
                 airport: { name: "สนามบิน (공항)", description: "เช็คอิน, พาสปอร์ต, ประตูทางออก" },
                 taxi: { name: "แท็กซี่ (택시)", description: "จุดหมายปลายทาง, ค่าโดยสาร, ทิศทาง" },
@@ -957,7 +1075,11 @@ export const translations = {
                 speed: "ปรับความเร็วในการเล่น",
                 flip: "แตะที่การ์ดเพื่อดูความหมาย",
                 bookmark: "บุ๊กมาร์กวลีเพื่อทบทวนในภายหลัง",
-                known: "ทำเครื่องหมายว่าเรียนรู้แล้วเพื่อรับ XP!"
+                known: "ทำเครื่องหมายว่าเรียนแล้วเพื่อรับ XP!"
+            },
+            aboutLesson: {
+                title: "เกี่ยวกับบทเรียนนี้",
+                content: "คุณกำลังเรียนรู้คำศัพท์และวลีภาษาเกาหลีใหม่ {count} คำที่เกี่ยวข้องกับ {category} ใช้แฟลชการ์ดเพื่อจดจำความหมายและการออกเสียง ฟีเจอร์ 'ฝึกพูด' ช่วยให้คุณแก้ไขสำเนียงโดยเปรียบเทียบเสียงของคุณกับเจ้าของภาษา"
             }
         },
         quiz: {
@@ -1062,6 +1184,24 @@ export const translations = {
             emailPlaceholder: "you@example.com",
             send: "ส่งคำติชม",
             backToHome: "กลับสู่หน้าหลัก"
+        },
+        conversation: {
+            back: "กลับไปที่หมวดหมู่",
+            titleSuffix: "บทสนทนา",
+            subtitle: "ฝึกฝนคำถามและคำตอบทั่วไป",
+            noData: "ยังไม่มีข้อมูลบทสนทนาสำหรับหมวดหมู่นี้",
+            question: "คำถาม",
+            answer: "คำตอบ",
+            option: "ตัวเลือก",
+            mainTitle: "ฝึกบทสนทนา",
+            mainDesc: "เรียนรู้คำถามและคำตอบทั่วไปสำหรับสถานการณ์ต่างๆ",
+            start: "เริ่มฝึกฝน"
+        },
+        bookmarks: {
+            noBookmarks: "ยังไม่มีบุ๊กมาร์ก",
+            desc: "เจอคำศัพท์ยากไหม? แตะที่ไอคอนดาวบนแฟลชการ์ดเพื่อบันทึกไว้ทบทวนภายหลัง",
+            tip: "เคล็ดลับ: การทบทวนอย่างสม่ำเสมอเป็นกุญแจสู่ความจำระยะยาว ลองเข้ามาดูบุ๊กมาร์กทุกวันและลบคำที่คุณจำได้แม่นแล้ว",
+            listen: "ฟัง"
         }
     },
     zh: {
@@ -1136,6 +1276,12 @@ export const translations = {
         },
         categories: {
             title: "选择类别",
+            intro: "选择一个类别开始学习常用短语。",
+            howToLearn: "如何学习",
+            focusTitle: "专注于短语",
+            focusDesc: "阅读并聆听与您的旅行相关的短语。",
+            speakTitle: "大声朗读",
+            speakDesc: "练习口语以改善您的发音。",
             items: {
                 airport: { name: "机场 (공항)", description: "值机, 护照, 登机口" },
                 taxi: { name: "出租车 (택시)", description: "目的地, 车费, 方向" },
@@ -1171,6 +1317,10 @@ export const translations = {
                 flip: "点击卡片查看含义。",
                 bookmark: "收藏短语以便稍后复习。",
                 known: "标记为已学以获得 XP！"
+            },
+            aboutLesson: {
+                title: "关于本课程",
+                content: "您正在学习与 {category} 相关的 {count} 个新的韩语单词和短语。使用抽认卡记忆含义和发音。“口语练习”功能通过将您的声音与母语人士进行比较来帮助您纠正口音。"
             }
         },
         quiz: {
@@ -1275,6 +1425,265 @@ export const translations = {
             emailPlaceholder: "you@example.com",
             send: "发送反馈",
             backToHome: "返回首页"
+        },
+        conversation: {
+            back: "返回分类",
+            titleSuffix: "会话",
+            subtitle: "练习常见问答",
+            noData: "该类别暂无会话数据。",
+            question: "问题",
+            answer: "回答",
+            option: "选项",
+            mainTitle: "会话练习",
+            mainDesc: "学习各种情况下的常见问答。",
+            start: "开始练习"
+        },
+        bookmarks: {
+            noBookmarks: "暂无书签。",
+            desc: "发现了难懂的单词？点击任何抽认卡上的星形图标将其保存在此处以便稍后复习。",
+            tip: "提示：定期复习是长期记忆的关键。尝试每天查看书签并删除已完全掌握的单词。",
+            listen: "收听"
+        }
+    },
+    "zh-TW": {
+        home: {
+            welcome: "歡迎來到 Hangle！",
+            askName: "我們該怎麼稱呼您？",
+            welcomeDescription: "Hangle 是一款免費且簡單的應用程式，可幫助您學習旅行所需的各種韓語短語。",
+            dataWarning: "注意：您的進度將保存在此設備本地。清除瀏覽器數據將重置您的進度。",
+            namePlaceholder: "輸入您的名字",
+            start: "開始",
+            greeting: "你好，{name}！準備好學習了嗎？",
+            title: "掌握基礎韓語",
+            subtitle: "為您的旅行做好準備",
+            description: "學習旅行和日常生活的基本短語。簡單的抽認卡，母語發音和有趣的測驗。",
+            startLearning: "開始學習",
+            takeQuiz: "參加測驗",
+            bookmarks: "書籤",
+            search: "搜尋",
+            dailyPhrase: {
+                title: "每日短語",
+                learnMore: "了解更多"
+            },
+            speaking: {
+                start: "說話",
+                listening: "正在聽...",
+                success: "太棒了！",
+                tryAgain: "再試一次",
+                permission: "請允許使用麥克風以練習口語。"
+            }
+        },
+        search: {
+            placeholder: "搜尋詞彙或語法...",
+            noResults: "未找到結果",
+            tabs: {
+                all: "全部",
+                vocab: "詞彙",
+                grammar: "語法"
+            },
+            results: "結果"
+        },
+        guide: {
+            title: "Hangle 指南",
+            subtitle: "語言基礎",
+            pronunciation: {
+                title: "發音技巧",
+                subtitle: "掌握難發音",
+                description: "學習收音、連音和同化規則，像母語者一樣說話。",
+                written: "書寫",
+                pronounced: "發音"
+            },
+            grammar: {
+                title: "基礎語法",
+                subtitle: "主要句型",
+                description: "初學者必備的韓語語法句型列表。",
+                searchPlaceholder: "搜尋語法...",
+                headers: {
+                    expression: "表達",
+                    meaning: "含義",
+                    example: "例句"
+                },
+                notFound: "未找到匹配的語法句型"
+            },
+            mistakes: {
+                title: "常見錯誤",
+                subtitle: "避免這些錯誤",
+                description: "了解外國人常犯的錯誤以及如何糾正它們。",
+                mistake: "錯誤",
+                correction: "改正",
+                tip: "提示"
+            },
+            explore: "探索"
+        },
+        categories: {
+            title: "選擇類別",
+            intro: "選擇一個類別開始學習常用短語。",
+            howToLearn: "如何學習",
+            focusTitle: "專注於短語",
+            focusDesc: "閱讀並聆聽與您的旅行相關的短語。",
+            speakTitle: "大聲朗讀",
+            speakDesc: "練習口語以改善您的發音。",
+            items: {
+                airport: { name: "機場 (공항)", description: "值機, 護照, 登機口" },
+                taxi: { name: "出租車 (택시)", description: "目的地, 車費, 方向" },
+                bus: { name: "公交車 (버스)", description: "公交站, 路線, 費用" },
+                subway: { name: "地鐵 (지하철)", description: "車站, 換乘, 出口" },
+                restaurant: { name: "餐廳 (식당)", description: "點餐, 菜單, 付款" },
+                hotel: { name: "酒店 (호텔)", description: "入住, 服務, 房間" },
+                tourist: { name: "旅遊信息 (관광안내소)", description: "地圖, 指南, 門票" },
+                daily: { name: "日常生活 (일상)", description: "問候, 基本問題" },
+                emergency: { name: "緊急情況 (긴급상황)", description: "警察, 消防, 救護車" },
+                hospital: { name: "醫院 (병원)", description: "醫生, 藥房, 症狀" }
+            }
+        },
+        learn: {
+            back: "返回",
+            flip: "點擊翻轉",
+            known: "我知道這個！",
+            learned: "已學習",
+            xp: "+10 XP",
+            quizPrompt: "準備好了嗎？參加測驗！",
+            notFound: "未找到類別",
+            goBack: "返回",
+            speedNormal: "正常速度",
+            speedSlow: "慢速",
+            close: "關閉",
+            last: "完成",
+            next: "下一個",
+            skip: "跳過",
+            tour: {
+                listen: "聽發音。",
+                speak: "打開麥克風說話。我們會檢查您的發音！",
+                speed: "調整播放速度。",
+                flip: "點擊卡片查看含義。",
+                bookmark: "收藏短語以便稍後複習。",
+                known: "標記為已學以獲得 XP！"
+            },
+            aboutLesson: {
+                title: "關於本課程",
+                content: "您正在學習與 {category} 相關的 {count} 個新的韓語單字和短語。使用抽认卡記憶含義和發音。「口語練習」功能通過將您的聲音與母語人士進行比較來幫助您糾正口音。"
+            }
+        },
+        quiz: {
+            quizModeTitle: "測驗模式",
+            quizModeSubtitle: "測試您的知識！",
+            quit: "退出",
+            question: "問題",
+            prompt: "這​​是什麼意思？",
+            complete: "測驗完成！",
+            score: "您的得分：",
+            review: "複習短語",
+            retry: "重試",
+            next: "下一個問題",
+            results: "查看結果",
+            notEnough: "沒有足夠的數據進行測驗",
+            goBack: "返回"
+        },
+        privacy: {
+            backToHome: "返回首頁",
+            title: "隱私政策",
+            lastUpdated: "最後更新：",
+            intro: {
+                title: "1. 簡介",
+                content: "歡迎來到 Hangle。我們尊重您的隱私，並致力於保護您的個人數據。本隱私政策將告知您當您訪問我們的網站時我們如何處理您的個人數據，並告知您有關您的隱私權以及法律如何保護您。"
+            },
+            dataCollection: {
+                title: "2. 我們收集的數據",
+                content: "我們不收集用戶的任何個人數據。Hangle 是一個客戶端應用程序。任何進度或偏好（例如您的姓名、等級、XP 和主題設置）都使用瀏覽器的本地存儲存儲在您的設備本地。此數據不會傳輸到任何外部服務器。"
+            },
+            cookies: {
+                title: "3. Cookie",
+                content: "我們不使用 Cookie 進行跟踪。我們可能會使用本地存儲來保存您的偏好，以改善您在我們網站上的體驗（例如，記住您的深色模式偏好）。"
+            },
+            thirdParty: {
+                title: "4. 第三方鏈接",
+                content: "本網站可能包含指向第三方網站、插件和應用程序的鏈接。點擊這些鏈接或啟用這些連接可能會允許第三方收集或共享有關您的數據。我們無法控制這些第三方網站，也不對其隱私聲明負責。"
+            },
+            changes: {
+                title: "5. 本政策的變更",
+                content: "我們可能會不時更新我們的隱私政策。我們將通過在此頁面上發布新的隱私政策來通知您任何更改。"
+            },
+            contact: {
+                title: "6. 聯繫我們",
+                content: "如果您對本隱私政策有任何疑問，請聯繫我們。"
+            }
+        },
+        terms: {
+            backToHome: "返回首頁",
+            title: "服務條款",
+            lastUpdated: "最後更新：",
+            agreement: {
+                title: "1. 同意條款",
+                content: "通過訪問我們的網站，您同意受這些服務條款的約束，並遵守所有適用的法律和法規。如果您不同意這些條款中的任何一項，您將被禁止使用或訪問本網站。"
+            },
+            license: {
+                title: "2. 使用許可",
+                content: "允許暫時下載 Hangle 網站上的材料（信息或軟件）副本，僅供個人、非商業性的臨時查看。這是許可的授予，而不是所有權的轉讓。"
+            },
+            disclaimer: {
+                title: "3. 免責聲明",
+                content: "Hangle 網站上的材料是按“原樣”提供的。Hangle 不做任何明示或暗示的保證，並特此聲明並否認所有其他保證，包括但不限於適銷性、特定用途適用性或不侵犯知識產權或其他侵犯權利的暗示保證或條件。"
+            },
+            limitations: {
+                title: "4. 限制",
+                content: "在任何情況下，Hangle 或其供應商均不對因使用或無法使用 Hangle 網站上的材料而造成的任何損害（包括但不限於數據丟失或利潤損失，或由於業務中斷造成的損害）負責。"
+            },
+            accuracy: {
+                title: "5. 材料的準確性",
+                content: "Hangle 網站上出現的材料可能包含技術、印刷或攝影錯誤。Hangle 不保證其網站上的任何材料是準確、完整或最新的。Hangle 可能隨時更改其網站上包含的材料，恕不另行通知。"
+            }
+        },
+        about: {
+            title: "關於 Hangle",
+            subtitle: "學習旅行和日常生活的韓語基本短語。",
+            intro: "Hangle 的創建旨在讓韓語學習變得簡單、有趣且人人均可訪問。無論您是計劃第一次去韓國旅行，還是只是對這門語言感到好奇，Hangle 都在這裡為您提供幫助。",
+            features: {
+                title: "主要功能",
+                practical: {
+                    title: "實用詞彙",
+                    desc: "學習適合實際旅行場景（如機場、出租車和餐廳）的基本短語。"
+                },
+                simple: {
+                    title: "簡單高效",
+                    desc: "沒有複雜的語法課程，只有您可以立即使用的有用表達。"
+                },
+                quiz: {
+                    title: "趣味測驗",
+                    desc: "通過我們的互動測驗模式測試您的知識，以鞏固您所學的知識。"
+                }
+            },
+            cta: "今天開始學習！",
+            backToHome: "返回首頁"
+        },
+        feedback: {
+            title: "您的反饋有助於我們改進",
+            issue: "問題",
+            issueDesc: "報告錯誤或不便",
+            idea: "想法",
+            ideaDesc: "建議功能或改進",
+            contentPlaceholder: "分享您的想法以獲得更好的服務。",
+            emailLabel: "我們將回复您提供的電子郵件 :)",
+            emailPlaceholder: "you@example.com",
+            send: "發送反饋",
+            backToHome: "返回首頁"
+        },
+        conversation: {
+            back: "返回分類",
+            titleSuffix: "會話",
+            subtitle: "練習常見問答",
+            noData: "該類別暫無會話數據。",
+            question: "問題",
+            answer: "回答",
+            option: "選項",
+            mainTitle: "會話練習",
+            mainDesc: "學習各種情況下的常見問答。",
+            start: "開始練習"
+        },
+        bookmarks: {
+            noBookmarks: "暫無書籤。",
+            desc: "發現了難懂的單字？點擊任何抽认卡上的星形圖示將其保存在此處以便稍後複習。",
+            tip: "提示：定期複習是長期記憶的關鍵。嘗試每天查看書籤並刪除已完全掌握的單字。",
+            listen: "收聽"
         }
     },
     hi: {
@@ -1349,6 +1758,12 @@ export const translations = {
         },
         categories: {
             title: "एक श्रेणी चुनें",
+            intro: "उपयोगी वाक्यांश सीखना शुरू करने के लिए एक श्रेणी चुनें।",
+            howToLearn: "कैसे सीखें",
+            focusTitle: "वाक्यांशों पर ध्यान दें",
+            focusDesc: "अपनी यात्रा से संबंधित वाक्यांश पढ़ें और सुनें।",
+            speakTitle: "ज़ोर से बोलो",
+            speakDesc: "अपने उच्चारण को बेहतर बनाने के लिए बोलने का अभ्यास करें।",
             items: {
                 airport: { name: "हवाई अड्डा (공항)", description: "चेक-इन, पासपोर्ट, गेट" },
                 taxi: { name: "टैक्सी (택시)", description: "गंतव्य, किराया, दिशा-निर्देश" },
@@ -1384,6 +1799,10 @@ export const translations = {
                 flip: "अर्थ देखने के लिए कार्ड पर टैप करें।",
                 bookmark: "बाद में समीक्षा करने के लिए वाक्यांशों को बुकमार्क करें।",
                 known: "XP अर्जित करने के लिए सीखा हुआ चिह्नित करें!"
+            },
+            aboutLesson: {
+                title: "इस पाठ के बारे में",
+                content: "आप {category} से संबंधित {count} नए कोरियाई शब्द और वाक्यांश सीख रहे हैं। अर्थ और उच्चारण याद करने के लिए फ्लैशकार्ड का उपयोग करें। 'बोलने का अभ्यास' सुविधा आपको मूल वक्ताओं के साथ अपनी आवाज़ की तुलना करके अपने उच्चारण को सुधारने में मदद करती है।"
             }
         },
         quiz: {
@@ -1488,6 +1907,24 @@ export const translations = {
             emailPlaceholder: "you@example.com",
             send: "प्रतिक्रिया भेजें",
             backToHome: "मुखपृष्ठ पर वापस"
+        },
+        conversation: {
+            back: "श्रेणियों पर वापस जाएं",
+            titleSuffix: "बातचीत",
+            subtitle: "सामान्य प्रश्न और उत्तर का अभ्यास करें",
+            noData: "इस श्रेणी के लिए अभी तक कोई बातचीत डेटा उपलब्ध नहीं है।",
+            question: "प्रश्न",
+            answer: "उत्तर",
+            option: "विकल्प",
+            mainTitle: "बातचीत का अभ्यास",
+            mainDesc: "विभिन्न स्थितियों के लिए सामान्य प्रश्न और उत्तर सीखें।",
+            start: "अभ्यास शुरू करें"
+        },
+        bookmarks: {
+            noBookmarks: "अभी तक कोई बुकमार्क नहीं।",
+            desc: "कोई कठिन शब्द मिला? बाद में समीक्षा के लिए इसे यहाँ सहेजने के लिए किसी भी फ्लैशकार्ड पर स्टार आइकन पर टैप करें।",
+            tip: "टिप: नियमित समीक्षा दीर्घकालिक स्मृति की कुंजी है। अपने बुकमार्क को प्रतिदिन देखने का प्रयास करें और उन शब्दों को हटा दें जिन्हें आपने पूरी तरह से महारत हासिल कर ली है।",
+            listen: "सुनें"
         }
     }
 };

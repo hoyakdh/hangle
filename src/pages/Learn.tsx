@@ -381,6 +381,7 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
                             {targetLanguage === 'fr' && currentItem.french}
                             {targetLanguage === 'th' && currentItem.thai}
                             {targetLanguage === 'zh' && currentItem.chinese}
+                            {targetLanguage === 'zh-TW' && (currentItem.traditional_chinese || currentItem.chinese)}
                             {targetLanguage === 'hi' && currentItem.hindi}
                         </h3>
 
@@ -456,12 +457,13 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
                 />
 
                 <h3 className="text-lg font-bold text-gray-800 dark:text-white mb-2">
-                    About this Lesson
+                    {t.aboutLesson?.title || "About this Lesson"}
                 </h3>
                 <p className="text-sm text-gray-500 dark:text-gray-400">
-                    You are learning <strong>{items.length}</strong> new Korean words and phrases related to <strong>{categoryId}</strong>.
-                    Use the flashcards to memorize the meaning and pronunciation.
-                    The "Speaking Practice" feature helps you correct your accent by comparing your voice with native speakers.
+                    {(t.aboutLesson?.content || "You are learning {count} new Korean words and phrases related to {category}. Use the flashcards to memorize the meaning and pronunciation. The 'Speaking Practice' feature helps you correct your accent by comparing your voice with native speakers.")
+                        .replace('{count}', items.length.toString())
+                        // @ts-ignore
+                        .replace('{category}', translations[targetLanguage].categories?.items?.[categoryId]?.name || categoryId || '')}
                 </p>
             </div>
 

@@ -16,7 +16,8 @@ export default function Conversation() {
                 targetLanguage === 'fr' ? 'french' :
                     targetLanguage === 'th' ? 'thai' :
                         targetLanguage === 'zh' ? 'chinese' :
-                            'hindi';
+                            targetLanguage === 'zh-TW' ? 'traditional_chinese' :
+                                'hindi';
 
     const baseCategories = [
         { id: 'airport', color: 'bg-blue-500' },
@@ -54,17 +55,17 @@ export default function Conversation() {
                     className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
                     <ArrowLeft className="w-5 h-5" />
-                    <span>Back to Categories</span>
+                    <span>{t.conversation.back}</span>
                 </button>
 
                 <div className="flex items-center gap-4 mb-8">
                     <div className={`w-3 h-12 rounded-full ${categoryInfo?.color}`} />
                     <div>
                         <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-                            {categoryInfo?.name} Conversation
+                            {categoryInfo?.name}
                         </h1>
                         <p className="text-gray-500 dark:text-gray-400">
-                            Practice common Questions & Answers
+                            {t.conversation.subtitle}
                         </p>
                     </div>
                 </div>
@@ -72,7 +73,7 @@ export default function Conversation() {
                 <div className="space-y-6">
                     {categoryData.length === 0 ? (
                         <div className="text-center py-12 text-gray-500">
-                            No conversation data available for this category yet.
+                            {t.conversation.noData}
                         </div>
                     ) : (
                         categoryData.map((item) => (
@@ -83,7 +84,7 @@ export default function Conversation() {
                                         <User className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                                     </div>
                                     <div className="flex-1 space-y-2">
-                                        <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">Question</div>
+                                        <div className="text-xs font-semibold text-indigo-600 dark:text-indigo-400 uppercase tracking-wide">{t.conversation.question}</div>
                                         <div className="text-xl font-bold text-gray-900 dark:text-white">{item.question.korean}</div>
                                         <div className="text-gray-500 dark:text-gray-400 font-medium">{item.question.romanized}</div>
                                         <div className="text-gray-400 dark:text-gray-500 text-sm">
@@ -102,7 +103,7 @@ export default function Conversation() {
                                     </div>
                                     <div className="flex-1 space-y-2">
                                         <div className="flex items-center justify-between">
-                                            <div className="text-xs font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wide">Answer</div>
+                                            <div className="text-xs font-semibold text-pink-600 dark:text-pink-400 uppercase tracking-wide">{t.conversation.answer}</div>
                                             <button
                                                 onClick={() => toggleAnswer(item.id)}
                                                 className="text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
@@ -122,7 +123,7 @@ export default function Conversation() {
                                                     {item.answers.map((answer, index) => (
                                                         <div key={index} className="relative">
                                                             {index > 0 && <div className="absolute -top-3 left-0 right-0 border-t border-dashed border-gray-200 dark:border-gray-700" />}
-                                                            <div className="text-xs text-gray-400 mb-1">Option {index + 1}</div>
+                                                            <div className="text-xs text-gray-400 mb-1">{t.conversation.option} {index + 1}</div>
                                                             <div className="text-xl font-bold text-gray-900 dark:text-white">{answer.korean}</div>
                                                             <div className="text-gray-500 dark:text-gray-400 font-medium">{answer.romanized}</div>
                                                             <div className="text-gray-400 dark:text-gray-500 text-sm">
@@ -148,10 +149,10 @@ export default function Conversation() {
             <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
                     <MessageCircle className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
-                    Conversation Practice
+                    {t.conversation.mainTitle}
                 </h2>
                 <p className="mt-2 text-gray-600 dark:text-gray-400">
-                    Learn common Questions & Answers for various situations.
+                    {t.conversation.mainDesc}
                 </p>
             </div>
 
@@ -171,7 +172,7 @@ export default function Conversation() {
                                 {cat.description}
                             </p>
                             <div className="mt-4 flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                Start Practice <ArrowLeft className="w-4 h-4 ml-1 rotate-180" />
+                                {t.conversation.start} <ArrowLeft className="w-4 h-4 ml-1 rotate-180" />
                             </div>
                         </div>
                     </button>

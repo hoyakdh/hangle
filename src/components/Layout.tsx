@@ -57,7 +57,7 @@ export default function Layout() {
                             <Globe className="w-4 h-4 text-gray-500 dark:text-gray-400 md:mr-2 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition" />
                             <select
                                 value={targetLanguage}
-                                onChange={(e) => setTargetLanguage(e.target.value as 'en' | 'es' | 'ja' | 'fr' | 'th' | 'zh' | 'hi')}
+                                onChange={(e) => setTargetLanguage(e.target.value as 'en' | 'es' | 'ja' | 'fr' | 'th' | 'zh' | 'zh-TW' | 'hi')}
                                 className="appearance-none bg-transparent font-medium text-sm text-gray-700 dark:text-gray-200 cursor-pointer focus:outline-none pr-4 md:pr-6 z-10 max-w-[70px] md:max-w-none text-center"
                             >
                                 <option value="en">🇺🇸 EN</option>
@@ -66,6 +66,7 @@ export default function Layout() {
                                 <option value="fr">🇫🇷 FR</option>
                                 <option value="th">🇹🇭 TH</option>
                                 <option value="zh">🇨🇳 ZH</option>
+                                <option value="zh-TW">🇹🇼 TW</option>
                                 <option value="hi">🇮🇳 HI</option>
                             </select>
                             <ChevronDown className="w-3 h-3 text-gray-500 dark:text-gray-400 absolute right-2 md:right-3 pointer-events-none group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition" />

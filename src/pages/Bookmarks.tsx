@@ -43,9 +43,9 @@ export default function Bookmarks() {
             {bookmarkedItems.length === 0 ? (
                 <div className="text-center py-20 bg-gray-50 dark:bg-gray-800 rounded-3xl">
                     <Star className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-                    <p className="text-gray-500 dark:text-gray-400 text-lg">No bookmarks yet.</p>
+                    <p className="text-gray-500 dark:text-gray-400 text-lg">{t.bookmarks?.noBookmarks || "No bookmarks yet."}</p>
                     <p className="text-sm text-gray-400 mt-2 max-w-sm mx-auto">
-                        Found a difficult word? Tap the star icon on any flashcard to save it here for later review.
+                        {t.bookmarks?.desc || "Found a difficult word? Tap the star icon on any flashcard to save it here for later review."}
                     </p>
                     <Link to="/categories" className="mt-6 inline-block px-6 py-2 bg-indigo-600 text-white rounded-full hover:bg-indigo-700 transition">
                         {t.home.startLearning}
@@ -76,13 +76,14 @@ export default function Bookmarks() {
                                     {targetLanguage === 'fr' && item.french}
                                     {targetLanguage === 'th' && item.thai}
                                     {targetLanguage === 'zh' && item.chinese}
+                                    {targetLanguage === 'zh-TW' && (item.traditional_chinese || item.chinese)}
                                     {targetLanguage === 'hi' && item.hindi}
                                 </p>
                                 <button
                                     onClick={() => playAudio(item.korean)}
                                     className="flex items-center gap-2 text-sm text-gray-500 hover:text-indigo-600 transition-colors"
                                 >
-                                    <Volume2 className="w-4 h-4" /> Listen
+                                    <Volume2 className="w-4 h-4" /> {t.bookmarks?.listen || "Listen"}
                                 </button>
                             </div>
                         </div>
@@ -92,8 +93,7 @@ export default function Bookmarks() {
 
             <div className="mt-12 text-center text-sm text-gray-400 dark:text-gray-600 pb-8">
                 <p>
-                    Tip: Regular review is the key to long-term memory.
-                    Try to visit your bookmarks everyday and remove the words you have fully mastered.
+                    {t.bookmarks?.tip || "Tip: Regular review is the key to long-term memory. Try to visit your bookmarks everyday and remove the words you have fully mastered."}
                 </p>
             </div>
         </div>

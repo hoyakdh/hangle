@@ -11,6 +11,7 @@ export interface ConversationItem {
         thai: string;
         chinese: string;
         hindi: string;
+        traditional_chinese: string;
     };
     answers: {
         korean: string;
@@ -22,6 +23,7 @@ export interface ConversationItem {
         thai: string;
         chinese: string;
         hindi: string;
+        traditional_chinese: string;
     }[];
 }
 
@@ -39,7 +41,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Où est le comptoir d\'enregistrement ?',
             thai: 'เคาน์เตอร์เช็คอินอยู่ที่ไหนครับ/คะ?',
             chinese: '值机柜台在哪儿？',
-            hindi: 'चेक-इन काउंटर कहाँ है?'
+            hindi: 'चेक-इन काउंटर कहाँ है?',
+            traditional_chinese: '值機櫃檯在哪兒？',
         },
         answers: [
             {
@@ -51,7 +54,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Il est devant la porte 3, là-bas.',
                 thai: 'อยู่หน้าประตู 3 ตรงโน้นครับ/ค่ะ',
                 chinese: '在那边3号登机口前面。',
-                hindi: 'वह वहां गेट 3 के सामने है।'
+                hindi: 'वह वहां गेट 3 के सामने है।',
+                traditional_chinese: '那邊3號登機口前面。'
             },
             {
                 korean: 'D구역으로 가시면 됩니다.',
@@ -62,7 +66,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Vous pouvez aller dans la zone D.',
                 thai: 'ไปที่โซน D ได้เลยครับ/ค่ะ',
                 chinese: '去D区就可以了。',
-                hindi: 'आप ज़ोन D में जा सकते हैं।'
+                hindi: 'आप ज़ोन D में जा सकते हैं।',
+                traditional_chinese: '去D區就可以了。'
             }
         ]
     },
@@ -78,7 +83,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Combien de bagages puis-je enregistrer ?',
             thai: 'โหลดกระเป๋าได้เท่าไหร่ครับ/คะ?',
             chinese: '可以托运多少行李？',
-            hindi: 'मैं कितना सामान चेक-इन कर सकता हूँ?'
+            hindi: 'मैं कितना सामान चेक-इन कर सकता हूँ?',
+            traditional_chinese: '可以託運多少行李？',
         },
         answers: [
             {
@@ -90,7 +96,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Vous pouvez enregistrer jusqu\'à deux sacs de 23 kg par personne.',
                 thai: 'ได้คนละ 2 ใบ ใบละไม่เกิน 23 กิโลกรัมครับ/ค่ะ',
                 chinese: '这是每人两件23公斤的行李。',
-                hindi: 'आप प्रति व्यक्ति 23 किग्रा के दो बैग चेक कर सकते हैं।'
+                hindi: 'आप प्रति व्यक्ति 23 किग्रा के दो बैग चेक कर सकते हैं।',
+                traditional_chinese: '每人兩件23公斤的行李。'
             },
             {
                 korean: '이코노미석은 1개만 무료입니다.',
@@ -101,7 +108,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'La classe économique n\'autorise qu\'un seul bagage gratuit.',
                 thai: 'ชั้นประหยัดโหลดฟรีได้ 1 ใบครับ/ค่ะ',
                 chinese: '经济舱只能免费托运一件。',
-                hindi: 'इकोनॉमी क्लास में केवल एक मुफ्त बैग की अनुमति है।'
+                hindi: 'इकोनॉमी क्लास में केवल एक मुफ्त बैग की अनुमति है।',
+                traditional_chinese: '經濟艙只能免費託運一件。'
             }
         ]
     },
@@ -118,7 +126,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Combien de temps faut-il pour aller à l\'Hôtel de Ville ?',
             thai: 'ไปศาลากลางใช้เวลานานเท่าไหร่ครับ/คะ?',
             chinese: '去市厅需要多长时间？',
-            hindi: 'सिटी हॉल जाने में कितना समय लगता है?'
+            hindi: 'सिटी हॉल जाने में कितना समय लगता है?',
+            traditional_chinese: '去市廳需要多長時間？',
         },
         answers: [
             {
@@ -130,7 +139,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Cela prendra environ 30 minutes.',
                 thai: 'น่าจะใช้เวลาประมาณ 30 นาทีครับ/ค่ะ',
                 chinese: '大约需要30分钟。',
-                hindi: 'इसमें लगभग 30 मिनट लगेंगे।'
+                hindi: 'इसमें लगभग 30 मिनट लगेंगे।',
+                traditional_chinese: '大約需要30分鐘。'
             },
             {
                 korean: '지금 차가 막혀서 1시간은 걸려요.',
@@ -141,7 +151,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Cela prend une heure car la circulation est dense en ce moment.',
                 thai: 'ตอนนี้รถติด น่าจะใช้เวลา 1 ชั่วโมงครับ/ค่ะ',
                 chinese: '现在堵车，要花1个小时。',
-                hindi: 'अभी ट्रैफिक भारी होने के कारण एक घंटा लगता है।'
+                hindi: 'अभी ट्रैफिक भारी होने के कारण एक घंटा लगता है।',
+                traditional_chinese: '現在塞車，要花1個小時。'
             }
         ]
     },
@@ -157,7 +168,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Puis-je payer par carte de crédit ?',
             thai: 'จ่ายด้วยบัตรเครดิตได้ไหมครับ/คะ?',
             chinese: '可以用信用卡支付吗？',
-            hindi: 'क्या मैं क्रेडिट कार्ड से भुगतान कर सकता हूँ?'
+            hindi: 'क्या मैं क्रेडिट कार्ड से भुगतान कर सकता हूँ?',
+            traditional_chinese: '可以用信用卡支付嗎？',
         },
         answers: [
             {
@@ -169,7 +181,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Oui, c\'est possible.',
                 thai: 'ได้ครับ/ค่ะ',
                 chinese: '是的，可以。',
-                hindi: 'हाँ, यह संभव है।'
+                hindi: 'हाँ, यह संभव है।',
+                traditional_chinese: '是的，可以。'
             },
             {
                 korean: '죄송하지만 현금만 받습니다.',
@@ -180,7 +193,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Désolé, je n\'accepte que les espèces.',
                 thai: 'ขอโทษครับ/ค่ะ รับเฉพาะเงินสดครับ/ค่ะ',
                 chinese: '抱歉，只收现金。',
-                hindi: 'क्षमा करें, मैं केवल नकद स्वीकार करता हूँ।'
+                hindi: 'क्षमा करें, मैं केवल नकद स्वीकार करता हूँ।',
+                traditional_chinese: '抱歉，只收現金。'
             }
         ]
     },
@@ -197,7 +211,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Ce bus va-t-il à la station Gangnam ?',
             thai: 'รถเมล์คันนี้ไปสถานีกังนัมไหมครับ/คะ?',
             chinese: '这辆公交车去江南站吗？',
-            hindi: 'क्या यह बस गंगनम स्टेशन जाती है?'
+            hindi: 'क्या यह बस गंगनम स्टेशन जाती है?',
+            traditional_chinese: '這輛公車去江南站嗎？',
         },
         answers: [
             {
@@ -209,7 +224,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Non, vous devez le prendre de l\'autre côté.',
                 thai: 'ไม่ครับ/ค่ะ ต้องไปขึ้นฝั่งตรงข้ามครับ/ค่ะ',
                 chinese: '不，您得去对面坐。',
-                hindi: 'नहीं, आपको इसे विपरीत दिशा से लेना होगा।'
+                hindi: 'नहीं, आपको इसे विपरीत दिशा से लेना होगा।',
+                traditional_chinese: '不，您得去對面坐。'
             },
             {
                 korean: '네, 갑니다. 타세요.',
@@ -220,7 +236,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Oui, il y va. Montez.',
                 thai: 'ไปครับ/ค่ะ เชิญขึ้นเลยครับ/ค่ะ',
                 chinese: '去的，请上车。',
-                hindi: 'हाँ, यह वहां जाती है। कृपया चढ़ें।'
+                hindi: 'हाँ, यह वहां जाती है। कृपया चढ़ें।',
+                traditional_chinese: '去的，請上車。'
             }
         ]
     },
@@ -236,7 +253,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Combien coûte le ticket ?',
             thai: 'ค่าโดยสารเท่าไหร่ครับ/คะ?',
             chinese: '车费是多少？',
-            hindi: 'किराया कितना है?'
+            hindi: 'किराया कितना है?',
+            traditional_chinese: '車費是多少？',
         },
         answers: [
             {
@@ -248,7 +266,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est 1500 wons. Veuillez valider votre carte de transport.',
                 thai: '1,500 วอนครับ/ค่ะ ช่วยแตะบัตรโดยสารด้วยครับ/ค่ะ',
                 chinese: '1500韩元。请刷交通卡。',
-                hindi: 'यह 1500 वोन है। कृपया अपना ट्रांजिट कार्ड टैप करें।'
+                hindi: 'यह 1500 वोन है। कृपया अपना ट्रांजिट कार्ड टैप करें।',
+                traditional_chinese: '1500韓元。請刷交通卡。'
             },
             {
                 korean: '현금은 천 육백 원입니다.',
@@ -259,7 +278,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est 1600 wons en espèces.',
                 thai: 'ถ้าจ่ายเงินสด 1,600 วอนครับ/ค่ะ',
                 chinese: '现金是1600韩元。',
-                hindi: 'नकद में 1600 वोन है।'
+                hindi: 'नकद में 1600 वोन है।',
+                traditional_chinese: '現金是1600韓元。'
             }
         ]
     },
@@ -276,7 +296,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Par quelle sortie dois-je sortir ?',
             thai: 'ต้องออกทางออกไหนครับ/คะ?',
             chinese: '我应该从几号出口出去？',
-            hindi: 'मुझे किस निकास से बाहर जाना चाहिए?'
+            hindi: 'मुझे किस निकास से बाहर जाना चाहिए?',
+            traditional_chinese: '我應該從幾號出口出去？',
         },
         answers: [
             {
@@ -288,7 +309,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est plus rapide si vous sortez par la sortie 4.',
                 thai: 'ออกทางออก 4 จะเร็วกว่าครับ/ค่ะ',
                 chinese: '走4号出口比较快。',
-                hindi: 'यदि आप निकास 4 से बाहर जाते हैं तो यह तेज़ है।'
+                hindi: 'यदि आप निकास 4 से बाहर जाते हैं तो यह तेज़ है।',
+                traditional_chinese: '走4號出口比較快。'
             },
             {
                 korean: '표지판을 보고 따라가세요.',
@@ -299,7 +321,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Veuillez suivre les panneaux.',
                 thai: 'เดินตามป้ายไปเลยครับ/ค่ะ',
                 chinese: '请跟着指示牌走。',
-                hindi: 'कृपया संकेतों का पालन करें।'
+                hindi: 'कृपया संकेतों का पालन करें।',
+                traditional_chinese: '請跟著指示牌走。'
             }
         ]
     },
@@ -315,7 +338,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Puis-je changer de ligne ici ?',
             thai: 'เปลี่ยนขบวนที่นี่ได้ไหมครับ/คะ?',
             chinese: '可以在这儿换乘吗？',
-            hindi: 'क्या मैं यहाँ ट्रांसफर कर सकता हूँ?'
+            hindi: 'क्या मैं यहाँ ट्रांसफर कर सकता हूँ?',
+            traditional_chinese: '可以在這兒轉乘嗎？',
         },
         answers: [
             {
@@ -327,7 +351,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Oui, vous pouvez prendre la ligne 2.',
                 thai: 'ได้ครับ/ค่ะ เปลี่ยนไปสาย 2 ได้ครับ/ค่ะ',
                 chinese: '可以，您可以换乘2号线。',
-                hindi: 'हाँ, आप लाइन 2 में ट्रांसफर कर सकते हैं।'
+                hindi: 'हाँ, आप लाइन 2 में ट्रांसफर कर सकते हैं।',
+                traditional_chinese: '可以，您可以轉乘2號線。'
             },
             {
                 korean: '아니요, 다음 역에서 내리셔야 해요.',
@@ -338,7 +363,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Non, vous devez descendre à la prochaine station.',
                 thai: 'ไม่ได้ครับ/ค่ะ ต้องลงสถานีหน้าครับ/ค่ะ',
                 chinese: '不行，您得在下一站下车。',
-                hindi: 'नहीं, आपको अगले स्टेशन पर उतरना होगा।'
+                hindi: 'नहीं, आपको अगले स्टेशन पर उतरना होगा।',
+                traditional_chinese: '不行，您得在下一站下車。'
             }
         ]
     },
@@ -355,7 +381,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Voulez-vous commander ?',
             thai: 'รับอะไรดีครับ/คะ?',
             chinese: '您要点餐吗？',
-            hindi: 'क्या आप ऑर्डर करना चाहेंगे?'
+            hindi: 'क्या आप ऑर्डर करना चाहेंगे?',
+            traditional_chinese: '您要點餐嗎？',
         },
         answers: [
             {
@@ -367,7 +394,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Oui, un bibimbap, s\'il vous plaît.',
                 thai: 'ค่ะ/ครับ ขอบิบิมบับหนึ่งที่ครับ/ค่ะ',
                 chinese: '是的，请给我一份拌饭。',
-                hindi: 'हाँ, एक बिबिंबप, कृपया।'
+                hindi: 'हाँ, एक बिबिंबप, कृपया।',
+                traditional_chinese: '是的，請給我一份拌飯。'
             },
             {
                 korean: '잠시만요, 메뉴 조금만 더 볼게요.',
@@ -378,7 +406,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Un instant, je vais regarder encore un peu le menu.',
                 thai: 'สักครู่นะครับ/คะ ขอูเมนูอีกหน่อยครับ/ค่ะ',
                 chinese: '稍等，我再看一会儿菜单。',
-                hindi: 'बस एक पल, मैं मेनू को थोड़ा और देखूंगा।'
+                hindi: 'बस एक पल, मैं मेनू को थोड़ा और देखूंगा।',
+                traditional_chinese: '稍等，我再看一會兒菜單。'
             }
         ]
     },
@@ -394,7 +423,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Où sont les toilettes ?',
             thai: 'ห้องน้ำอยู่ที่ไหนครับ/คะ?',
             chinese: '洗手间在哪儿？',
-            hindi: 'शौचालय कहाँ है?'
+            hindi: 'शौचालय कहाँ है?',
+            traditional_chinese: '洗手間在哪兒？',
         },
         answers: [
             {
@@ -406,7 +436,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est au 2ème étage de l\'immeuble à droite en sortant.',
                 thai: 'ออกไปแล้วอยู่ชั้น 2 ตึกขวามือครับ/ค่ะ',
                 chinese: '出去后右边大楼的二楼。',
-                hindi: 'यह बाहर दाईं ओर इमारत की दूसरी मंजिल पर है।'
+                hindi: 'यह बाहर दाईं ओर इमारत की दूसरी मंजिल पर है।',
+                traditional_chinese: '出去後右邊大樓的二樓。'
             },
             {
                 korean: '카운터 왼쪽 끝에 있습니다.',
@@ -417,7 +448,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est à l\'extrémité gauche du comptoir.',
                 thai: 'อยู่สุดทางซ้ายของเคาน์เตอร์ครับ/ค่ะ',
                 chinese: '在柜台左端。',
-                hindi: 'यह काउंटर के बाएं छोर पर है।'
+                hindi: 'यह काउंटर के बाएं छोर पर है।',
+                traditional_chinese: '在櫃檯左端。'
             }
         ]
     },
@@ -434,7 +466,8 @@ export const conversationData: ConversationItem[] = [
             french: 'À quelle heure est le départ ?',
             thai: 'เช็คเอาท์กี่โมงครับ/คะ?',
             chinese: '退房时间是几点？',
-            hindi: 'चेक-आउट किस समय है?'
+            hindi: 'चेक-आउट किस समय है?',
+            traditional_chinese: '退房時間是幾點？',
         },
         answers: [
             {
@@ -446,7 +479,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est à 11h00.',
                 thai: '11 โมงเช้าครับ/ค่ะ',
                 chinese: '是上午11点。',
-                hindi: 'यह सुबह 11:00 बजे है।'
+                hindi: 'यह सुबह 11:00 बजे है।',
+                traditional_chinese: '是上午11點。'
             },
             {
                 korean: '오후 12시까지입니다.',
@@ -457,7 +491,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est jusqu\'à 12h00.',
                 thai: 'ถึงเที่ยงครับ/ค่ะ',
                 chinese: '直到中午12点。',
-                hindi: 'यह दोपहर 12:00 बजे तक है।'
+                hindi: 'यह दोपहर 12:00 बजे तक है।',
+                traditional_chinese: '直到中午12點。'
             }
         ]
     },
@@ -473,7 +508,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Le petit-déjeuner est-il inclus ?',
             thai: 'รวมอาหารเช้าไหมครับ/คะ?',
             chinese: '包含早餐吗？',
-            hindi: 'क्या नाश्ता शामिल है?'
+            hindi: 'क्या नाश्ता शामिल है?',
+            traditional_chinese: '包含早餐嗎？',
         },
         answers: [
             {
@@ -485,7 +521,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Oui, vous pouvez manger au restaurant du 1er étage.',
                 thai: 'ครับ/ค่ะ ทานได้ที่ร้านอาหารชั้น 1 ครับ/ค่ะ',
                 chinese: '是的，您可以在一楼餐厅用餐。',
-                hindi: 'हाँ, आप पहली मंजिल पर रेस्तरां में खा सकते हैं।'
+                hindi: 'हाँ, आप पहली मंजिल पर रेस्तरां में खा सकते हैं।',
+                traditional_chinese: '是的，您可以在一樓餐廳用餐。'
             },
             {
                 korean: '아니요, 현장에서 따로 결제하셔야 합니다.',
@@ -496,7 +533,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Non, vous devez payer séparément sur place.',
                 thai: 'ไม่ครับ/ค่ะ ต้องชำระแยกหน้างานครับ/ค่ะ',
                 chinese: '不，您需要在现场单独付费。',
-                hindi: 'नहीं, आपको साइट पर अलग से भुगतान करना होगा।'
+                hindi: 'नहीं, आपको साइट पर अलग से भुगतान करना होगा।',
+                traditional_chinese: '不，您需要在現場單獨付費。'
             }
         ]
     },
@@ -513,7 +551,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Puis-je l\'essayer ?',
             thai: 'ขอลองชุดนี้ได้ไหมครับ/คะ?',
             chinese: '我可以试穿这个吗？',
-            hindi: 'क्या मैं इसे पहन कर देख सकता हूँ?'
+            hindi: 'क्या मैं इसे पहन कर देख सकता हूँ?',
+            traditional_chinese: '我可以試穿這個嗎？',
         },
         answers: [
             {
@@ -525,7 +564,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Oui, la cabine d\'essayage est là-bas.',
                 thai: 'ได้ครับ/ค่ะ ห้องลองชุดอยู่ทางโน้นครับ/ค่ะ',
                 chinese: '可以，试衣间在那边。',
-                hindi: 'हाँ, फिटिंग रूम उधर है।'
+                hindi: 'हाँ, फिटिंग रूम उधर है।',
+                traditional_chinese: '可以，試衣間在那邊。'
             },
             {
                 korean: '죄송합니다. 흰색 옷은 착용이 불가능합니다.',
@@ -536,7 +576,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Désolé. Les vêtements blancs ne peuvent pas être essayés.',
                 thai: 'ขอโทษครับ/ค่ะ เสื้อสีขาวลองไม่ได้ครับ/ค่ะ',
                 chinese: '抱歉。白色衣服不能试穿。',
-                hindi: 'क्षमा करें। सफेद कपड़े पहन कर नहीं देखे जा सकते।'
+                hindi: 'क्षमा करें। सफेद कपड़े पहन कर नहीं देखे जा सकते।',
+                traditional_chinese: '抱歉。白色衣服不能試穿。'
             }
         ]
     },
@@ -552,7 +593,8 @@ export const conversationData: ConversationItem[] = [
             french: 'C\'est combien ?',
             thai: 'อันนี้เท่าไหร่ครับ/คะ?',
             chinese: '这个多少钱？',
-            hindi: 'यह कितने का है?'
+            hindi: 'यह कितने का है?',
+            traditional_chinese: '這個多少錢？',
         },
         answers: [
             {
@@ -564,7 +606,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est 15 000 wons.',
                 thai: '15,000 วอนครับ/ค่ะ',
                 chinese: '一万五千韩元。',
-                hindi: 'यह 15,000 वोन है।'
+                hindi: 'यह 15,000 वोन है।',
+                traditional_chinese: '一萬五千韓元。'
             },
             {
                 korean: '지금 세일해서 만 원이에요.',
@@ -575,7 +618,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'C\'est 10 000 wons car c\'est en solde maintenant.',
                 thai: 'ตอนนี้ลดราคาเหลือ 10,000 วอนครับ/ค่ะ',
                 chinese: '现在打折，一万韩元。',
-                hindi: 'यह 10,000 वोन है क्योंकि यह अभी सेल में है।'
+                hindi: 'यह 10,000 वोन है क्योंकि यह अभी सेल में है।',
+                traditional_chinese: '現在打折，一萬韓元。'
             }
         ]
     },
@@ -592,7 +636,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Comment vous appelez-vous ?',
             thai: 'ชื่ออะไรครับ/คะ?',
             chinese: '你叫什么名字？',
-            hindi: 'आपका नाम क्या है?'
+            hindi: 'आपका नाम क्या है?',
+            traditional_chinese: '你叫什麼名字？',
         },
         answers: [
             {
@@ -604,7 +649,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Je m\'appelle Kim Minsu.',
                 thai: 'ผม/ฉันชื่อคิมมินซูครับ/ค่ะ',
                 chinese: '我叫金民秀。',
-                hindi: 'मेरा नाम किम मिनसु है।'
+                hindi: 'मेरा नाम किम मिनसु है।',
+                traditional_chinese: '我叫金民秀。'
             },
             {
                 korean: '저는 이지은이라고 해요.',
@@ -615,7 +661,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Je m\'appelle Lee Jieun.',
                 thai: 'ชื่อลีจีอึนค่ะ/ครับ',
                 chinese: '我叫李知恩。',
-                hindi: 'मुझे ली जीउन कहा जाता है।'
+                hindi: 'मुझे ली जीउन कहा जाता है।',
+                traditional_chinese: '我叫李知恩。'
             }
         ]
     },
@@ -631,7 +678,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Quel est votre passe-temps ?',
             thai: 'งานอดิเรกคืออะไรครับ/คะ?',
             chinese: '你的爱好是什么？',
-            hindi: 'आपका शौक क्या है?'
+            hindi: 'आपका शौक क्या है?',
+            traditional_chinese: '你的愛好是什麼？',
         },
         answers: [
             {
@@ -643,7 +691,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'J\'aime regarder des films.',
                 thai: 'ผม/ฉันชอบดูหนังครับ/ค่ะ',
                 chinese: '我喜欢看电影。',
-                hindi: 'मुझे फिल्में देखना पसंद है।'
+                hindi: 'मुझे फिल्में देखना पसंद है।',
+                traditional_chinese: '我喜歡看電影。'
             },
             {
                 korean: '요리하는 게 제 취미예요.',
@@ -654,7 +703,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'La cuisine est mon passe-temps.',
                 thai: 'การทำอาหารคืองานอดิเรกของผม/ฉันครับ/ค่ะ',
                 chinese: '做饭是我的爱好。',
-                hindi: 'खाना बनाना मेरा शौक है।'
+                hindi: 'खाना बनाना मेरा शौक है।',
+                traditional_chinese: '做飯是我的愛好。'
             }
         ]
     },
@@ -671,7 +721,8 @@ export const conversationData: ConversationItem[] = [
             french: 'À l\'aide ! Appelez la police s\'il vous plaît.',
             thai: 'ช่วยด้วย! ช่วยเรียกตำรวจให้หน่อยครับ/ค่ะ',
             chinese: '救命！请叫警察。',
-            hindi: 'मदद! कृपया पुलिस को बुलाएं।'
+            hindi: 'मदद! कृपया पुलिस को बुलाएं।',
+            traditional_chinese: '救命！請叫警察。',
         },
         answers: [
             {
@@ -683,7 +734,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Que s\'est-il passé ? Calmez-vous s\'il vous plaît.',
                 thai: 'เกิดอะไรขึ้นครับ/คะ? ใจเย็นๆ นะครับ/คะ',
                 chinese: '发生什么事了？请冷静点。',
-                hindi: 'क्या हुआ? कृपया शांत हो जाएं।'
+                hindi: 'क्या हुआ? कृपया शांत हो जाएं।',
+                traditional_chinese: '發生什麼事了？請冷靜點。'
             },
             {
                 korean: '제가 신고해 드릴게요. 기다리세요.',
@@ -694,7 +746,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Je vais le signaler. Attendez s\'il vous plaît.',
                 thai: 'เดี๋ยวผม/ฉันแจ้งให้ครับ/ค่ะ รอสักครู่นะครับ/ค่ะ',
                 chinese: '我去报警。请稍等。',
-                hindi: 'मैं इसकी रिपोर्ट करूँगा। कृपया प्रतीक्षा करें।'
+                hindi: 'मैं इसकी रिपोर्ट करूँगा। कृपया प्रतीक्षा करें।',
+                traditional_chinese: '我去報警。請稍等。'
             }
         ]
     },
@@ -711,7 +764,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Où avez-vous mal ?',
             thai: 'เจ็บตรงไหนครับ/คะ?',
             chinese: '哪里不舒服？',
-            hindi: 'कहाँ दर्द हो रहा है?'
+            hindi: 'कहाँ दर्द हो रहा है?',
+            traditional_chinese: '哪裡不舒服？',
         },
         answers: [
             {
@@ -723,7 +777,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'J\'ai très mal au ventre et j\'ai de la fièvre.',
                 thai: 'ปวดท้องมากและมีไข้ครับ/ค่ะ',
                 chinese: '肚子很疼，发烧了。',
-                hindi: 'मेरे पेट में बहुत दर्द है और मुझे बुखार है।'
+                hindi: 'मेरे पेट में बहुत दर्द है और मुझे बुखार है।',
+                traditional_chinese: '肚子很疼，發燒了。'
             },
             {
                 korean: '발목을 다친 것 같아요.',
@@ -734,7 +789,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Je crois que je me suis blessé à la cheville.',
                 thai: 'รู้สึกเหมือนข้อเท้าแพลงครับ/ค่ะ',
                 chinese: '好像扭伤了脚踝。',
-                hindi: 'मुझे लगता है कि मेरे टखने में चोट लगी है।'
+                hindi: 'मुझे लगता है कि मेरे टखने में चोट लगी है।',
+                traditional_chinese: '好像扭傷了腳踝。'
             }
         ]
     },
@@ -750,7 +806,8 @@ export const conversationData: ConversationItem[] = [
             french: 'Veuillez prendre le médicament 30 minutes après le repas.',
             thai: 'ทานยาหลังอาหาร 30 นาทีนะครับ/คะ',
             chinese: '请饭后30分钟服药。',
-            hindi: 'कृपया भोजन के 30 मिनट बाद दवा लें।'
+            hindi: 'कृपया भोजन के 30 मिनट बाद दवा लें।',
+            traditional_chinese: '請飯後30分鐘服藥。',
         },
         answers: [
             {
@@ -762,7 +819,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Compris. Merci.',
                 thai: 'เข้าใจแล้วครับ/ค่ะ ขอบคุณครับ/ค่ะ',
                 chinese: '好的，谢谢。',
-                hindi: 'मैं समझ गया। धन्यवाद।'
+                hindi: 'मैं समझ गया। धन्यवाद।',
+                traditional_chinese: '好的，謝謝。'
             },
             {
                 korean: '빈 속에 먹어도 되나요?',
@@ -773,7 +831,8 @@ export const conversationData: ConversationItem[] = [
                 french: 'Puis-je le prendre l\'estomac vide ?',
                 thai: 'ทานตอนท้องว่างได้ไหมครับ/คะ?',
                 chinese: '可以空腹吃吗？',
-                hindi: 'क्या मैं इसे खाली पेट ले सकता हूँ?'
+                hindi: 'क्या मैं इसे खाली पेट ले सकता हूँ?',
+                traditional_chinese: '可以空腹吃嗎？'
             }
         ]
     }

@@ -1,7 +1,7 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, Book, Search } from 'lucide-react';
+import { ArrowLeft, Book, Search, Volume2 } from 'lucide-react';
 import { guideData } from '../../data/guideData';
 import type { GrammarItem } from '../../data/guideData';
 import { useUser } from '../../context/UserContext';
@@ -17,6 +17,32 @@ export default function Grammar() {
         item.expression.includes(searchTerm) ||
         item.meaning.toLowerCase().includes(searchTerm.toLowerCase())
     );
+
+    const playAudio = (text: string) => {
+        if (!('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        const cleanText = text.replace(/\*\*/g, '');
+        const utterance = new SpeechSynthesisUtterance(cleanText);
+        utterance.lang = 'ko-KR';
+        window.speechSynthesis.speak(utterance);
+    };
+
+    const renderExample = (text: string) => {
+        const parts = text.split(/(\*\*.*?\*\*)/);
+        return (
+            <>
+                {parts.map((part, i) =>
+                    part.startsWith('**') && part.endsWith('**') ? (
+                        <strong key={i} className="text-emerald-600 dark:text-emerald-400 font-bold">
+                            {part.slice(2, -2)}
+                        </strong>
+                    ) : (
+                        part
+                    )
+                )}
+            </>
+        );
+    };
 
     return (
         <div className="max-w-4xl mx-auto animate-fade-in space-y-8">
@@ -66,7 +92,18 @@ export default function Grammar() {
                                         <td className="p-4 text-center text-gray-400 dark:text-gray-500 font-mono text-sm">{item.id}</td>
                                         <td className="p-4 font-bold text-indigo-600 dark:text-indigo-400 text-lg">{item.expression}</td>
                                         <td className="p-4 text-gray-600 dark:text-gray-300 font-medium">{item.meaning}</td>
-                                        <td className="p-4 text-gray-700 dark:text-gray-200">{item.example}</td>
+                                        <td className="p-4 text-gray-700 dark:text-gray-200">
+                                            <div className="flex items-center justify-between gap-2">
+                                                <span>{renderExample(item.example)}</span>
+                                                <button
+                                                    onClick={() => playAudio(item.example)}
+                                                    className="p-2 text-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 rounded-full transition-colors"
+                                                    title="Listen"
+                                                >
+                                                    <Volume2 className="w-4 h-4" />
+                                                </button>
+                                            </div>
+                                        </td>
                                     </tr>
                                 ))
                             ) : (

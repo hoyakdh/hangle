@@ -190,6 +190,7 @@ function QuizContent({ categoryId }: { categoryId?: string }) {
                                 {targetLanguage === 'fr' && option.french}
                                 {targetLanguage === 'th' && option.thai}
                                 {targetLanguage === 'zh' && option.chinese}
+                                {targetLanguage === 'zh-TW' && (option.traditional_chinese || option.chinese)}
                                 {targetLanguage === 'hi' && option.hindi}
                             </span>
                             {isAnswered && isCorrect && <CheckCircle className="w-6 h-6 text-green-500" />}
