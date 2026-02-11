@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import { vocabData } from '../data/vocab';
 import { translations } from '../data/translations';
-import { ArrowLeft, Star, Volume2 } from 'lucide-react';
+import { Star, Volume2 } from 'lucide-react';
 import SEO from '../components/SEO';
 
 export default function Bookmarks() {
@@ -24,20 +24,20 @@ export default function Bookmarks() {
     };
 
     return (
-        <div className="max-w-3xl mx-auto py-8 px-4 animate-fade-in">
+        <div className="space-y-8 animate-fade-in">
             <SEO
                 title={t.home.bookmarks}
                 description="Review your bookmarked Korean vocabulary. Manage your saved words and practice them anytime."
             />
 
-            <div className="flex items-center justify-between mb-8">
-                <Link to="/" className="inline-flex items-center text-gray-500 hover:text-indigo-600 transition-colors">
-                    <ArrowLeft className="w-5 h-5 mr-2" /> {t.privacy.backToHome}
-                </Link>
-                <h1 className="text-2xl font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                    <Star className="w-6 h-6 text-yellow-500 fill-current" />
+            <div>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
+                    <Star className="w-8 h-8 text-yellow-500 fill-current" />
                     {t.home.bookmarks}
-                </h1>
+                </h2>
+                <p className="mt-2 text-gray-600 dark:text-gray-400">
+                    {t.bookmarks?.desc || "Found a difficult word? Tap the star icon on any flashcard to save it here for later review."}
+                </p>
             </div>
 
             {bookmarkedItems.length === 0 ? (

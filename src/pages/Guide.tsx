@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Volume2, Book, AlertTriangle, ArrowRight } from 'lucide-react';
+import { Volume2, Book, AlertTriangle, ArrowRight, BookOpen } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 
@@ -39,11 +39,12 @@ export default function Guide() {
 
     return (
         <div className="space-y-8 animate-fade-in">
-            <div className="text-center space-y-4">
-                <h1 className="text-4xl font-black text-gray-900 dark:text-white">
+            <div>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
+                    <BookOpen className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
                     {t.title}
-                </h1>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                </h2>
+                <p className="mt-2 text-gray-600 dark:text-gray-300">
                     {t.subtitle}
                 </p>
             </div>

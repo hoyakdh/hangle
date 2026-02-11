@@ -182,7 +182,7 @@ export default function Conversation() {
                 </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 gap-6">
                 {categories.map((cat) => (
                     <button
                         key={cat.id}
@@ -190,16 +190,13 @@ export default function Conversation() {
                         className="group relative overflow-hidden rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-left"
                     >
                         <div className={`h-2 ${cat.color}`} />
-                        <div className="p-6">
-                            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
+                        <div className="p-8">
+                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">
                                 {cat.name}
                             </h3>
-                            <p className="text-sm text-gray-500 dark:text-gray-400 mt-2 line-clamp-2">
+                            <p className="text-gray-500 dark:text-gray-400 mt-2">
                                 {cat.description}
                             </p>
-                            <div className="mt-4 flex items-center text-sm font-medium text-indigo-600 dark:text-indigo-400 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0">
-                                {t.conversation.start} <ArrowLeft className="w-4 h-4 ml-1 rotate-180" />
-                            </div>
                         </div>
                     </button>
                 ))}

@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
+import { BookOpen } from 'lucide-react';
 import SEO from '../components/SEO';
 
 export default function Categories() {
@@ -33,11 +34,15 @@ export default function Categories() {
                 description="Browse Korean vocabulary by topic. Choose a category to start learning specific words and phrases."
             />
 
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white">{t.title}</h2>
-
-            <p className="text-gray-600 dark:text-gray-400 max-w-2xl">
-                {t.intro}
-            </p>
+            <div>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
+                    <BookOpen className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />
+                    {t.title}
+                </h2>
+                <p className="mt-2 text-gray-600 dark:text-gray-400">
+                    {t.intro}
+                </p>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-6">
                 {categories.map((cat) => (

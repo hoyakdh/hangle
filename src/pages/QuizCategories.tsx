@@ -28,12 +28,14 @@ export default function QuizCategories() {
 
     return (
         <div className="space-y-8 animate-fade-in">
-            <div className="text-center space-y-2">
-                <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center justify-center gap-2">
+            <div>
+                <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
                     <Trophy className="w-8 h-8 text-yellow-500" />
                     {t.quiz.quizModeTitle}
                 </h2>
-                <p className="text-gray-500 dark:text-gray-400">{t.quiz.quizModeSubtitle}</p>
+                <p className="mt-2 text-gray-600 dark:text-gray-400">
+                    {t.quiz.quizModeSubtitle}
+                </p>
             </div>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -49,9 +51,6 @@ export default function QuizCategories() {
                                 {cat.name}
                             </h3>
                             <p className="text-gray-500 dark:text-gray-400 mt-2">{cat.description}</p>
-                            <div className="mt-4 flex items-center text-indigo-500 dark:text-indigo-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                                {t.home.takeQuiz} &rarr;
-                            </div>
                         </div>
                     </Link>
                 ))}
