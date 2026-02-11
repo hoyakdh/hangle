@@ -61,6 +61,17 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
         }
     };
 
+    useEffect(() => {
+        // Cleanup function to stop recognition and TTS when component unmounts
+        return () => {
+            window.speechSynthesis.cancel();
+            if (recognitionRef.current) {
+                recognitionRef.current.abort();
+                setSpeakingStatus('idle');
+            }
+        };
+    }, []);
+
     const startListening = (e: React.MouseEvent) => {
         e.stopPropagation();
 
@@ -73,6 +84,11 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
             recognitionRef.current?.stop();
             setSpeakingStatus('idle');
             return;
+        }
+
+        // Cleanup any previous instances
+        if (recognitionRef.current) {
+            recognitionRef.current.abort();
         }
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -108,6 +124,7 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
 
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
         recognition.onerror = (event: any) => {
+            if (event.error === 'aborted') return; // Ignore aborted errors
             console.error('Speech recognition error', event.error);
             setDebugInfo(`Error: ${event.error}`);
             if (event.error === 'not-allowed' || event.error === 'permission-denied') {
@@ -360,6 +377,13 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
                             </button>
                         </div>
 
+                        {/* Speech Recognition Feedback */}
+                        {debugInfo && (
+                            <div className="mt-4 text-sm text-gray-500 dark:text-gray-400 font-medium text-center animate-fade-in bg-gray-50 dark:bg-gray-700/50 px-3 py-1.5 rounded-lg">
+                                {debugInfo}
+                            </div>
+                        )}
+
                         <div className="absolute top-4 right-4">
                             <button
                                 onClick={(e) => { e.stopPropagation(); toggleBookmark(currentItem.id); }}
@@ -467,10 +491,6 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
                 </p>
             </div>
 
-            {/* Debug Info */}
-            <div className="text-xs text-gray-400 text-center mt-4">
-                {debugInfo}
-            </div>
         </div>
     );
 }
