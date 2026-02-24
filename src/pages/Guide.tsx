@@ -37,10 +37,9 @@ export default function Guide() {
         },
         {
             id: 'culture',
-            // 한국 문화 카드는 번역 키가 없어서 하드코딩 (영어 학습자 기준)
-            title: "Korean Culture",
-            subtitle: "Cultural Context",
-            description: "Understand 눈치, 정, 빨리빨리 and other cultural concepts that shape Korean communication.",
+            title: t.culture.title,
+            subtitle: t.culture.subtitle,
+            description: t.culture.description,
             icon: Globe,
             color: "bg-purple-500",
             link: "/guide/culture"

@@ -85,6 +85,11 @@ export const translations = {
                 tip: "Tip",
                 advanced: "Advanced Tip"
             },
+            culture: {
+                title: "Korean Culture",
+                subtitle: "Cultural Context",
+                description: "Understand 눈치, 정, 빨리빨리 and other cultural concepts that shape everyday Korean communication."
+            },
             explore: "Explore"
         },
         categories: {
@@ -240,7 +245,26 @@ export const translations = {
                 }
             },
             cta: "Start Learning Today!",
-            backToHome: "Back to Home"
+            backToHome: "Back to Home",
+            article: {
+                sectionTitle: "Why Learn Korean with Hangle?",
+                introPara: "Korean (한국어) is spoken by approximately 80 million people worldwide. Driven by the global popularity of K-Pop, K-Drama, and Korean cuisine, demand for learning Korean has exploded in recent years. In the United States, Australia, Southeast Asia, and Europe, Korean has become one of the fastest-growing foreign language fields.",
+                featuresTitle: "Core Learning Features",
+                f1Title: "Flashcards",
+                f1Desc: "Categorize words you know and don't know. A spaced-repetition system moves new vocabulary into long-term memory. Each card includes the Korean expression, romanization, example sentence, and translation.",
+                f2Title: "AI Conversation Practice",
+                f2Desc: "Practice real Korean conversation with AI. Builds practical fluency through scenarios you'd encounter in cafes, travel, and business settings.",
+                f3Title: "Quiz",
+                f3Desc: "Multiple-choice quizzes to review what you've learned, with instant feedback on right and wrong answers.",
+                f4Title: "Pronunciation Guide",
+                f4Desc: "Covers the 5 essential Korean pronunciation rules: Final Consonants, Liaison, Consonant Assimilation, Aspiration, and Tensification.",
+                f5Title: "Grammar Guide",
+                f5Desc: "Systematic study of particles, tense, honorifics, and connective endings.",
+                whoTitle: "Who Is This For?",
+                whoPara: "Hangle supports learners of all levels — from absolute beginners to intermediate speakers who can read but struggle with real conversation. Perfect for K-Pop and K-Drama fans, travelers preparing for Korea, business professionals, and anyone wanting to connect with Korean culture.",
+                langTitle: "Multilingual Support",
+                langPara: "Hangle is currently available in 8 languages: English, Spanish, Japanese, French, Thai, Simplified Chinese, Traditional Chinese, and Hindi. More language support is planned."
+            }
         },
         feedback: {
             title: "Your feedback helps us improve",
@@ -382,6 +406,11 @@ export const translations = {
                 correction: "Corrección",
                 tip: "Consejo",
                 advanced: "Consejo Avanzado"
+            },
+            culture: {
+                title: "Cultura Coreana",
+                subtitle: "Contexto Cultural",
+                description: "Comprende 눈치, 정, 빨리빨리 y otros conceptos culturales que conforman la comunicación coreana cotidiana."
             },
             explore: "Explorar"
         },
@@ -538,7 +567,26 @@ export const translations = {
                 }
             },
             cta: "¡Empieza a Aprender Hoy!",
-            backToHome: "Volver al Inicio"
+            backToHome: "Volver al Inicio",
+            article: {
+                sectionTitle: "¿Por qué aprender coreano con Hangle?",
+                introPara: "El coreano (한국어) es hablado por aproximadamente 80 millones de personas en todo el mundo. Impulsada por la popularidad global del K-Pop, K-Drama y la gastronomía coreana, la demanda de aprender coreano ha explotado en los últimos años. En EE. UU., Australia, el Sudeste Asiático y Europa, el coreano se ha convertido en uno de los idiomas extranjeros de más rápido crecimiento.",
+                featuresTitle: "Funciones principales de aprendizaje",
+                f1Title: "Tarjetas de memoria",
+                f1Desc: "Clasifica las palabras que conoces y las que no. Un sistema de repetición espaciada traslada el nuevo vocabulario a la memoria a largo plazo.",
+                f2Title: "Práctica de conversación con IA",
+                f2Desc: "Practica conversación real en coreano con IA en situaciones cotidianas.",
+                f3Title: "Quiz",
+                f3Desc: "Cuestionarios de opción múltiple para revisar lo aprendido, con retroalimentación inmediata.",
+                f4Title: "Guía de pronunciación",
+                f4Desc: "Cubre las 5 reglas esenciales: Consonantes finales, Enlace, Asimilación, Aspiración y Tensificación.",
+                f5Title: "Guía de gramática",
+                f5Desc: "Estudio sistemático de partículas, tiempos verbales, honoríficos y terminaciones conectivas.",
+                whoTitle: "¿Para quién es?",
+                whoPara: "Hangle apoya a estudiantes de todos los niveles, desde principiantes absolutos hasta intermedios que tienen dificultades con la conversación real.",
+                langTitle: "Soporte multilingüe",
+                langPara: "Hangle está disponible en 8 idiomas: inglés, español, japonés, francés, tailandés, chino simplificado, chino tradicional e hindi."
+            }
         },
         feedback: {
             title: "Tu opinión nos ayuda a mejorar",
@@ -680,6 +728,11 @@ export const translations = {
                 correction: "正解",
                 tip: "ヒント",
                 advanced: "上級編"
+            },
+            culture: {
+                title: "韓国文化",
+                subtitle: "文化的背景",
+                description: "ヌンチ、チョン、パリパリなど、韓国語コミュニケーションの文化的背景を理解しましょう。"
             },
             explore: "詳細を見る"
         },
@@ -836,7 +889,26 @@ export const translations = {
                 }
             },
             cta: "今日から学習を始めましょう！",
-            backToHome: "ホームに戻る"
+            backToHome: "ホームに戻る",
+            article: {
+                sectionTitle: "なぜHangleで韓国語を学ぶのか？",
+                introPara: "韓国語（한국어）は世界中で約8,000万人に話されています。K-Pop、K-Drama、韓国料理の世界的人気に後押しされ、近年韓国語学習の需要が急増しています。",
+                featuresTitle: "主な学習機能",
+                f1Title: "フラッシュカード",
+                f1Desc: "知っている単語と知らない単語に分類。スペースド・リピティションシステムで語彙を長期記憶に定着させます。",
+                f2Title: "AI会話練習",
+                f2Desc: "AIを使ったリアルな韓国語会話練習。カフェ、旅行、ビジネスシーンのシナリオで実践的な流暢さを身につけます。",
+                f3Title: "クイズ",
+                f3Desc: "学習内容を確認するための選択式クイズ。即時フィードバック付き。",
+                f4Title: "発音ガイド",
+                f4Desc: "パッチム、連音化、同化、激音化、濃音化の5つの必須ルールをカバー。",
+                f5Title: "文法ガイド",
+                f5Desc: "助詞、時制、敬語、接続語尾の体系的な学習。",
+                whoTitle: "対象者",
+                whoPara: "Hangleは初心者から中級者まで幅広い学習者をサポートします。K-POP・K-Dramaファン、韓国旅行を計画中の方、ビジネスで韓国語が必要な方など、さまざまな方に最適です。",
+                langTitle: "多言語対応",
+                langPara: "Hangleは現在、英語、スペイン語、日本語、フランス語、タイ語、中国語（簡体）、中国語（繁体）、ヒンディー語の8言語で利用できます。"
+            }
         },
         feedback: {
             title: "皆様のご意見でより良いサービスを提供します",
@@ -978,6 +1050,11 @@ export const translations = {
                 correction: "Correction",
                 tip: "Conseil",
                 advanced: "Conseil Avancé"
+            },
+            culture: {
+                title: "Culture coréenne",
+                subtitle: "Contexte culturel",
+                description: "Comprenez 눈치, 정, 빨리빨리 et d'autres concepts culturels qui façonnent la communication coréenne quotidienne."
             },
             explore: "Explorer"
         },
@@ -1134,7 +1211,26 @@ export const translations = {
                 }
             },
             cta: "Commencez à Apprendre Aujourd'hui !",
-            backToHome: "Retour à l'Accueil"
+            backToHome: "Retour à l'Accueil",
+            article: {
+                sectionTitle: "Pourquoi apprendre le coréen avec Hangle ?",
+                introPara: "Le coréen (한국어) est parlé par environ 80 millions de personnes dans le monde. Porté par la popularité mondiale du K-Pop, K-Drama et de la cuisine coréenne, la demande pour apprendre le coréen a explosé ces dernières années.",
+                featuresTitle: "Fonctionnalités d'apprentissage principales",
+                f1Title: "Cartes mémoire",
+                f1Desc: "Classez les mots que vous connaissez et ceux que vous ne connaissez pas. Un système de répétition espacée consolide le nouveau vocabulaire dans la mémoire à long terme.",
+                f2Title: "Pratique de conversation avec l'IA",
+                f2Desc: "Pratiquez une vraie conversation coréenne avec l'IA dans des situations quotidiennes.",
+                f3Title: "Quiz",
+                f3Desc: "Questions à choix multiples pour réviser ce que vous avez appris, avec un retour immédiat.",
+                f4Title: "Guide de prononciation",
+                f4Desc: "Couvre les 5 règles essentielles : consonnes finales, liaison, assimilation, aspiration et tensification.",
+                f5Title: "Guide de grammaire",
+                f5Desc: "Étude systématique des particules, des temps, des honorifiques et des terminaisons connectives.",
+                whoTitle: "Pour qui ?",
+                whoPara: "Hangle soutient les apprenants de tous niveaux, des débutants absolus aux intermédiaires qui ont du mal avec la conversation réelle.",
+                langTitle: "Support multilingue",
+                langPara: "Hangle est actuellement disponible en 8 langues : anglais, espagnol, japonais, français, thaï, chinois simplifié, chinois traditionnel et hindi."
+            }
         },
         feedback: {
             title: "Vos commentaires nous aident à nous améliorer",
@@ -1276,6 +1372,11 @@ export const translations = {
                 correction: "แก้ไข",
                 tip: "เคล็ดลับ",
                 advanced: "เคล็ดลับขั้นสูง"
+            },
+            culture: {
+                title: "วัฒนธรรมเกาหลี",
+                subtitle: "บริบททางวัฒนธรรม",
+                description: "ทำความเข้าใจ 눈치, 정, 빨리빨리 และแนวคิดทางวัฒนธรรมอื่น ๆ ที่กำหนดรูปแบบการสื่อสารภาษาเกาหลีในชีวิตประจำวัน"
             },
             explore: "สำรวจ"
         },
@@ -1432,7 +1533,26 @@ export const translations = {
                 }
             },
             cta: "เริ่มเรียนรู้ได้เลยวันนี้!",
-            backToHome: "กลับสู่หน้าหลัก"
+            backToHome: "กลับสู่หน้าหลัก",
+            article: {
+                sectionTitle: "ทำไมต้องเรียนภาษาเกาหลีกับ Hangle?",
+                introPara: "ภาษาเกาหลี (한국어) มีผู้พูดประมาณ 80 ล้านคนทั่วโลก ด้วยความนิยมระดับโลกของ K-Pop, K-Drama และอาหารเกาหลี ความต้องการเรียนภาษาเกาหลีเติบโตอย่างรวดเร็วในช่วงไม่กี่ปีที่ผ่านมา",
+                featuresTitle: "ฟีเจอร์การเรียนรู้หลัก",
+                f1Title: "แฟลชการ์ด",
+                f1Desc: "จัดหมวดคำศัพท์ที่รู้และไม่รู้ ระบบทบทวนแบบเว้นช่วงช่วยเก็บคำศัพท์ใหม่ไว้ในความจำระยะยาว",
+                f2Title: "ฝึกสนทนากับ AI",
+                f2Desc: "ฝึกสนทนาภาษาเกาหลีจริงกับ AI ในสถานการณ์ประจำวัน",
+                f3Title: "แบบทดสอบ",
+                f3Desc: "คำถามแบบเลือกตอบเพื่อทบทวนสิ่งที่เรียนรู้ พร้อมรับข้อเสนอแนะทันที",
+                f4Title: "คู่มือการออกเสียง",
+                f4Desc: "ครอบคลุมกฎ 5 ข้อสำคัญ: พยัญชนะท้าย, การเชื่อมเสียง, การกลมกลืนเสียง, การออกเสียงหนัก และการออกเสียงเกร็ง",
+                f5Title: "คู่มือไวยากรณ์",
+                f5Desc: "ศึกษาคำบุพบท กาล ระดับภาษา และคำเชื่อมอย่างเป็นระบบ",
+                whoTitle: "เหมาะสำหรับใคร?",
+                whoPara: "Hangle รองรับผู้เรียนทุกระดับ ตั้งแต่ผู้เริ่มต้นจนถึงระดับกลาง เหมาะสำหรับแฟน K-Pop, K-Drama, นักเดินทาง และผู้ที่ต้องการเชื่อมโยงกับวัฒนธรรมเกาหลี",
+                langTitle: "รองรับหลายภาษา",
+                langPara: "Hangle พร้อมใช้งานใน 8 ภาษา ได้แก่ อังกฤษ สเปน ญี่ปุ่น ฝรั่งเศส ไทย จีนตัวย่อ จีนตัวเต็ม และฮินดี"
+            }
         },
         feedback: {
             title: "คำติชมของคุณช่วยให้เราปรับปรุงดีขึ้น",
@@ -1574,6 +1694,11 @@ export const translations = {
                 correction: "改正",
                 tip: "提示",
                 advanced: "进阶提示"
+            },
+            culture: {
+                title: "韩国文化",
+                subtitle: "文化背景",
+                description: "了解 눈치、정、빨리빨리 等塑造韩语日常沟通的文化概念。"
             },
             explore: "探索"
         },
@@ -1730,7 +1855,26 @@ export const translations = {
                 }
             },
             cta: "今天开始学习！",
-            backToHome: "返回首页"
+            backToHome: "返回首页",
+            article: {
+                sectionTitle: "为什么选择 Hangle 学习韩语？",
+                introPara: "韩语（한국어）在全球约有 8000 万使用者。受 K-Pop、K-Drama 和韩国料理的全球热潮推动，近年来学习韩语的需求急剧增加。",
+                featuresTitle: "核心学习功能",
+                f1Title: "单词卡",
+                f1Desc: "将单词分为已知和未知。间隔重复系统将新词汇转化为长期记忆。",
+                f2Title: "AI 对话练习",
+                f2Desc: "通过 AI 练习真实的韩语对话，适用于日常情境。",
+                f3Title: "测验",
+                f3Desc: "多项选择题，立即反馈，帮助巩固所学内容。",
+                f4Title: "发音指南",
+                f4Desc: "涵盖 5 大核心规则：终声、连音、辅音同化、激音化、紧音化。",
+                f5Title: "语法指南",
+                f5Desc: "系统学习助词、时态、敬语和连接词尾。",
+                whoTitle: "适合谁？",
+                whoPara: "Hangle 适合各个水平的学习者，从零基础到中级都可以使用。无论是 K-Pop 粉丝、赴韩旅游者还是商务人士，都能从中受益。",
+                langTitle: "多语言支持",
+                langPara: "Hangle 目前提供 8 种语言：英语、西班牙语、日语、法语、泰语、简体中文、繁体中文和印地语。"
+            }
         },
         feedback: {
             title: "您的反馈有助于我们需要改进",
@@ -1872,6 +2016,11 @@ export const translations = {
                 correction: "改正",
                 tip: "提示",
                 advanced: "進階提示"
+            },
+            culture: {
+                title: "韓國文化",
+                subtitle: "文化背景",
+                description: "理解 눈치、정、빨리빨리 等塑造韓語日常溝通的文化概念。"
             },
             explore: "探索"
         },
@@ -2028,7 +2177,26 @@ export const translations = {
                 }
             },
             cta: "今天開始學習！",
-            backToHome: "返回首頁"
+            backToHome: "返回首頁",
+            article: {
+                sectionTitle: "為什麼選擇 Hangle 學習韓語？",
+                introPara: "韓語（한국어）在全球約有 8000 萬使用者。受 K-Pop、K-Drama 和韓國料理的全球熱潮推動，近年來學習韓語的需求急劇增加。",
+                featuresTitle: "核心學習功能",
+                f1Title: "單字卡",
+                f1Desc: "將單字分為已知和未知。間隔重複系統將新詞彙轉化為長期記憶。",
+                f2Title: "AI 對話練習",
+                f2Desc: "透過 AI 練習真實的韓語對話，適用於日常情境。",
+                f3Title: "測驗",
+                f3Desc: "多選題，立即回饋，幫助鞏固所學內容。",
+                f4Title: "發音指南",
+                f4Desc: "涵蓋 5 大核心規則：終聲、連音、輔音同化、激音化、緊音化。",
+                f5Title: "文法指南",
+                f5Desc: "系統學習助詞、時態、敬語和連接詞尾。",
+                whoTitle: "適合誰？",
+                whoPara: "Hangle 適合各個水平的學習者，從零基礎到中級都可以使用。無論是 K-Pop 粉絲、赴韓旅遊者還是商務人士，都能從中受益。",
+                langTitle: "多語言支援",
+                langPara: "Hangle 目前提供 8 種語言：英語、西班牙語、日語、法語、泰語、簡體中文、繁體中文和印地語。"
+            }
         },
         feedback: {
             title: "您的反饋有助於我們改進",
@@ -2170,6 +2338,11 @@ export const translations = {
                 correction: "सुधार",
                 tip: "सुझाव",
                 advanced: "उन्नत सुझाव"
+            },
+            culture: {
+                title: "कोरियाई संस्कृति",
+                subtitle: "सांस्कृतिक संदर्भ",
+                description: "눈치, 정, 빨리빨리 और अन्य सांस्कृतिक अवधारणाओं को समझें जो कोरियाई दैनिक संचार को आकार देती हैं।"
             },
             explore: "अन्वेषण करें"
         },
@@ -2326,7 +2499,26 @@ export const translations = {
                 }
             },
             cta: "आज सीखना शुरू करें!",
-            backToHome: "मुखपृष्ठ पर वापस"
+            backToHome: "मुखपृष्ठ पर वापस",
+            article: {
+                sectionTitle: "Hangle के साथ कोरियाई क्यों सीखें?",
+                introPara: "कोरियाई (한국어) दुनिया भर में लगभग 8 करोड़ लोगों द्वारा बोली जाती है। K-Pop, K-Drama और कोरियाई व्यंजनों की वैश्विक लोकप्रियता के कारण हाल के वर्षों में कोरियाई सीखने की मांग तेजी से बढ़ी है।",
+                featuresTitle: "मुख्य सीखने की विशेषताएं",
+                f1Title: "फ्लैशकार्ड",
+                f1Desc: "जो शब्द आप जानते हैं और जो नहीं जानते उन्हें वर्गीकृत करें। स्पेस्ड रिपीटिशन सिस्टम नई शब्दावली को दीर्घकालिक स्मृति में डालता है।",
+                f2Title: "AI वार्तालाप अभ्यास",
+                f2Desc: "AI के साथ वास्तविक कोरियाई वार्तालाप का अभ्यास करें।",
+                f3Title: "क्विज़",
+                f3Desc: "बहुविकल्पीय प्रश्नोत्तरी जो आपने सीखा है उसकी समीक्षा करने के लिए, तत्काल प्रतिक्रिया के साथ।",
+                f4Title: "उच्चारण मार्गदर्शिका",
+                f4Desc: "5 आवश्यक नियमों को कवर करती है: अंतिम व्यंजन, लियाज़ॉन, व्यंजन एकीकरण, अभिप्रेरण और तनाव।",
+                f5Title: "व्याकरण मार्गदर्शिका",
+                f5Desc: "कण, काल, सम्मानजनक और संयोजक अंत का व्यवस्थित अध्ययन।",
+                whoTitle: "यह किसके लिए है?",
+                whoPara: "Hangle सभी स्तरों के शिक्षार्थियों का समर्थन करता है। K-Pop और K-Drama प्रशंसकों, कोरिया यात्रा की तैयारी करने वालों और व्यावसायिक पेशेवरों के लिए आदर्श।",
+                langTitle: "बहुभाषी समर्थन",
+                langPara: "Hangle वर्तमान में 8 भाषाओं में उपलब्ध है: अंग्रेजी, स्पेनिश, जापानी, फ्रेंच, थाई, सरलीकृत चीनी, पारंपरिक चीनी और हिंदी।"
+            }
         },
         feedback: {
             title: "आपकी प्रतिक्रिया हमें बेहतर बनाने में मदद करती है",
