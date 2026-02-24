@@ -1,20 +1,15 @@
 import { Link, Outlet, useLocation } from 'react-router-dom';
-import { BookOpen, Moon, Sun, Globe, ChevronDown, RotateCcw, Star, MessageCircle } from 'lucide-react';
+import { BookOpen, Moon, Sun, Globe, ChevronDown, Star, MessageCircle } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 
 
 export default function Layout() {
-    const { name, level, xp, logout, theme, toggleTheme, targetLanguage, setTargetLanguage } = useUser();
+    const { theme, toggleTheme, targetLanguage, setTargetLanguage } = useUser();
     const t = translations[targetLanguage];
 
     const location = useLocation();
 
-    const handleLogout = () => {
-        if (window.confirm('Are you sure you want to reset your progress? This cannot be undone.')) {
-            logout();
-        }
-    };
 
     const isActive = (path: string) => location.pathname.startsWith(path);
 
@@ -29,28 +24,6 @@ export default function Layout() {
                         <span className="text-xl font-bold tracking-tight">Hangle</span>
                     </Link>
 
-                    {/* Center: User Profile (Desktop Only) */}
-                    {name && (
-                        <div className="hidden md:flex items-center gap-4 justify-self-center col-start-2 whitespace-nowrap">
-                            <div className="flex items-center gap-4 bg-gray-100 dark:bg-gray-700 px-4 py-2 rounded-full transition-colors">
-                                <span className="text-sm font-bold text-gray-700 dark:text-gray-200">Lv. {level}</span>
-                                <div className="w-24 h-2 bg-gray-300 dark:bg-gray-600 rounded-full overflow-hidden">
-                                    <div
-                                        className="h-full bg-gradient-to-r from-indigo-500 to-pink-500 transition-all duration-500"
-                                        style={{ width: `${(xp % 100)}%` }}
-                                    />
-                                </div>
-                                <span className="text-xs font-medium text-gray-500 dark:text-gray-400">{xp % 100} / 100 XP</span>
-                            </div>
-                            <button
-                                onClick={handleLogout}
-                                className="p-2 text-gray-400 dark:text-gray-500 hover:text-red-500 dark:hover:text-red-400 transition"
-                                title="Reset Progress"
-                            >
-                                <RotateCcw className="w-4 h-4" />
-                            </button>
-                        </div>
-                    )}
 
                     {/* Right: Nav & Settings */}
                     <nav className="flex items-center gap-3 md:gap-4 justify-self-end col-start-3">
@@ -137,24 +110,6 @@ export default function Layout() {
                     <span className="text-xs font-medium">{t.layout.bookmarks}</span>
                 </Link>
 
-                {name && (
-                    <div className="flex items-center gap-3">
-                        <div className="flex flex-col items-center">
-                            <div className="w-16 h-1 bg-gray-200 dark:bg-gray-700 rounded-full mb-1 overflow-hidden">
-                                <div className="h-full bg-gradient-to-r from-indigo-500 to-pink-500" style={{ width: `${(xp % 100)}%` }} />
-                            </div>
-                            <span className="text-[10px] font-bold text-gray-400 dark:text-gray-500">Lv. {level}</span>
-                        </div>
-
-                        <button
-                            onClick={handleLogout}
-                            className="p-1.5 text-gray-300 dark:text-gray-600 hover:text-red-500 dark:hover:text-red-400 transition"
-                            title="Reset Progress"
-                        >
-                            <RotateCcw className="w-4 h-4" />
-                        </button>
-                    </div>
-                )}
 
                 <Link to="/quiz" className={`flex flex-col items-center p-2 rounded-xl transition-colors ${isActive('/quiz') ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-gray-500 hover:text-gray-600'}`}>
                     <Globe className={`w-6 h-6 mb-1 ${isActive('/quiz') ? 'fill-current opacity-20' : ''}`} />

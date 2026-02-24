@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { vocabData } from '../data/vocab';
 import { ChevronLeft, ChevronRight, Volume2, RotateCw, ArrowLeft, Check, Star, Mic, MicOff } from 'lucide-react';
 import { useUser } from '../context/UserContext';
-import LevelUpModal from '../components/LevelUpModal';
 import Joyride, { type CallBackProps, type Step } from 'react-joyride';
 
 import { translations } from '../data/translations';
@@ -16,7 +15,7 @@ export default function Learn() {
 }
 
 function LearnContent({ categoryId }: { categoryId?: string }) {
-    const { addXp, showLevelUp, level, closeLevelUp, targetLanguage, bookmarks, toggleBookmark } = useUser();
+    const { targetLanguage, bookmarks, toggleBookmark } = useUser();
 
     // Translations are dynamic
     const t = translations[targetLanguage].learn;
@@ -115,7 +114,6 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
 
             if (cleanTranscript === cleanTarget) {
                 setSpeakingStatus('success');
-                addXp(5);
             } else {
                 setSpeakingStatus('fail');
                 setTimeout(() => setSpeakingStatus(prev => prev === 'fail' ? 'idle' : prev), 2000);
@@ -162,13 +160,11 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
 
     const handleMarkAsDone = (id: number) => {
         if (completedItems.includes(id)) {
-            // Toggle OFF: Remove from completed list and deduct XP
+            // Toggle OFF: Remove from completed list
             setCompletedItems(prev => prev.filter(item => item !== id));
-            addXp(-10);
         } else {
-            // Toggle ON: Add to completed list and grant XP
+            // Toggle ON: Add to completed list
             setCompletedItems(prev => [...prev, id]);
-            addXp(10); // Award 10 XP
 
             // Move to next card automatically after a short delay if not the last one
             if (currentIndex < items.length - 1) {
@@ -243,7 +239,7 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
         },
         {
             target: '.tour-known-btn',
-            content: t.tour?.known || 'Mark as learned to earn XP!',
+            content: t.tour?.known || 'Mark as learned to track your progress!',
         }
     ];
 
@@ -308,7 +304,7 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
                     skip: t.skip || 'Skip',
                 }}
             />
-            {showLevelUp && <LevelUpModal level={level} onClose={closeLevelUp} />}
+
 
             {/* Header */}
             <div className="w-full flex items-center justify-between">
@@ -447,7 +443,7 @@ function LearnContent({ categoryId }: { categoryId?: string }) {
                         </>
                     ) : (
                         <>
-                            {t.known} <span className="text-xs bg-white/20 px-2 py-0.5 rounded ml-1">{t.xp}</span>
+                            {t.known}
                         </>
                     )}
                 </button>
