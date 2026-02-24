@@ -13,6 +13,7 @@ import Guide from './pages/Guide';
 import Pronunciation from './pages/guide/Pronunciation';
 import Grammar from './pages/guide/Grammar';
 import Mistakes from './pages/guide/Mistakes';
+import Culture from './pages/guide/Culture';
 import Bookmarks from './pages/Bookmarks';
 import Search from './pages/Search';
 import Conversation from './pages/Conversation';
@@ -40,6 +41,7 @@ function App() {
               <Route path="guide/pronunciation" element={<Pronunciation />} />
               <Route path="guide/grammar" element={<Grammar />} />
               <Route path="guide/mistakes" element={<Mistakes />} />
+              <Route path="guide/culture" element={<Culture />} />
               <Route path="privacy" element={<PrivacyPolicy />} />
               <Route path="terms" element={<Terms />} />
               <Route path="about" element={<About />} />
