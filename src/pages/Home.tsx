@@ -1,6 +1,6 @@
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Volume2, Calendar } from 'lucide-react';
+import { ArrowRight, Volume2, Calendar, BookOpen } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 import { vocabData } from '../data/vocab';
@@ -136,6 +136,35 @@ export default function Home() {
                             {t.home.seo.howToDescEnd}
                         </p>
                     </section>
+                </div>
+
+                {/* Language Guides Section for SEO & Engagement */}
+                <div className="mt-16 text-left space-y-8 max-w-3xl mx-auto px-4 bg-indigo-50 dark:bg-indigo-900/20 py-10 rounded-[2.5rem] border border-indigo-100 dark:border-indigo-800/50 shadow-sm">
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3 px-4">
+                        <div className="p-2 bg-indigo-600 text-white rounded-xl shadow-md">
+                            <BookOpen className="w-6 h-6" />
+                        </div>
+                        {t.guide.title} - {t.guide.subtitle}
+                    </h2>
+
+                    <div className="grid sm:grid-cols-2 gap-4 px-4">
+                        <Link to="/guide/pronunciation" className="block p-5 bg-white dark:bg-gray-800 rounded-2xl hover:shadow-lg transition-all border border-indigo-100 dark:border-gray-700 hover:border-indigo-300 hover:-translate-y-1">
+                            <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">{t.guide.pronunciation.title}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400">{t.guide.pronunciation.description}</p>
+                        </Link>
+                        <Link to="/guide/grammar" className="block p-5 bg-white dark:bg-gray-800 rounded-2xl hover:shadow-lg transition-all border border-indigo-100 dark:border-gray-700 hover:border-indigo-300 hover:-translate-y-1">
+                            <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">{t.guide.grammar.title}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400">{t.guide.grammar.description}</p>
+                        </Link>
+                        <Link to="/guide/mistakes" className="block p-5 bg-white dark:bg-gray-800 rounded-2xl hover:shadow-lg transition-all border border-indigo-100 dark:border-gray-700 hover:border-indigo-300 hover:-translate-y-1">
+                            <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">{t.guide.mistakes.title}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400">{t.guide.mistakes.description}</p>
+                        </Link>
+                        <Link to="/guide/culture" className="block p-5 bg-white dark:bg-gray-800 rounded-2xl hover:shadow-lg transition-all border border-indigo-100 dark:border-gray-700 hover:border-indigo-300 hover:-translate-y-1">
+                            <h3 className="font-bold text-gray-900 dark:text-white text-lg mb-2">{t.guide.culture.title}</h3>
+                            <p className="text-sm text-gray-600 dark:text-gray-400">{t.guide.culture.description}</p>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { vocabData } from '../data/vocab';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
+import SEO from '../components/SEO';
 
 import { ArrowLeft, CheckCircle, XCircle, Trophy, RefreshCcw, Volume2 } from 'lucide-react';
 
@@ -122,6 +123,10 @@ function QuizContent({ categoryId }: { categoryId?: string }) {
 
     return (
         <div className="max-w-lg mx-auto space-y-6">
+            <SEO
+                title={`Korean Quiz: ${categoryId?.charAt(0).toUpperCase()}${categoryId?.slice(1) || ''} | Hangle`}
+                description={`Test your Korean vocabulary for ${categoryId}. Interactive quiz with native audio to improve your memory.`}
+            />
             {/* Header */}
             <div className="flex items-center justify-between mb-8">
                 <Link to="/quiz" className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 flex items-center gap-1">

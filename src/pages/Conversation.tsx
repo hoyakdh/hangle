@@ -3,6 +3,7 @@ import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
 import { conversationData } from '../data/conversation';
 import { MessageCircle, ArrowLeft, Eye, EyeOff, User, Bot, Volume2 } from 'lucide-react';
+import SEO from '../components/SEO';
 
 export default function Conversation() {
     const { targetLanguage } = useUser();
@@ -58,6 +59,10 @@ export default function Conversation() {
 
         return (
             <div className="space-y-6">
+                <SEO
+                    title={`${categoryInfo?.name || selectedCategory} - Korean Conversation`}
+                    description={`Practice Korean conversation for ${categoryInfo?.name || selectedCategory}. Listen and speak with interactive roleplay.`}
+                />
                 <button
                     onClick={() => setSelectedCategory(null)}
                     className="flex items-center gap-2 text-gray-600 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
@@ -172,6 +177,10 @@ export default function Conversation() {
 
     return (
         <div className="space-y-8">
+            <SEO
+                title={t.conversation.seo?.title || "Korean Conversation Practice"}
+                description={t.conversation.seo?.desc || "Practice real-life Korean conversations. Interactive roleplay with audio for various situations."}
+            />
             <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
                     <MessageCircle className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />

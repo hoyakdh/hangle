@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Volume2, Book, AlertTriangle, Globe, ArrowRight, BookOpen } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
+import SEO from '../components/SEO';
 
 export default function Guide() {
     const { targetLanguage } = useUser();
@@ -48,6 +49,10 @@ export default function Guide() {
 
     return (
         <div className="space-y-8 animate-fade-in">
+            <SEO
+                title={t.title || "Korean Learning Guide"}
+                description={t.subtitle || "Comprehensive guides on Korean pronunciation, grammar, and culture."}
+            />
             <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
                     <BookOpen className="w-8 h-8 text-indigo-600 dark:text-indigo-400" />

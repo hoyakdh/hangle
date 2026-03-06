@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { Trophy } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import { translations } from '../data/translations';
+import SEO from '../components/SEO';
 
 export default function QuizCategories() {
     const { targetLanguage } = useUser();
@@ -28,6 +29,10 @@ export default function QuizCategories() {
 
     return (
         <div className="space-y-8 animate-fade-in">
+            <SEO
+                title={t.quiz.quizModeTitle || "Korean Vocabulary Quiz"}
+                description={t.quiz.quizModeSubtitle || "Test your Korean knowledge with interactive quizzes. Improve memory and confidence."}
+            />
             <div>
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white flex items-center gap-3">
                     <Trophy className="w-8 h-8 text-yellow-500" />
